@@ -138,7 +138,7 @@ import ie.cork.mycit.group1.HomePage;
 import ie.cork.mycit.group1.R;
 
 public class HomePageSettings extends ActionBarActivity {
-
+//dan was here
     List<String> checkList = new ArrayList<String>();
 
     @Override
