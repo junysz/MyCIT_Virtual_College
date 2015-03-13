@@ -86,6 +86,7 @@
       <w>hdcld</w>
       <w>hdmob</w>
       <w>hdsdev</w>
+      <w>listfile</w>
       <w>listnames</w>
       <w>lvph</w>
       <w>maplt</w>
@@ -102,6 +103,8 @@
       <w>pubdate</w>
       <w>refph</w>
       <w>reft</w>
+      <w>settingslinks</w>
+      <w>settingsnames</w>
       <w>studentappslinks</w>
       <w>studentappsnames</w>
       <w>thpy</w>

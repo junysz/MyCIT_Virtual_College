@@ -176,6 +176,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ie.cork.mycit.group1.StudentNews" />
         </activity>
+        <activity
+            android:name="ie.cork.mycit.settings.HomePageSettings"
+            android:label="@string/title_activity_home_page_settings"
+            android:parentActivityName=".HomePage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ie.cork.mycit.group1.HomePage" />
+        </activity>
     </application>
 
 </manifest>

@@ -58,6 +58,7 @@
     <string name="twitter">Twitter</string>
     <string name="title_activity_site_adapter">SiteAdapter</string>
     <string name="title_activity_gen_news">GenNews</string>
+    <string name="title_activity_home_page_settings">HomePageSettings</string>
 
     <string-array name="drawer">
         <item>Home</item>

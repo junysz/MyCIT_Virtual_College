@@ -22,6 +22,8 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import ie.cork.mycit.settings.HomePageSettings;
+
 public class HomePage extends ActionBarActivity implements
 	NavigationDrawerFragment.NavigationDrawerCallbacks {
 
@@ -96,7 +98,6 @@ public class HomePage extends ActionBarActivity implements
 			Intent studentNews = new Intent(HomePage.this, StudentNews.class);
 			startActivity(studentNews);
 			break;
-			
 		case 9:
 			Intent studentApplications = new Intent(HomePage.this, StudentApplications.class);
 			startActivity(studentApplications);
@@ -153,7 +154,8 @@ public class HomePage extends ActionBarActivity implements
 			// Only show items in the action bar relevant to this screen
 			// if the drawer is not showing. Otherwise, let the drawer
 			// decide what to show in the action bar.
-			getMenuInflater().inflate(R.menu.home_page, menu);
+            //getMenuInflater().inflate(R.menu.home_page, menu);
+            getMenuInflater().inflate(R.menu.menu_home_page_settings, menu);
 			restoreActionBar();
 			return true;
 		}
@@ -169,6 +171,11 @@ public class HomePage extends ActionBarActivity implements
 		if (id == R.id.action_settings) {
 			return true;
 		}
+        else if(id == R.id.menu_settings){
+            String message = "You selected the " + item.getTitle() + " menu";
+            Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+            startActivity(new Intent(this, HomePageSettings.class));
+        }
 		return super.onOptionsItemSelected(item);
 	}
 
