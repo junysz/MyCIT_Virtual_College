@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyCit</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="mycit_homepage">MyCit HomePage</string>
+    <string name="title_activity_new_students">New Students</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="new_students">New Students</string>
+    <string name="title_activity_it_services_support">IT Services Support</string>
+    <string name="it_services_support">IT Services Support</string>
+    <string name="title_activity_support_services">Support Services</string>
+    <string name="support_services">Support Services</string>
+    <string name="title_activity_academic_information">Academic Information</string>
+    <string name="academic_information">Academic Information</string>
+    <string name="title_activity_useful_resources">Useful Resources</string>
+    <string name="useful_resources">Useful Resources</string>
+    <string name="title_activity_student_calendar">Student Calendar</string>
+    <string name="student_calendar">Student Calendar</string>
+    <string name="title_activity_student_news">Student News</string>
+    <string name="student_news">Student News</string>
+    <string name="card_topup">Card Topup</string>
+    <string name="student_email">Student Email</string>
+    <string name="timetables">Timetables</string>
+    <string name="title_activity_timetables">Timetables</string>
+    <string name="submit">Submit</string>
+    <string name="semester_2">Semester 2</string>
+    <string name="semester_1">Semester 1</string>
+    <string name="class_group">Class group</string>
+    <string name="time_period">Time Period</string>
+    <string name="title_activity_timetable_view">Timetables</string>
+    <string name="title_activity_student_applications">Student Applications</string>
+    <string name="student_applications">Student Applications</string>
+    <string name="title_activity_pay_fees_online">Pay Fees Online</string>
+    <string name="pay_fees_online">Pay Fees Online</string>
+    <string name="title_activity_student_handbooks">Student Handbooks</string>
+    <string name="student_handbooks">Student Handbooks</string>
+    <string name="title_activity_citvideos">CIT Videos</string>
+    <string name="cit_videos">CIT Videos</string>
+    <string name="title_activity_campus_map">Campus Map</string>
+    <string name="campus_map">Campus Map</string>
+    <string name="title_activity_important_documents">Important Documents</string>
+    <string name="important_documents">Important Documents</string>
+    <string name="title_activity_public_folders">Public Folders</string>
+    <string name="public_folders">Public Folders</string>
+    <string name="ClassGroups">Class Groups</string>
+    <string name="Department">Department</string>
+    <string name="title_activity_web">MyCIT</string>
+    <string name="title_activity_custom_view_adapter">CustomViewAdapter</string>
+    <string name="facebook">Facebook</string>
+    <string name="general">General News</string>
+    <string name="twitter">Twitter</string>
+    <string name="title_activity_site_adapter">SiteAdapter</string>
+    <string name="title_activity_gen_news">GenNews</string>
+
+    <string-array name="drawer">
+        <item>Home</item>
+        <item>New Students</item>
+        <item>IT Services Support</item>
+        <item>Support Services</item>
+        <item>Academic Information</item>
+        <item>Useful Resources</item>
+        <item>Student Calendar</item>
+        <item>Student News</item>
+        <item>Student Applications</item>
+        <item>Pay Fees Online</item>
+        <item>Student Handbooks</item>
+        <item>CIT Videos</item>
+        <item>Campus Map</item>
+        <item>Important Documents</item>
+        <item>Public Folders</item>
+    </string-array>
+
+    <string-array name="studentappsnames">
+        <item>Student E-mail</item>
+        <item>Blackboard</item>
+        <item>Timetables</item>
+        <item>Exam Papers</item>
+        <item>Library Search</item>
+        <item>Student Card Top-Up</item>
+        <item>Web for Student</item>
+        <item>CIT Password Reset</item>
+        <item>Wifi Registration</item>
+        <item>Student Drive</item>
+        <item>Job Listings</item>
+    </string-array>
+
+    <string-array name="studentappslinks">
+        <item>http://mail.mycit.ie/</item>
+        <item>http://citbb.blackboard.com/</item>
+        <item>http://timetables.cit.ie/</item>
+        <item>http://exampapers.cit.ie/#pageTitle</item>
+        <item>http://library.cit.ie/#search</item>
+        <item>https://citcard.cit.ie/icmserver/#student_number</item>
+        <item>https://ssb.ancheim.ie/cit/app/twbkwbis.P_WWWLogin#UserID</item>
+        <item>https://live.runmyprocess.com/pub/925358723/appli/88243#id_cit_student_id</item>
+        <item>http://www.cit.ie/eduroam#pageTitle</item>
+        <item>https://webvpn.cit.ie/+CSCOE+/logon.html#username</item>
+        <item>http://www.mycit.ie/career-listings#path</item>
+    </string-array>
+
+    <string-array name="newStudentNames">
+        <item>President\'s Welcome</item>
+        <item>Quick Start Guide</item>
+        <item>Campus Life</item>
+        <item>Helping Freshers Find Their Way</item>
+        <item>Transport &amp; Parking</item>
+        <item>Banks, Shops, Restaurants</item>
+        <item>Lost Property &amp; Lockers</item>
+        <item>Caretakers Office</item>
+        <item>Sports &amp; Societies</item>
+        <item>Money Management</item>
+        <item>Health &amp; Safety</item>
+        <item>Arts in CIT</item>
+    </string-array>
+
+    <string-array name="newStudentLinks">
+        <item>http://www.mycit.ie/newstudents/presidentswelcome/#pageTitle</item>
+        <item>http://www.mycit.ie/quickstart#pageTitle</item>
+        <item>http://www.mycit.ie/newstudents/campuslife/#pageTitle</item>
+        <item>http://www.mycit.ie/goodstart#pageTitle</item>
+        <item>http://www.mycit.ie/newstudents/transport/#pageTitle</item>
+        <item>http://www.mycit.ie/newstudents/banks_shops_restaurants/#pageTitle</item>
+        <item>http://www.mycit.ie/caretakers/lostproperty_lockers/</item>
+        <item>http://www.mycit.ie/newstudents/caretakers#pageTitle</item>
+        <item>http://www.mycit.ie/orientation/sport_societies/</item>
+        <item>http://www.mycit.ie/orientation/moneymanagement/</item>
+        <item>http://www.mycit.ie/orientation/health_safety/</item>
+        <item>http://www.mycit.ie/orientation/arts/</item>
+    </string-array>
+
+    <string-array name="itServicesNames">
+        <item>IT Services Department</item>
+        <item>Quick Start Guide</item>
+        <item>Activating Your Account</item>
+        <item>Student Single Sign On</item>
+        <item>Student Password Reset</item>
+        <item>Email Information</item>
+        <item>Blackboard Overview</item>
+        <item>Blackboard Getting Started</item>
+        <item>Navigating Blackboard</item>
+        <item>Working Within Your Course</item>
+        <item>Blackboard FAQ</item>
+    </string-array>
+
+    <string-array name="itServicesLinks">
+        <item>http://www.mycit.ie/itsupport#pageTitle</item>
+        <item>http://www.mycit.ie/quickstart#pageTitle</item>
+        <item>http://www.mycit.ie/itsupport/activatingyouraccount/#pageTitle</item>
+        <item>http://www.mycit.ie/itsupport/student-single-sign-on-_sso/#pageTitle</item>
+        <item>http://www.mycit.ie/itsupport/reset-password/#pageTitle</item>
+        <item>http://www.mycit.ie/itsupport/cit-student-email/#pageTitle</item>
+        <item>http://www.mycit.ie/itsupport/blackboard/#pageTitle</item>
+        <item>http://www.mycit.ie/itsupport/blackboard/guide/#pageTitle</item>
+        <item>http://www.mycit.ie/itsupport/blackboard/navigation/#pageTitle</item>
+        <item>http://www.mycit.ie/itsupport/blackboard/yourcourse/#pageTitle</item>
+        <item>http://www.mycit.ie/itsupport/blackboard/faq/#pageTitle</item>
+    </string-array>
+
+    <string-array name="supportServicesNames">
+        <item>Accommodation</item>
+        <item>Medical Centre</item>
+        <item>Chaplaincy</item>
+        <item>Students\' Union</item>
+        <item>Learning Support</item>
+        <item>Photocopying / Printing</item>
+        <item>Academic Learning Centre</item>
+        <item>Sports Office</item>
+        <item>Careers &amp; Employability Service</item>
+        <item>Job Listings</item>
+        <item>Student Counselling</item>
+        <item>Disability Support</item>
+        <item>Mature Students</item>
+        <item>Student Assistance Fund</item>
+    </string-array>
+
+    <string-array name="supportServicesLinks">
+        <item>http://www.mycit.ie/accommodation#pageTitle</item>
+        <item>http://www.mycit.ie/medical#pageTitle</item>
+        <item>http://www.mycit.ie/chaplaincy#pageTitle</item>
+        <item>http://www.mycit.ie/studentsunion#pageTitle</item>
+        <item>http://alc.cit.ie/</item>
+        <item>http://www.mycit.ie/orientation/photocopying_printing1/</item>
+        <item>http://alc.cit.ie/</item>
+        <item>http://www.mycit.ie/sport#pageTitle</item>
+        <item>http://www.mycit.ie/careers#pageTitle</item>
+        <item>http://www.mycit.ie/career-listings#path</item>
+        <item>http://www.mycit.ie/counselling#pageTitle</item>
+        <item>http://www.mycit.ie/access_disability/disability-support-service/#pageTitle</item>
+        <item>http://www.mycit.ie/access_disability/mature-students/#pageTitle</item>
+        <item>http://www.mycit.ie/access_disability/student-assistance-fund/#pageTitle</item>
+    </string-array>
+
+    <string-array name="academicInformationNames">
+        <item>Admissions Office</item>
+        <item>Free Choice Electives</item>
+        <item>Search Library Catalogue</item>
+        <item>eBooks Collections</item>
+        <item>Library Guide</item>
+        <item>Library Services</item>
+        <item>Registrar\'s Office &amp; Student Services</item>
+        <item>International Office</item>
+        <item>Student Ombudsman</item>
+        <item>CCAD Students Guide</item>
+        <item>Exams Office</item>
+        <item>Exam Timetables</item>
+        <item>Results</item>
+        <item>Regulations</item>
+        <item>Exam Support</item>
+        <item>Exam Papers</item>
+        <item>Conferrings</item>
+    </string-array>
+
+    <string-array name="academicInformationLinks">
+        <item>http://www.mycit.ie/admissions#pageTitle</item>
+        <item>http://www.mycit.ie/admissions/freechoice/#pageTitle</item>
+        <item>http://library.cit.ie/search#search</item>
+        <item>http://library.cit.ie/screens/Ebook_launch.html</item>
+        <item>http://www.mycit.ie/libraryguide/</item>
+        <item>http://www.mycit.ie/library#pageTitle</item>
+        <item>http://www.mycit.ie/registrar_soffice_studentservi#pageTitle</item>
+        <item>http://www.mycit.ie/internationaloffice#pageTitle</item>
+        <item>http://www.mycit.ie/studentombudsman#pageTitle</item>
+        <item>http://www.mycit.ie/ccad/guides#pageTitle</item>
+        <item>http://www.mycit.ie/examinations#pageTitle</item>
+        <item>http://www.mycit.ie/examinations/timetables/#pageTitle</item>
+        <item>http://www.mycit.ie/examinations/results/#pageTitle</item>
+        <item>http://www.mycit.ie/examinations/regulations/#pageTitle</item>
+        <item>http://www.mycit.ie/examinations/support/#pageTitle</item>
+        <item>http://www.mycit.ie/examinations/exampapers/#pageTitle</item>
+        <item>http://www.mycit.ie/examinations/conferrings/#pageTitle</item>
+    </string-array>
+
+    <string-array name="usefulResourcesNames">
+        <item>CIT Campuses</item>
+        <item>Academic Departments</item>
+        <item>Student Services</item>
+        <item>Other Helplines</item>
+        <item>Bishopstown Campus</item>
+        <item>Interactive Map</item>
+        <item>Directions to CIT</item>
+        <item>Panorama Photos</item>
+        <item>Bus Timetables</item>
+        <item>CIT Arts Office</item>
+        <item>CIT Event Booking</item>
+    </string-array>
+
+    <string-array name="usefulResourcesLinks">
+        <item>http://www.mycit.ie/contacts#pageTitle</item>
+        <item>http://www.mycit.ie/departments#pageTitle</item>
+        <item>http://www.mycit.ie/student-services#pageTitle</item>
+        <item>http://www.mycit.ie/helplines#pageTitle</item>
+        <item>http://www.mycit.ie/maps#pageTitle</item>
+        <item>http://www.mycit.ie/interactive-map#pageTitle</item>
+        <item>http://www.mycit.ie/directions-map#pageTitle</item>
+        <item>http://www.mycit.ie/panoramas#pageTitle</item>
+        <item>http://www.mycit.ie/bus#path</item>
+        <item>http://arts.cit.ie/</item>
+        <item>http://events.cit.ie/#headlineEvents</item>
+    </string-array>
+
+    <string-array name="news">
+        <item>Semester 1</item>
+        <item>Semester 2</item>
+    </string-array>
+
+    <string-array name="department">
+        <item>All</item>
+        <item>ACCOUNTING</item>
+        <item>ADMIN</item>
+        <item>ALC</item>
+        <item>ARCHITECTURE</item>
+        <item>ARTSOFFICE</item>
+        <item>BIOLOGY</item>
+        <item>CCAD</item>
+        <item>CHEMISTRY</item>
+        <item>CIVIL</item>
+        <item>COMPUTING</item>
+        <item>CONSTRUCTION</item>
+        <item>CRAFTSTUDIES</item>
+        <item>CSM</item>
+        <item>CSMACADEMIC</item>
+        <item>CSMKEYBOARD</item>
+        <item>CSMSTRINGS</item>
+        <item>CSMWIND</item>
+        <item>DEIS</item>
+        <item>ELECTRICAL</item>
+        <item>MANAGEMENT</item>
+        <item>MARKETING</item>
+        <item>MATHS</item>
+        <item>MECHANICAL</item>
+        <item>MEDIA</item>
+        <item>NMCI</item>
+        <item>ONLINE</item>
+        <item>ORGANISATION</item>
+        <item>PHYSICAL SCIENCES</item>
+        <item>PROCESS</item>
+        <item>SOCIAL</item>
+        <item>SPORT</item>
+        <item>TOURISM</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>Semester 1</item>
+        <item>Semester 2</item>
+    </string-array>
+
+    <string-array name="classes">
+        <item>AD.STUDY</item>
+        <item>AI.ADCA1-A</item>
+        <item>AI.ADCA1-B</item>
+        <item>AI.ADCA2-A</item>
+        <item>AI.ADCA2-B</item>
+        <item>AI.ADCA3-A</item>
+        <item>AI.ADCA3-B</item>
+        <item>AI.ADCA3-C</item>
+        <item>AI.ADCA4</item>
+        <item>AI.AGRI1-A</item>
+        <item>AI.AGRI1-B</item>
+        <item>AI.AGRI1-C</item>
+        <item>AI.AGRI2</item>
+        <item>AI.AGRI3-A</item>
+        <item>AI.AGRI3-B</item>
+        <item>AI.AGRI3-C</item>
+        <item>AI.AGRI4</item>
+        <item>AI.BBSIS1-A</item>
+        <item>AI.BBSIS1-B</item>
+        <item>AI.BBSIS1-C</item>
+        <item>AI.BBSIS1-D</item>
+        <item>AI.BBSIS2-A</item>
+        <item>AI.BBSIS2-B</item>
+        <item>AI.BBSIS2-C</item>
+        <item>AI.BBSIS2-D</item>
+        <item>AI.BBSIS3-A</item>
+        <item>AI.BBSIS3-B</item>
+        <item>AI.BBSIS3-C</item>
+        <item>AI.BBSIS4-A</item>
+        <item>AI.BBSIS4-B</item>
+        <item>AI.ENTB1</item>
+        <item>AI.EVBBSAC-L7</item>
+        <item>AI.EVBBSAC-L8</item>
+        <item>AI.EVBBSAC-L8 LAW</item>
+        <item>AI.EVBBSAC-L8 NEW</item>
+        <item>AI.EVDAIRY1</item>
+        <item>AI.HORT1</item>
+        <item>AI.HORT2</item>
+        <item>AI.HORT3</item>
+        <item>AI.HORT4</item>
+        <item>AI.MBSACC</item>
+        <item>AI.MBSINFO</item>
+        <item>AR.ARCH1</item>
+        <item>AR.ARCH2</item>
+        <item>AR.ARCH3</item>
+        <item>AR.ARCH4</item>
+        <item>AR.ARCH5</item>
+        <item>AR.ARCH6</item>
+        <item>AR.AT1A</item>
+        <item>AR.AT1B</item>
+        <item>AR.AT2</item>
+        <item>AR.AT3</item>
+        <item>AR.AT4</item>
+        <item>AR.AT5</item>
+        <item>AR.IA1</item>
+        <item>AR.IA2</item>
+        <item>AR.IA3</item>
+        <item>AR.IA4</item>
+        <item>AR.IA5</item>
+        <item>AS.CD1</item>
+        <item>AS.CD2</item>
+        <item>AS.CD3</item>
+        <item>AS.CD4</item>
+        <item>AS.CD5</item>
+        <item>AS.EVCOUNS1-A</item>
+        <item>AS.EVCOUNS1-B</item>
+        <item>AS.EVCOUNS2</item>
+        <item>AS.EVCOUNS3</item>
+        <item>AS.EVCOUNS4</item>
+        <item>AS.MAPLT</item>
+        <item>AS.SC1-A1</item>
+        <item>AS.SC1-A2</item>
+        <item>AS.SC1-B1</item>
+        <item>AS.SC1-B2</item>
+        <item>AS.SC1-C1</item>
+        <item>AS.SC1-C2</item>
+        <item>AS.SC2-A1</item>
+        <item>AS.SC2-A2</item>
+        <item>AS.SC2-A3</item>
+        <item>AS.SC2-B1</item>
+        <item>AS.SC2-B2</item>
+        <item>AS.SC2-B3</item>
+        <item>AS.SC3-A</item>
+        <item>AS.SC3-B</item>
+        <item>AS.SC4.B</item>
+        <item>AS.SC4.C</item>
+        <item>AS.SC4-A</item>
+        <item>AS.SS5</item>
+        <item>BI.BMS1</item>
+        <item>BI.BMS2</item>
+        <item>BI.BMS3</item>
+        <item>BI.BMS4</item>
+        <item>BI.BRBI5</item>
+        <item>BI.EVS4B</item>
+        <item>BI.HS1</item>
+        <item>BI.HS2</item>
+        <item>BI.HS3</item>
+        <item>BI.HS4</item>
+        <item>BI.NHS1</item>
+        <item>BI.NHS2</item>
+        <item>BI.NHS3</item>
+        <item>BI.NHS4</item>
+        <item>BI.PB1</item>
+        <item>BI.PB2</item>
+        <item>BI.PB3</item>
+        <item>BI.PB4</item>
+        <item>BI.S1B</item>
+        <item>BI.S2B</item>
+        <item>BI.S3BA</item>
+        <item>BI.S3BB</item>
+        <item>BI.S5B</item>
+        <item>BI.S6B</item>
+        <item>CA.CM1</item>
+        <item>CA.CM2</item>
+        <item>CA.CM3</item>
+        <item>CA.CM4</item>
+        <item>CA.CM5</item>
+        <item>CA.CMEQS</item>
+        <item>CA.CS1.A1</item>
+        <item>CA.CS1.A2</item>
+        <item>CA.CS1.B1</item>
+        <item>CA.CS1.B2</item>
+        <item>CA.CS2.A</item>
+        <item>CA.CS2.B</item>
+        <item>CA.CS3E.A</item>
+        <item>CA.CS3E.B</item>
+        <item>CA.CS3M.A</item>
+        <item>CA.CS3M.B</item>
+        <item>CA.CS4M.A</item>
+        <item>CA.CS4M.B</item>
+        <item>CA.CS4Q.A</item>
+        <item>CA.CS4Q.B</item>
+        <item>CA.EVNCCS1A</item>
+        <item>CA.EVNCCS1B</item>
+        <item>CA.EVNCCS2A</item>
+        <item>CA.EVNCCS2B</item>
+        <item>CA.EVNCCS3A</item>
+        <item>CA.EVNCCS3B</item>
+        <item>CA.EVNDCSECON</item>
+        <item>CA.EVNDCSMGT</item>
+        <item>CA.QS1</item>
+        <item>CA.QS2</item>
+        <item>CA.QS3</item>
+        <item>CA.QS4</item>
+        <item>CC.A&amp;D1</item>
+        <item>CC.A&amp;D2</item>
+        <item>CC.CRM1</item>
+        <item>CC.CRM2</item>
+        <item>CC.CRM3</item>
+        <item>CC.DCRM1</item>
+        <item>CC.DCRM2</item>
+        <item>CC.DCRM3</item>
+        <item>CC.DCRM4</item>
+        <item>CC.DFA1</item>
+        <item>CC.DFA2</item>
+        <item>CC.DFA3</item>
+        <item>CC.DFA4</item>
+        <item>CC.DIPADT-A1</item>
+        <item>CC.DIPADT-A2</item>
+        <item>CC.DIPADT-B1</item>
+        <item>CC.DIPADT-B2</item>
+        <item>CC.EVPF-PREP</item>
+        <item>CC.FA1</item>
+        <item>CC.FA2</item>
+        <item>CC.FA3</item>
+        <item>CC.MARSR</item>
+        <item>CC.THPY1-A</item>
+        <item>CC.THPY1-B</item>
+        <item>CC.THPY2-A</item>
+        <item>CC.THPY2-B</item>
+        <item>CC.TVA1</item>
+        <item>CC.TVA2</item>
+        <item>CO.CLD4-A</item>
+        <item>CO.CLD4-B</item>
+        <item>CO.CLD5-A-(New)</item>
+        <item>CO.CLD5-B-(Fin)</item>
+        <item>CO.COM1-A</item>
+        <item>CO.COM1-B</item>
+        <item>CO.COM2- A</item>
+        <item>CO.COM2- B</item>
+        <item>CO.COM3-A</item>
+        <item>CO.COM3-B</item>
+        <item>CO.DCOM1 - A</item>
+        <item>CO.DCOM1 - B</item>
+        <item>CO.DCOM2-A</item>
+        <item>CO.DCOM2-B</item>
+        <item>CO.DCOM3</item>
+        <item>CO.DCOM4</item>
+        <item>CO.DCOM5</item>
+        <item>CO.DCOM6</item>
+        <item>CO.DNET1</item>
+        <item>CO.DNET2</item>
+        <item>CO.DNET3</item>
+        <item>CO.DNET4</item>
+        <item>CO.EV.NWS5</item>
+        <item>CO.EVCISCO1</item>
+        <item>CO.EVCISCO2</item>
+        <item>CO.EVCISCOW1</item>
+        <item>CO.EVCOM1-A</item>
+        <item>CO.EVCOM1-B</item>
+        <item>CO.EVCOM2</item>
+        <item>CO.EVCOM3</item>
+        <item>CO.EVCOMPTIA</item>
+        <item>CO.EVMScCOMSD</item>
+        <item>CO.EVMScCOMSD.A</item>
+        <item>CO.EVPCHW</item>
+        <item>CO.FREECHOICE</item>
+        <item>CO.HCCLD</item>
+        <item>CO.HDCLD</item>
+        <item>CO.HDMOB-A-(New)</item>
+        <item>CO.HDMOB-B-(Fin)</item>
+        <item>CO.HDSDEV1</item>
+        <item>CO.ITM1</item>
+        <item>CO.ITM2</item>
+        <item>CO.ITM3</item>
+        <item>CO.ITM4</item>
+        <item>CO.ITS1- A</item>
+        <item>CO.ITS1- B</item>
+        <item>CO.ITS2</item>
+        <item>CO.ITS3</item>
+        <item>CO.LINUX</item>
+        <item>CO.MScCOMSD.B</item>
+        <item>CO.MSCRSCH</item>
+        <item>CO.MSCRSCHProj</item>
+        <item>CO.MScSD</item>
+        <item>CO.NWS5</item>
+        <item>CO.VM-WARE</item>
+        <item>CO.WEB1</item>
+        <item>CO.WEB2</item>
+        <item>CO.WEB3</item>
+        <item>CO.WEB4</item>
+        <item>COMPUTING ELECTIVE HCI</item>
+        <item>COMPUTING ELECTIVE HDW</item>
+        <item>COMPUTING ELECTIVE Media DF</item>
+        <item>COMPUTING ELECTIVE WEB</item>
+        <item>CR.BREPH4AT1</item>
+        <item>CR.BREPH4AT2</item>
+        <item>CR.BREPH4AT3</item>
+        <item>CR.BREPH4BT1</item>
+        <item>CR.BREPH4BT2</item>
+        <item>CR.BREPH4BT3</item>
+        <item>CR.BREPH4REFT1</item>
+        <item>CR.BREPH4REFT2</item>
+        <item>CR.BREPH4REFT3</item>
+        <item>CR.BREPH6AT1</item>
+        <item>CR.BREPH6AT2</item>
+        <item>CR.BREPH6AT3</item>
+        <item>CR.BREPH6BT1</item>
+        <item>CR.BREPH6BT2</item>
+        <item>CR.BREPH6BT3</item>
+        <item>CR.BREPH6REFT1</item>
+        <item>CR.CJPH4REFT1</item>
+        <item>CR.CJPH4REFT2</item>
+        <item>CR.CJPH4REFT3</item>
+        <item>CR.CPFPH4AT1</item>
+        <item>CR.CPFPH4AT2</item>
+        <item>CR.CPFPH4AT3</item>
+        <item>CR.CPFPH4BT2</item>
+        <item>CR.CPFPH4BT3</item>
+        <item>CR.CPFPH6AT1</item>
+        <item>CR.CPFPH6AT2</item>
+        <item>CR.CPFPH6AT3</item>
+        <item>CR.CPFPH6BT2</item>
+        <item>CR.CTS1-A</item>
+        <item>CR.CTS1-B</item>
+        <item>CR.CTW1</item>
+        <item>CR.CTW2</item>
+        <item>CR.CTW3</item>
+        <item>CR.EVAUTOCERT</item>
+        <item>CR.EVBREPH4REFT1</item>
+        <item>CR.EVBREPH4REFT2</item>
+        <item>CR.EVBREPH4REFT3</item>
+        <item>CR.EVBREPH6REFT1</item>
+        <item>CR.EVBREPH6REFT2</item>
+        <item>CR.EVBREPH6REFT3</item>
+        <item>CR.EVEMD</item>
+        <item>CR.EVEN287A.T1</item>
+        <item>CR.EVEN287A.T2</item>
+        <item>CR.EVEN287A.T3</item>
+        <item>CR.EVEN287B.T1</item>
+        <item>CR.EVEN287B.T2</item>
+        <item>CR.EVEN287B.T3</item>
+        <item>CR.EVEN287C.T1</item>
+        <item>CR.EVEN287C.T2</item>
+        <item>CR.EVEN287C.T3</item>
+        <item>CR.EVREFINTRO</item>
+        <item>CR.EVWE165</item>
+        <item>CR.FTPH4AT1</item>
+        <item>CR.FTPH4AT2</item>
+        <item>CR.FTPH4AT3</item>
+        <item>CR.FTPH4BT2</item>
+        <item>CR.FTPH4BT3</item>
+        <item>CR.FTPH6AT1</item>
+        <item>CR.FTPH6AT2</item>
+        <item>CR.FTPH6AT3</item>
+        <item>CR.FTPH6BT1</item>
+        <item>CR.LVPH4T1</item>
+        <item>CR.LVPH4T2</item>
+        <item>CR.LVPH4T3</item>
+        <item>CR.LVPH6T1</item>
+        <item>CR.LVPH6T2A</item>
+        <item>CR.LVPH6T2B</item>
+        <item>CR.LVPH6T3</item>
+        <item>CR.LVPH6T3B</item>
+        <item>CR.MS1</item>
+        <item>CR.MS2</item>
+        <item>CR.MTF</item>
+        <item>CR.PDPH4T1</item>
+        <item>CR.PDPH4T2</item>
+        <item>CR.PDPH4T3</item>
+        <item>CR.PDPH6T1</item>
+        <item>CR.PDPH6T2</item>
+        <item>CR.PDPH6T3</item>
+        <item>CR.PLBPH4AT1</item>
+        <item>CR.PLBPH4AT2</item>
+        <item>CR.PLBPH4AT3</item>
+        <item>CR.PLBPH4BT1</item>
+        <item>CR.PLBPH4BT2</item>
+        <item>CR.PLBPH4BT3</item>
+        <item>CR.PLBPH4REFT1</item>
+        <item>CR.PLBPH4REFT2</item>
+        <item>CR.PLBPH4REFT3</item>
+        <item>CR.PLBPH6AT1</item>
+        <item>CR.PLBPH6AT2</item>
+        <item>CR.PLBPH6AT3</item>
+        <item>CR.PLBPH6BT1</item>
+        <item>CR.PLBPH6BT2</item>
+        <item>CR.PLBPH6BT3</item>
+        <item>CR.PLSPH4AT1</item>
+        <item>CR.PLSPH4AT2</item>
+        <item>CR.PLSPH4AT3</item>
+        <item>CR.PLSPH6AT1</item>
+        <item>CR.PLSPH6AT2</item>
+        <item>CR.PLSPH6AT3</item>
+        <item>CR.PP5.CON</item>
+        <item>CR.PP5.ELX</item>
+        <item>CR.REFPH4T1</item>
+        <item>CR.REFPH4T2</item>
+        <item>CR.REFPH4T3</item>
+        <item>CR.REFPH6T1</item>
+        <item>CR.REFPH6T2</item>
+        <item>CR.REFPH6T3</item>
+        <item>CR.WFPH4AT1</item>
+        <item>CR.WFPH4AT2</item>
+        <item>CR.WFPH4AT3</item>
+        <item>CR.WFPH4BT1</item>
+        <item>CR.WFPH4BT2</item>
+        <item>CR.WFPH4BT3</item>
+        <item>CR.WFPH6AT1</item>
+        <item>CR.WFPH6AT2</item>
+        <item>CR.WFPH6AT3</item>
+        <item>CR.WFPH6BT1</item>
+        <item>CR.WFPH6BT2</item>
+        <item>CR.WFPH6BT3</item>
+        <item>CS.CE1</item>
+        <item>CS.CE2-A</item>
+        <item>CS.CE2-B</item>
+        <item>CS.CE3.A</item>
+        <item>CS.CE3.B</item>
+        <item>CS.CE5</item>
+        <item>CS.CE6</item>
+        <item>CS.DSE1</item>
+        <item>CS.DSE2</item>
+        <item>CS.DSE3.A</item>
+        <item>CS.DSE3.B</item>
+        <item>CS.DSE3.C</item>
+        <item>CS.DSE4</item>
+        <item>CS.DSE5</item>
+        <item>CS.DSE6</item>
+        <item>CS.EE1</item>
+        <item>CS.EE2</item>
+        <item>CS.EE3</item>
+        <item>CS.ENGCE1-A</item>
+        <item>CS.ENGCE1-B</item>
+        <item>CS.ENGCE1-C</item>
+        <item>CS.ENVENG1</item>
+        <item>CS.ENVENG1-SC</item>
+        <item>CS.ENVX1</item>
+        <item>CS.ENVX1-CE</item>
+        <item>CS.EVCE1A</item>
+        <item>CS.EVCE1B</item>
+        <item>CS.EVCE2A</item>
+        <item>CS.EVCE2B</item>
+        <item>CS.EVCE3</item>
+        <item>CS.MSCE</item>
+        <item>DE.RPL</item>
+        <item>EE.BDG-ESB</item>
+        <item>EE.DLX5</item>
+        <item>EE.DLX6</item>
+        <item>EE.ELX1-A</item>
+        <item>EE.ELX1-B</item>
+        <item>EE.ELX2-A</item>
+        <item>EE.ELX2-B</item>
+        <item>EE.ELX3-A</item>
+        <item>EE.ELX3-B</item>
+        <item>EE.ELX4</item>
+        <item>EE.EMBED9_Y_1</item>
+        <item>EE.EMBED9_Y_2</item>
+        <item>EE.EPS1</item>
+        <item>EE.EPS2</item>
+        <item>EE.EPS3</item>
+        <item>EE.EPS4-A</item>
+        <item>EE.EPS4-B</item>
+        <item>EE.EPS4-C</item>
+        <item>EE.ETC1.A</item>
+        <item>EE.ETC1.B</item>
+        <item>EE.ETC2.A</item>
+        <item>EE.ETC2.B</item>
+        <item>EE.ETC2.C</item>
+        <item>EE.ETC3.A</item>
+        <item>EE.ETC3.B</item>
+        <item>EE.ETC3.C</item>
+        <item>EE.EVC&amp;G803Y1</item>
+        <item>EE.EVC&amp;G803Y2</item>
+        <item>EE.EVC&amp;GB</item>
+        <item>EE.EVC&amp;GC</item>
+        <item>EE.EVCADETC-Mon</item>
+        <item>EE.EVCADETC-Tues</item>
+        <item>EE.EVDCELEM</item>
+        <item>EE.EVELADV6</item>
+        <item>EE.EVEPSBR</item>
+        <item>EE.EVLOGIC1</item>
+        <item>EE.EVLOGIC1T2</item>
+        <item>EE.EVLOGIC2</item>
+        <item>MA.DSA1</item>
+        <item>MB.AMTA</item>
+        <item>MB.ASME</item>
+        <item>MB.BIOENG1A</item>
+        <item>MB.BIOENG1B</item>
+        <item>MB.BIOENG2-A</item>
+        <item>MB.BIOENG2-B</item>
+        <item>MB.BIOENG2FREE</item>
+        <item>MB.BIOENG3</item>
+        <item>MB.BIOENG3FREE</item>
+        <item>MB.DBE1.A</item>
+        <item>MB.DBE2.A</item>
+        <item>MB.DBE3.A</item>
+        <item>MB.DBE4.A</item>
+        <item>MB.DME1</item>
+        <item>MB.DME2</item>
+        <item>MB.DME2.FREE</item>
+        <item>MB.DME3.A1</item>
+        <item>MB.DME3.A2</item>
+        <item>MB.DME3.B1</item>
+        <item>MB.DME3.B2</item>
+        <item>MB.DME3.C1</item>
+        <item>MB.DME3.C2</item>
+        <item>MB.DME3.FREE</item>
+        <item>MB.DME4</item>
+        <item>MB.DME4B</item>
+        <item>MB.DME4FREE</item>
+        <item>MB.DME4FREE1</item>
+        <item>MB.DME5</item>
+        <item>MB.ECQTE_6_11</item>
+        <item>MB.EV EVNMAN</item>
+        <item>MB.EV WAVEN</item>
+        <item>MB.EV2565</item>
+        <item>MB.EV25653</item>
+        <item>MB.EV3DIM</item>
+        <item>MB.EV3DIMS</item>
+        <item>MB.EVAMT1</item>
+        <item>MB.EVAMT1Y2</item>
+        <item>MB.EVASQC</item>
+        <item>MB.EVASQCClon</item>
+        <item>MB.EVASQCNT</item>
+        <item>MB.EVBERE</item>
+        <item>MB.EVBERI</item>
+        <item>MB.EVBIOFUELS (ESB)</item>
+        <item>MB.EVCADA</item>
+        <item>MB.EVCADB</item>
+        <item>MB.EVCADCUS</item>
+        <item>MB.EVCAE</item>
+        <item>MB.EVCME</item>
+        <item>MB.EVCMT</item>
+        <item>MB.EVFLUID</item>
+        <item>MB.EVGREEN</item>
+        <item>MB.EVINTMATHS</item>
+        <item>MB.EVLEAN2</item>
+        <item>MB.EVLMAN</item>
+        <item>MB.EVMAINTEC1</item>
+        <item>MB.EVMAINTEC2</item>
+        <item>MB.EVMECH1</item>
+        <item>MB.EVMECH2</item>
+        <item>MB.EVMECH3</item>
+        <item>MB.EVMECH3/A</item>
+        <item>MB.EVMECH3/B</item>
+        <item>MB.EVMTRON</item>
+        <item>MB.EVPIPCAD</item>
+        <item>MB.EVPMAN</item>
+        <item>MB.EVPMAN2</item>
+        <item>MB.EVPMANC</item>
+        <item>MB.EVPMANC2</item>
+        <item>MB.EVPPT1</item>
+        <item>MB.EVPPT1Y2</item>
+        <item>MB.EVPROENG</item>
+        <item>MB.EVROBO</item>
+        <item>MB.EVSCADA</item>
+        <item>MB.EVSCADAT2</item>
+        <item>MB.EVSCADAT3</item>
+        <item>MB.EVSET</item>
+        <item>MB.EVSETBUILD</item>
+        <item>MB.EVSETEnergy</item>
+        <item>MB.EVSSGB</item>
+        <item>MB.EVWIND</item>
+        <item>MB.MASTERS</item>
+        <item>MB.MECHNAV</item>
+        <item>MB.METS1 - A</item>
+        <item>MB.METS1 - B</item>
+        <item>MB.METS1 - C</item>
+        <item>MB.METS1 - D</item>
+        <item>MB.METS1 - E</item>
+        <item>MB.METS1 - free</item>
+        <item>MB.METS2.A1</item>
+        <item>MB.METS2.A2</item>
+        <item>MB.METS2.B1</item>
+        <item>MB.METS2.B2</item>
+        <item>MB.METS2.FREE</item>
+        <item>MB.METS2.FREE1</item>
+        <item>MB.METS3.A</item>
+        <item>MB.METS3.B</item>
+        <item>MB.METS3.C</item>
+        <item>MB.METS3.CFREE</item>
+        <item>MB.METS3M</item>
+        <item>MB.PHD</item>
+        <item>MB.PPT</item>
+        <item>MB.PPT Free</item>
+        <item>MB.SOCRATES</item>
+        <item>MC.ABC1</item>
+        <item>MC.ABC2</item>
+        <item>MC.EVMEDPRD</item>
+        <item>MC.JNM</item>
+        <item>MC.MM1A</item>
+        <item>MC.MM1B</item>
+        <item>MC.MM2A</item>
+        <item>MC.MM2B</item>
+        <item>MC.MM3</item>
+        <item>MC.MM4</item>
+        <item>MC.MM5</item>
+        <item>MC.MM5RS</item>
+        <item>MC.PR1</item>
+        <item>MC.PR2</item>
+        <item>MC.PR3.A</item>
+        <item>MC.PR3.B</item>
+        <item>MC.PR4</item>
+        <item>MC.PURE8</item>
+        <item>MC.PURENM9</item>
+        <item>ME.DME5</item>
+        <item>MG.BS1 - A</item>
+        <item>MG.BS1 - B</item>
+        <item>MG.BS1 - C</item>
+        <item>MG.BS1 - D</item>
+        <item>MG.BS2.A</item>
+        <item>MG.BS2.B</item>
+        <item>MG.BS3-A</item>
+        <item>MG.BS3-B</item>
+        <item>MG.BS3-C</item>
+        <item>MG.BS3-D</item>
+        <item>MG.BS4.A</item>
+        <item>MG.BS4.B</item>
+        <item>MG.BS5</item>
+        <item>MG.BS6</item>
+        <item>MG.EVBBSMGT1</item>
+        <item>MG.EVBBSMGT2</item>
+        <item>MG.EVBBSMGT4-GRP1</item>
+        <item>MG.EVBBSMGT4-GRP2</item>
+        <item>MG.EVHCBS1</item>
+        <item>MG.EVHCBS2</item>
+        <item>MG.MBS1-A</item>
+        <item>MG.MBS1-B</item>
+        <item>MG.MBS2-A</item>
+        <item>MG.MBS2-B</item>
+        <item>MR.BIB1</item>
+        <item>MR.BS3M</item>
+        <item>MR.EVBSSM1</item>
+        <item>MR.EVDM1</item>
+        <item>MR.MBSMKT</item>
+        <item>MR.MRKT1</item>
+        <item>MR.MRKT2</item>
+        <item>MR.MRKT3</item>
+        <item>MR.MRKT4</item>
+        <item>MR.MSCMRKT</item>
+        <item>NS.CL1DK</item>
+        <item>NS.CMM</item>
+        <item>NS.ETO1</item>
+        <item>NS.ETO2</item>
+        <item>NS.ETO2-DI</item>
+        <item>NS.ETO3</item>
+        <item>NS.EVBSS</item>
+        <item>NS.EVEDH</item>
+        <item>NS.EVM4</item>
+        <item>NS.EVM4.OOW</item>
+        <item>NS.EVOCEAN</item>
+        <item>NS.EVOOW.A</item>
+        <item>NS.EVOOW.B</item>
+        <item>NS.EVSC</item>
+        <item>NS.EVYOFF</item>
+        <item>NS.HC1</item>
+        <item>NS.HC2</item>
+        <item>NS.M4-C</item>
+        <item>NS.M4-S</item>
+        <item>NS.MP1-A</item>
+        <item>NS.MP1-B</item>
+        <item>NS.MP1-C</item>
+        <item>NS.MP1-D</item>
+        <item>NS.MP2-A</item>
+        <item>NS.MP2-B</item>
+        <item>NS.MP3-A</item>
+        <item>NS.MP3-B</item>
+        <item>NS.MP3-C</item>
+        <item>NS.NARAS-O.A</item>
+        <item>NS.NARAS-O.B</item>
+        <item>NS.OOW</item>
+        <item>NS.SC1</item>
+        <item>NS.TDO1-A</item>
+        <item>NS.TDO1-B</item>
+        <item>NS.TDO1-C</item>
+        <item>NS.TDO1-D</item>
+        <item>NS.TDO2</item>
+        <item>NS.TDO3-A1</item>
+        <item>NS.TDO3-A2</item>
+        <item>NS.TDO3-B</item>
+        <item>NS.TDO3-C"</item>
+        <item>NS.TDO4-INS</item>
+        <item>NS.TDO4-MN-A</item>
+        <item>NS.TDO4-MN-B</item>
+        <item>OP.ACCAFT</item>
+        <item>OP.BBADM1-A</item>
+        <item>OP.BBADM1-B</item>
+        <item>OP.BBADM1-C</item>
+        <item>OP.BBADM2-A</item>
+        <item>OP.BBADM2-B</item>
+        <item>OP.BBADM3-A</item>
+        <item>OP.BBADM3-B</item>
+        <item>OP.BBADM4</item>
+        <item>OP.EVACCA</item>
+        <item>OP.EVACPA1-F2</item>
+        <item>OP.EVACPA2-P1</item>
+        <item>OP.EVACPA3-P2</item>
+        <item>OP.EVDHRM1</item>
+        <item>OP.EVDHRM2</item>
+        <item>OP.EVDHRM3</item>
+        <item>OP.EVDHRM4</item>
+        <item>OP.EVIATI-1</item>
+        <item>OP.EVIATI-2A</item>
+        <item>OP.EVMAHRM1</item>
+        <item>OP.EVMAHRM2</item>
+        <item>OP.EVMBS1-I&amp;E</item>
+        <item>OP.EVMBS1-MK&amp;AC</item>
+        <item>OP.EVMBS2-ACC</item>
+        <item>OP.EVMBS2-I&amp;E</item>
+        <item>OP.EVMBS2-MKT</item>
+        <item>OP.EVPAYROLL</item>
+        <item>OP.EVPHDAE</item>
+        <item>OP.EVRT-T1</item>
+        <item>OP.EVRT-T2</item>
+        <item>PE.AUTO1 A</item>
+        <item>PE.AUTO1 B</item>
+        <item>PE.AUTO1 C</item>
+        <item>PE.AUTO1 D</item>
+        <item>PE.AUTO2 A</item>
+        <item>PE.AUTO2 B</item>
+        <item>PE.AUTO3A</item>
+        <item>PE.AUTO3B</item>
+        <item>PE.AUTO4</item>
+        <item>PE.BES1</item>
+        <item>PE.BES2</item>
+        <item>PE.BES3civil</item>
+        <item>PE.BES4</item>
+        <item>PE.BIS1 - A</item>
+        <item>PE.BIS2A</item>
+        <item>PE.BIS2B</item>
+        <item>PE.BIS3A</item>
+        <item>PE.BIS3B</item>
+        <item>PE.CB1</item>
+        <item>PE.CBPMO</item>
+        <item>PE.CBPP</item>
+        <item>PE.CFDMO</item>
+        <item>PE.DBPMO</item>
+        <item>PE.DCE1</item>
+        <item>PE.DCE2</item>
+        <item>PE.DCE2-(COMMON)</item>
+        <item>PE.DCE3</item>
+        <item>PE.DCE4-A</item>
+        <item>PE.DCE4ACCS</item>
+        <item>PE.DCE4-B</item>
+        <item>PE.DCE5</item>
+        <item>PE.EVELEADV</item>
+        <item>PE.EVELECELEM</item>
+        <item>PE.EVELEINT</item>
+        <item>PE.EVENGADV</item>
+        <item>PE.EVGMP1</item>
+        <item>PE.EVGMP2</item>
+        <item>PE.EVGMP3</item>
+        <item>PE.EVGMP4</item>
+        <item>PE.EVGORG</item>
+        <item>PE.EVMIMI</item>
+        <item>PE.EVPFIZER</item>
+        <item>PE.EXPLCIT</item>
+        <item>PE.GMP1A</item>
+        <item>PE.GMP1B</item>
+        <item>PE.GMP2</item>
+        <item>PE.HCGMP1</item>
+        <item>PE.HCGMP2</item>
+        <item>PE.HCGMP3</item>
+        <item>PE.MASTERS</item>
+        <item>PE.MSCCENG</item>
+        <item>PE.PPD1</item>
+        <item>PE.SET1A</item>
+        <item>PE.SET1B</item>
+        <item>PE.SET1C</item>
+        <item>PE.SET1D</item>
+        <item>PE.SET1FREE</item>
+        <item>PE.SET2A</item>
+        <item>PE.SET2A free</item>
+        <item>PE.SET2B</item>
+        <item>PE.SET2C</item>
+        <item>PE.SET3A</item>
+        <item>PE.SET3B</item>
+        <item>PE.SET3C</item>
+        <item>PE.SET3FREE</item>
+        <item>PE.SET4A</item>
+        <item>PE.SET4B</item>
+        <item>PE.SET4B Free</item>
+        <item>PE.SET4C</item>
+        <item>PS.AIA</item>
+        <item>PS.BEST1</item>
+        <item>PS.BEST2</item>
+        <item>PS.BEST3</item>
+        <item>PS.BEST4</item>
+        <item>PS.CIMC-A Grp 1</item>
+        <item>PS.CIMC-A Grp 2</item>
+        <item>PS.CIMC-B</item>
+        <item>PS.CIMC-C</item>
+        <item>PS.DCH1</item>
+        <item>PS.DCH2</item>
+        <item>PS.DCH3</item>
+        <item>PS.DCH4</item>
+        <item>PS.DSCI1</item>
+        <item>PS.EVDIPQM1</item>
+        <item>PS.EVDIPQM2</item>
+        <item>PS.EVHCQA</item>
+        <item>PS.EVIP3-ACCS</item>
+        <item>PS.EVIP4-ACCS</item>
+        <item>PS.EVS3A</item>
+        <item>PS.EVSINDA6</item>
+        <item>PS.EVSINDA7</item>
+        <item>PS.EVSINDA8</item>
+        <item>PS.IE1</item>
+        <item>PS.IE2</item>
+        <item>PS.IE3</item>
+        <item>PS.IE4</item>
+        <item>PS.IP1</item>
+        <item>PS.IP2</item>
+        <item>PS.IP3</item>
+        <item>PS.IP4</item>
+        <item>PS.IP5</item>
+        <item>PS.IP6</item>
+        <item>PS.S1A</item>
+        <item>PS.S2A</item>
+        <item>PS.S3A</item>
+        <item>PS.S5A</item>
+        <item>PS.S6A</item>
+        <item>PS.SCI1</item>
+        <item>SL.EYE1-A</item>
+        <item>SL.EYE1-B</item>
+        <item>SL.EYE2-A</item>
+        <item>SL.EYE2-B</item>
+        <item>SL.EYE2-C</item>
+        <item>SL.EYE3-A</item>
+        <item>SL.EYE3-B</item>
+        <item>SL.EYE3-C</item>
+        <item>SL.EYE4</item>
+        <item>SL.EYE5</item>
+        <item>SL.MTS3-A</item>
+        <item>SL.MTS3-B</item>
+        <item>SL.MTS4-A</item>
+        <item>SL.MTS4-B</item>
+        <item>SL.PLTH1</item>
+        <item>SL.RL1-A</item>
+        <item>SL.RL1-B</item>
+        <item>SL.RL1-C</item>
+        <item>SL.RL1-D</item>
+        <item>SL.RL2-A</item>
+        <item>SL.RL2-B</item>
+        <item>SL.RL2-C</item>
+        <item>SL.RL2-D</item>
+        <item>SL.RL3-A</item>
+        <item>SL.RL3-B</item>
+        <item>SL.RL4</item>
+        <item>SL.RL5</item>
+        <item>SO.PIM1</item>
+        <item>TC.BACA1cuisine</item>
+        <item>TC.BACA1pastry</item>
+        <item>TC.BBBM1</item>
+        <item>TC.BBBM2</item>
+        <item>TC.BBBM3</item>
+        <item>TC.BBCA1A</item>
+        <item>TC.BBCA1B</item>
+        <item>TC.BBCA1C</item>
+        <item>TC.BBCA2A</item>
+        <item>TC.BBCA2B</item>
+        <item>TC.BBCA2C</item>
+        <item>TC.BBCA3A</item>
+        <item>TC.BBCA3B</item>
+        <item>TC.BBCA3C</item>
+        <item>TC.CHEF1Accelerated</item>
+        <item>TC.CHEF1DRA</item>
+        <item>TC.CHEF1DRB</item>
+        <item>TC.CHEF2DRA</item>
+        <item>TC.CHEF2DRB</item>
+        <item>TC.CHEF3DRA</item>
+        <item>TC.CHEF3DRB</item>
+        <item>TC.CUL1A</item>
+        <item>TC.CUL1B</item>
+        <item>TC.CUL1C</item>
+        <item>TC.CUL1D</item>
+        <item>TC.CUL1E</item>
+        <item>TC.CUL2A</item>
+        <item>TC.CUL2B</item>
+        <item>TC.CUL2C</item>
+        <item>TC.CUL2D</item>
+        <item>TC.CUL3A</item>
+        <item>TC.CUL3B</item>
+        <item>TC.CUL3C</item>
+        <item>TC.EV PASTRY</item>
+        <item>TC.EVBARRRTN</item>
+        <item>TC.EVFOODHYG_A</item>
+        <item>TC.EVFOODHYG_B</item>
+        <item>TC.EVWINE</item>
+        <item>TC.HM1.A</item>
+        <item>TC.HM1.B</item>
+        <item>TC.HM1.C</item>
+        <item>TC.HM2.A</item>
+        <item>TC.HM2.B</item>
+        <item>TC.HM3</item>
+        <item>TC.HM4</item>
+        <item>TC.HOSP1A</item>
+        <item>TC.HOSP1B</item>
+        <item>TC.HOSP2</item>
+        <item>TC.TOU1{L7}A</item>
+        <item>TC.TOU1{L7}B</item>
+        <item>TC.TOU2.A</item>
+        <item>TC.TOU2.B</item>
+        <item>TC.TOU3A</item>
+        <item>TC.TOU3B</item>
+        <item>TC.TOU4</item>
+        <item>TC.TOU5</item>
+        <item>TC.TRSM1</item>
+        <item>TC.TRSM2</item>
+        <item>TC.TRSM3</item>
+        <item>TC.TRSM4</item>
+        <item>UQ.DRAMA1</item>
+        <item>UQ.DRAMA2</item>
+        <item>UQ.DRAMA3</item>
+        <item>UQ.DRAMA4</item>
+        <item>UQ.JNRACCSA</item>
+        <item>UQ.JNRACCSB</item>
+        <item>UQ.JNRCERTA</item>
+        <item>UQ.JNRCERTB</item>
+        <item>UQ.JNRCERTC</item>
+        <item>UQ.LVCERT</item>
+        <item>UQ.M1A</item>
+        <item>UQ.M1B</item>
+        <item>UQ.M1C</item>
+        <item>UQ.M1D</item>
+        <item>UQ.M2A</item>
+        <item>UQ.M2B</item>
+        <item>UQ.M2C</item>
+        <item>UQ.M2H</item>
+        <item>UQ.M3A</item>
+        <item>UQ.M3B</item>
+        <item>UQ.M3C</item>
+        <item>UQ.M3H</item>
+        <item>UQ.M3WA</item>
+        <item>UQ.M3WB</item>
+        <item>UQ.M4A</item>
+        <item>UQ.M4B</item>
+        <item>UQ.M4C</item>
+        <item>UQ.M4E</item>
+        <item>UQ.M4F</item>
+        <item>UQ.M4G</item>
+        <item>UQ.M4H</item>
+        <item>UQ.M4WA</item>
+        <item>UQ.M4WB</item>
+        <item>UQ.M5A</item>
+        <item>UQ.M5B</item>
+        <item>UQ.M5D</item>
+        <item>UQ.M5E</item>
+        <item>UQ.M5F</item>
+        <item>UQ.M5G</item>
+        <item>UQ.M5H</item>
+        <item>UQ.M5WA</item>
+        <item>UQ.M5WB</item>
+        <item>UQ.MP1F</item>
+        <item>UQ.MP1G</item>
+        <item>UQ.MP1S</item>
+        <item>UQ.MP1T</item>
+        <item>UQ.MP2F</item>
+        <item>UQ.MP2G</item>
+        <item>UQ.MP2S</item>
+        <item>UQ.MP2T</item>
+        <item>UQ.MP3F</item>
+        <item>UQ.MP3G</item>
+        <item>UQ.MP3S</item>
+        <item>UQ.MP3T</item>
+        <item>UQ.MP4B</item>
+        <item>UQ.MP4C</item>
+        <item>UQ.MP4F</item>
+        <item>UQ.MP4S</item>
+        <item>UQ.MP5A</item>
+        <item>UQ.MP5B</item>
+        <item>UQ.MP5C</item>
+        <item>UQ.MP6A</item>
+        <item>UQ.MP6B</item>
+        <item>UQ.MP6C</item>
+        <item>UQ.MP6H</item>
+        <item>UQ.MSA1</item>
+        <item>UQ.MSA2</item>
+        <item>UQ.MSA3</item>
+        <item>UQ.MUSTCH5</item>
+        <item>UQ.MX1</item>
+        <item>UQ.MX2</item>
+        <item>UQ.MX3</item>
+        <item>UQ.MX4</item>
+        <item>UQ.MX5</item>
+        <item>UQ.MX6</item>
+        <item>UQ.MX7</item>
+        <item>UQ.POP1</item>
+        <item>UQ.POP2</item>
+        <item>UQ.POP3</item>
+        <item>UQ.POP4</item>
+        <item>UQ.SM1A</item>
+        <item>UQ.SM1B</item>
+        <item>UQ.SM1C</item>
+        <item>UQ.SM1D</item>
+        <item>UQ.SM1E</item>
+        <item>UQ.SM2A</item>
+        <item>UQ.SM2B</item>
+        <item>UQ.SM2C</item>
+        <item>UQ.SM2D</item>
+        <item>UQ.SM3A</item>
+        <item>UQ.SM3B</item>
+        <item>UQ.SM3C</item>
+        <item>UQ.SM4A</item>
+        <item>UQ.SM4B</item>
+        <item>UQ.SMX</item>
+        <item>UQ.SNRACCS</item>
+        <item>UQ.T1</item>
+        <item>UQ.TEMP</item>
+        <item>UQ.WW1A</item>
+        <item>UQ.WW1B</item>
+        <item>UQ.WW1C</item>
+        <item>UQ.WW2A</item>
+        <item>UQ.WW2B</item>
+        <item>UQ.WW2C</item>
+    </string-array>
+
+</resources>
