@@ -24,7 +24,7 @@ import ie.cork.mycit.group1.HomePage;
 import ie.cork.mycit.group1.R;
 
 
-public class MainActivity extends Activity implements CompoundButton.OnCheckedChangeListener {
+public class HomePageSettings extends Activity implements CompoundButton.OnCheckedChangeListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +80,7 @@ public class MainActivity extends Activity implements CompoundButton.OnCheckedCh
         saveBoxes(9, findViewById(R.id.checkBox10));
         saveBoxes(10, findViewById(R.id.checkBox11));
         try{
-            saveFile();
+           // saveFile();
         } catch (Exception e) {
             // e.printStackTrace();
         }
@@ -91,10 +91,10 @@ public class MainActivity extends Activity implements CompoundButton.OnCheckedCh
     public void saveBoxes(int x, View v) {
         CheckBox cb = (CheckBox) v;
         if(cb.isChecked() == true){
-            checkList.add(x, "true");
+           // checkList.add(x, "true");
         }
         else {
-            checkList.add(x, "false");
+          //  checkList.add(x, "false");
         }
     }
 
