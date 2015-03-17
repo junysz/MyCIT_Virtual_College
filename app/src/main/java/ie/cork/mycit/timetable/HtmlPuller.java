@@ -1,4 +1,4 @@
-package ie.cork.mycit.group1.timetable;
+package ie.cork.mycit.timetable;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,9 +12,9 @@ import java.net.URL;
  * Software Development Group project Year 3   -   2015
  * 
  */
-public class HtmlPuller {
+public class HtmlPuller{
 	
-	private URL oracle;
+	private URL url;
 	private BufferedReader in;
 	private StringBuffer code;
 	public HtmlPuller(String URL) throws IOException
@@ -42,9 +42,9 @@ public class HtmlPuller {
 	public BufferedReader retrieveCodeFromURL(String url) throws IOException 
 	{
 
-		oracle = new URL(url);
+		this.url = new URL(url);
         in = new BufferedReader(
-        new InputStreamReader(oracle.openStream()));
+        new InputStreamReader(this.url.openStream()));
 
         return in;
 	}

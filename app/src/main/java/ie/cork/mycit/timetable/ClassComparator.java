@@ -1,4 +1,4 @@
-package ie.cork.mycit.group1.timetable;
+package ie.cork.mycit.timetable;
 
 import java.util.Comparator;
 /**
