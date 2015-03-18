@@ -16,9 +16,11 @@
         android:onClick="submit"
         android:layout_alignWithParentIfMissing="false"
         android:layout_below="@+id/spinnerClassGroups"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="77dp" />
+        android:layout_marginTop="77dp"
+        android:layout_alignLeft="@+id/spinnerClassGroups"
+        android:layout_alignStart="@+id/spinnerClassGroups"
+        android:layout_alignRight="@+id/spinnerClassGroups"
+        android:layout_alignEnd="@+id/spinnerClassGroups" />
 
     <TextView
         android:id="@+id/textViewClassGroups"
@@ -32,11 +34,13 @@
 
     <Spinner
         android:id="@+id/spinnerClassGroups"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:spinnerMode="dropdown"
         android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignLeft="@+id/textViewClassGroups"
+        android:layout_alignStart="@+id/textViewClassGroups"
+        android:layout_alignRight="@+id/textViewClassGroups"
+        android:layout_alignEnd="@+id/textViewClassGroups" />
 
 </RelativeLayout>

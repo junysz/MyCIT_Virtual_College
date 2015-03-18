@@ -16,25 +16,22 @@ import java.util.regex.Pattern;
  * 
  */
 public class TimetableExtractor {
-	private LinkedList<Integer> isClassonDay = new LinkedList<Integer>();
-	private Pattern regExEmptyCell = Pattern.compile("<td  >&nbsp;</td>");
-	private Pattern regExClassLentgh1 = Pattern.compile("<td   colspan='(\\d)' rowspan='4' >");
-	private Pattern regExClassLentgh2 = Pattern.compile("<td   colspan='(\\d)' rowspan='8' >");
-	private Pattern regExClassLentgh3 = Pattern.compile("<td   colspan='(\\d)' rowspan='12' >");
-	private Pattern regExClassLentgh4 = Pattern.compile("<td   colspan='(\\d)' rowspan='16' >");
-	private Pattern regExClassLentgh5 = Pattern.compile("<td   colspan='(\\d)' rowspan='20' >");
-	private Pattern regExClassLentgh6 = Pattern.compile("<td   colspan='(\\d)' rowspan='24' >");
+	private final LinkedList<Integer> isClassonDay = new LinkedList<Integer>();
+	private final Pattern regExEmptyCell = Pattern.compile("<td  >&nbsp;</td>");
+	private final Pattern regExClassLentgh1 = Pattern.compile("<td   colspan='(\\d)' rowspan='4' >");
+	private final Pattern regExClassLentgh2 = Pattern.compile("<td   colspan='(\\d)' rowspan='8' >");
+	private final Pattern regExClassLentgh3 = Pattern.compile("<td   colspan='(\\d)' rowspan='12' >");
+	private final Pattern regExClassLentgh4 = Pattern.compile("<td   colspan='(\\d)' rowspan='16' >");
+	private final Pattern regExClassLentgh5 = Pattern.compile("<td   colspan='(\\d)' rowspan='20' >");
+	private final Pattern regExClassLentgh6 = Pattern.compile("<td   colspan='(\\d)' rowspan='24' >");
 	private Pattern regExClassLocation = Pattern.compile("<td align='right'><font color='#008000'>([\\S\\|,]{1,13})</font></td>");
 	private Pattern regExClassName = Pattern.compile("<td align='left'><font color='#000000'>(.*?)</font></td>");
 	private Pattern regExFirstCellInRow = Pattern.compile("<td  rowspan='1' bgcolor='#C0C0C0'><font color='#000000'>(\\d+):(\\d+)</font></td>");
-	private Matcher firstCellInRowMatch;
-	private Matcher classNameMatch;
-	private Matcher emptyCellMatch,classLenth1hMatch,classLenth2hMatch,classLenth3hMatch,classLenth4hMatch,classLenth5hMatch, classLenth6hMatch;
-	private int dayOfTheWeek=1;
+    private int dayOfTheWeek=1;
 	
 	
 	private LinkedList<Lclass> myClasses = new LinkedList<Lclass>();
-	private Time[] timesIndex = {new Time(8,00), new Time(8,15), new Time(8,30), new Time(8,45),
+	private final Time[] timesIndex = {new Time(8,00), new Time(8,15), new Time(8,30), new Time(8,45),
 								new Time(9,00), new Time(9,15), new Time(9,30), new Time(9,45),
 								new Time(10,00), new Time(10,15), new Time(10,30), new Time(10,45),
 								new Time(11,00), new Time(11,15), new Time(11,30), new Time(11,45),
@@ -44,8 +41,8 @@ public class TimetableExtractor {
 								new Time(15,00), new Time(15,15), new Time(15,30), new Time(15,45),
 								new Time(16,00), new Time(16,15), new Time(16,30), new Time(16,45),
 								new Time(17,00), new Time(17,15), new Time(17,30), new Time(17,45), new Time(18,00)};
-	private Matcher locationMatch;
-	public LinkedList<Lclass> getTimetable(BufferedReader code) throws IOException
+
+    public LinkedList<Lclass> getTimetable(BufferedReader code) throws IOException
 	{
 		String currentLine="", currentClassName="", classLocation="";
 		int timeArrayIndexNum = 0, classLength = 0 ;
@@ -59,17 +56,17 @@ public class TimetableExtractor {
                 isClassonDay.add(0);
                 isClassonDay.add(0);
                 isClassonDay.add(0);
-                firstCellInRowMatch = regExFirstCellInRow.matcher(currentLine);
+                Matcher firstCellInRowMatch = regExFirstCellInRow.matcher(currentLine);
                 regExFirstCellInRow.matcher(currentLine);
-                emptyCellMatch = regExEmptyCell.matcher(currentLine);
-                classLenth1hMatch = regExClassLentgh1.matcher(currentLine);
-                classLenth2hMatch = regExClassLentgh2.matcher(currentLine);
-                classLenth3hMatch = regExClassLentgh3.matcher(currentLine);
-                classLenth4hMatch = regExClassLentgh4.matcher(currentLine);
-                classLenth5hMatch = regExClassLentgh5.matcher(currentLine);
-                classLenth6hMatch = regExClassLentgh6.matcher(currentLine);
-                locationMatch = regExClassLocation.matcher(currentLine);
-                classNameMatch = regExClassName.matcher(currentLine);
+                Matcher emptyCellMatch = regExEmptyCell.matcher(currentLine);
+                Matcher classLenth1hMatch = regExClassLentgh1.matcher(currentLine);
+                Matcher classLenth2hMatch = regExClassLentgh2.matcher(currentLine);
+                Matcher classLenth3hMatch = regExClassLentgh3.matcher(currentLine);
+                Matcher classLenth4hMatch = regExClassLentgh4.matcher(currentLine);
+                Matcher classLenth5hMatch = regExClassLentgh5.matcher(currentLine);
+                Matcher classLenth6hMatch = regExClassLentgh6.matcher(currentLine);
+                Matcher locationMatch = regExClassLocation.matcher(currentLine);
+                Matcher classNameMatch = regExClassName.matcher(currentLine);
 
                 if(firstCellInRowMatch.find())
                 {
@@ -97,7 +94,7 @@ public class TimetableExtractor {
                 else if(emptyCellMatch.find())
                 {
                     dayOfTheWeek++;
-                    while(isClassonDay.get(dayOfTheWeek)>0)
+                    while(isClassonDay.get(dayOfTheWeek-1)>0)
                     {
                         dayOfTheWeek++;
                     }
@@ -144,7 +141,7 @@ public class TimetableExtractor {
                 }
                 else if(locationMatch.find())
                 {
-                    classLocation=locationMatch.group(1);
+                    classLocation= locationMatch.group(1);
                     myClasses.add(new Lclass(currentClassName,classLocation,timesIndex[timeArrayIndexNum-1],timesIndex[timeArrayIndexNum+(classLength*4)-1],dayOfTheWeek-1));
                 }
 
@@ -197,7 +194,17 @@ public class TimetableExtractor {
 							{
 								dayOfTheWeek+=2;
 								isClassonDay.set(3, isClassonDay.get(3)-1);
-								break;
+                                if(isClassonDay.get(4)>0)
+                                {
+                                    dayOfTheWeek+=2;
+                                    isClassonDay.set(4, isClassonDay.get(4)-1);
+                                    break;
+                                }
+                                else
+                                {
+                                    dayOfTheWeek++;
+                                    break;
+                                }
 							}
 							else
 							{
@@ -244,7 +251,17 @@ public class TimetableExtractor {
 						{
 							dayOfTheWeek+=2;
 							isClassonDay.set(3, isClassonDay.get(3)-1);
-							break;
+                            if(isClassonDay.get(4)>0)
+                            {
+                                dayOfTheWeek+=2;
+                                isClassonDay.set(4, isClassonDay.get(4)-1);
+                                break;
+                            }
+                            else
+                            {
+                                dayOfTheWeek++;
+                                break;
+                            }
 						}
 						else
 						{
@@ -282,7 +299,17 @@ public class TimetableExtractor {
 					{
 						dayOfTheWeek+=2;
 						isClassonDay.set(3, isClassonDay.get(3)-1);
-						break;
+                        if(isClassonDay.get(4)>0)
+                        {
+                            dayOfTheWeek+=2;
+                            isClassonDay.set(4, isClassonDay.get(4)-1);
+                            break;
+                        }
+                        else
+                        {
+                            dayOfTheWeek++;
+                            break;
+                        }
 					}
 					else
 					{
@@ -302,9 +329,46 @@ public class TimetableExtractor {
 				break;
 			}
 		case 4:
-			dayOfTheWeek++;
-			break;
-		default:return;
+            if(isClassonDay.get(3)>0)
+            {
+                dayOfTheWeek+=2;
+                isClassonDay.set(3, isClassonDay.get(3)-1);
+                if(isClassonDay.get(3)>0)
+                {
+                    dayOfTheWeek+=2;
+                    isClassonDay.set(3, isClassonDay.get(3)-1);
+                    if(isClassonDay.get(4)>0)
+                    {
+                        dayOfTheWeek+=2;
+                        isClassonDay.set(4, isClassonDay.get(4)-1);
+                        break;
+                    }
+                    else
+                    {
+                        dayOfTheWeek++;
+                        break;
+                    }
+                }
+                else
+                {
+                    dayOfTheWeek++;
+                    break;
+                }
+            }
+            case 5:
+                if(isClassonDay.get(4)>0)
+                {
+                    dayOfTheWeek+=2;
+                    isClassonDay.set(4, isClassonDay.get(4)-1);
+                    break;
+                }
+                else
+                {
+                    dayOfTheWeek++;
+                    break;
+                }
+
+		default:dayOfTheWeek++;
 		}
 	}
 	public LinkedList<Lclass> getMyClasses() {

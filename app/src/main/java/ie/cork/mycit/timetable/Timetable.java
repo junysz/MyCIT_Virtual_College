@@ -22,18 +22,16 @@ import java.util.concurrent.ExecutionException;
 
 
 public class Timetable extends ActionBarActivity {
-    ClassComparator.ExpandableListAdapter listAdapter;
-    ExpandableListView expListView;
-    List<String> listDataHeader = new LinkedList<String>();
-    LinkedList<Lclass> classes=new LinkedList<Lclass>();
-    HashMap<String, List<String>> listDataChild = new HashMap<String, List<String>>();
+    private final List<String> listDataHeader = new LinkedList<String>();
+    private LinkedList<Lclass> classes=new LinkedList<Lclass>();
+    private final HashMap<String, List<String>> listDataChild = new HashMap<String, List<String>>();
 
-    List<String> monday = new ArrayList<String>();
-    List<String> tuesday = new ArrayList<String>();
-    List<String> wednesday = new ArrayList<String>();
-    List<String> thursday = new ArrayList<String>();
-    List<String> friday = new ArrayList<String>();
-    String url;
+    private final List<String> monday = new ArrayList<String>();
+    private final List<String> tuesday = new ArrayList<String>();
+    private final List<String> wednesday = new ArrayList<String>();
+    private final List<String> thursday = new ArrayList<String>();
+    private final List<String> friday = new ArrayList<String>();
+    private String url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         classes=new LinkedList<Lclass>();
@@ -54,12 +52,12 @@ public class Timetable extends ActionBarActivity {
 
 
         // get the listview
-        expListView = (ExpandableListView) findViewById(R.id.timetableView);
+        ExpandableListView expListView = (ExpandableListView) findViewById(R.id.timetableView);
 
         // preparing list data
         prepareListData();
 
-        listAdapter = new ClassComparator.ExpandableListAdapter(this, listDataHeader, listDataChild);
+        ClassComparator.ExpandableListAdapter listAdapter = new ClassComparator.ExpandableListAdapter(this, listDataHeader, listDataChild);
 
         // setting list adapter
         expListView.setAdapter(listAdapter);
@@ -97,8 +95,16 @@ public class Timetable extends ActionBarActivity {
         listDataHeader.add(getResources().getString(R.string.thursday));
         listDataHeader.add(getResources().getString(R.string.friday));
 
-        int currentDay = 1;
         int i = 0;
+        while(classes==null&&i<5)
+        {
+            try {
+                this.wait(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            i++;
+        }
         if(classes!=null)
         {
             for(i=0;i<classes.size();i++)
@@ -107,15 +113,15 @@ public class Timetable extends ActionBarActivity {
                     case 1:for(i=0;i<classes.size();i++)
                     {
                         switch (classes.get(i).getDayOfTheWeek()){
-                            case 1:monday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
+                            case 1:monday.add(0,classes.get(i).getStartTime().getTimeFormatted()+  " - " +classes.get(i).getEndTime().getTimeFormatted()+ "\n\t" + classes.get(i).getName() +"\n\t" + classes.get(i).getLocation());
                                 break;
-                            case 2:tuesday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
+                            case 2:tuesday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " +classes.get(i).getEndTime().getTimeFormatted()+ "\n\t" + classes.get(i).getName() +"\n\t" + classes.get(i).getLocation());
                                 break;
-                            case 3:wednesday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
+                            case 3:wednesday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " +classes.get(i).getEndTime().getTimeFormatted()+ "\n\t" + classes.get(i).getName() +"\n\t" + classes.get(i).getLocation());
                                 break;
-                            case 4:thursday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
+                            case 4:thursday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " +classes.get(i).getEndTime().getTimeFormatted()+ "\n\t" + classes.get(i).getName() +"\n\t" + classes.get(i).getLocation());
                                 break;
-                            case 5:friday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
+                            case 5:friday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " +classes.get(i).getEndTime().getTimeFormatted()+ "\n" + classes.get(i).getName() +"\n\t" + classes.get(i).getLocation());
                                 break;
                         }
                     }
@@ -157,9 +163,6 @@ public class Timetable extends ActionBarActivity {
             }
     private class RetrieveHTMLcode extends AsyncTask<Void,Void,Void> {
 
-        private BufferedReader in;
-        private StringBuffer code;
-        private BufferedReader theCode;
         @Override
         protected Void doInBackground(Void... uri) {
             try {
