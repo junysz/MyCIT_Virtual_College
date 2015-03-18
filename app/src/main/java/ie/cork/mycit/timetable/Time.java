@@ -23,6 +23,6 @@ public class Time {
 	public String getTimeFormatted()
 	{
 		
-		return ""+hours+":"+minutes;
+		return ""+String.format("%02d", hours)+":"+String.format("%02d", minutes);
 	}
 }

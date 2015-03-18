@@ -88,7 +88,7 @@
                 android:value="ie.cork.mycit.group1.HomePage" />
         </activity>
         <activity
-            android:name=".Timetables"
+            android:name="ie.cork.mycit.timetable.Timetables"
             android:label="@string/title_activity_timetables"
             android:parentActivityName=".HomePage" >
             <meta-data
@@ -184,12 +184,12 @@
                 android:value="ie.cork.mycit.group1.HomePage" />
         </activity>
         <activity
-            android:name=".Timetable"
+            android:name="ie.cork.mycit.timetable.Timetable"
             android:label="@string/title_activity_timetable"
-            android:parentActivityName=".Timetables" >
+            android:parentActivityName="ie.cork.mycit.timetable.Timetables" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="ie.cork.mycit.group1.Timetables" />
+                android:value="ie.cork.mycit.timetable.Timetables" />
         </activity>
     </application>
 

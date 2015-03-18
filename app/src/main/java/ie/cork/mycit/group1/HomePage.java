@@ -5,7 +5,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -23,6 +22,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import ie.cork.mycit.settings.HomePageSettings;
+import ie.cork.mycit.timetable.Timetables;
 
 public class HomePage extends ActionBarActivity implements
 	NavigationDrawerFragment.NavigationDrawerCallbacks {

@@ -1,4 +1,4 @@
-package ie.cork.mycit.group1;
+package ie.cork.mycit.timetable;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -7,23 +7,22 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
-import ie.cork.mycit.timetable.*;
+import ie.cork.mycit.group1.R;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import ie.cork.mycit.timetable.*;
-
 
 public class Timetable extends ActionBarActivity {
-    ExpandableListAdapter listAdapter;
+    ClassComparator.ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader = new LinkedList<String>();
     LinkedList<Lclass> classes=new LinkedList<Lclass>();
@@ -34,6 +33,7 @@ public class Timetable extends ActionBarActivity {
     List<String> wednesday = new ArrayList<String>();
     List<String> thursday = new ArrayList<String>();
     List<String> friday = new ArrayList<String>();
+    String url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         classes=new LinkedList<Lclass>();
@@ -41,26 +41,17 @@ public class Timetable extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timetable);
         setTitle(intent.getExtras().getString("title"));
-        String url = intent.getExtras().getString("url");
+        url = intent.getExtras().getString("url");
 
-                try{
-                    try {
-                        try {
-                            classes = new TimetableExtractor().getTimetable(new RetrieveHTMLcode().execute(url).get());
-                        }
-                        catch (ExecutionException t)
-                        {
 
-                        }
-                    }catch (InterruptedException r)
-                    {
+        try {
+            new RetrieveHTMLcode().execute().get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
-                    }
-                }
-                catch(IOException e)
-                {
-
-                }
 
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.timetableView);
@@ -68,7 +59,7 @@ public class Timetable extends ActionBarActivity {
         // preparing list data
         prepareListData();
 
-        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+        listAdapter = new ClassComparator.ExpandableListAdapter(this, listDataHeader, listDataChild);
 
         // setting list adapter
         expListView.setAdapter(listAdapter);
@@ -116,15 +107,15 @@ public class Timetable extends ActionBarActivity {
                     case 1:for(i=0;i<classes.size();i++)
                     {
                         switch (classes.get(i).getDayOfTheWeek()){
-                            case 1:monday.add(classes.get(i).getStartTime() + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
+                            case 1:monday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
                                 break;
-                            case 2:tuesday.add(classes.get(i).getStartTime() + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
+                            case 2:tuesday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
                                 break;
-                            case 3:wednesday.add(classes.get(i).getStartTime() + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
+                            case 3:wednesday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
                                 break;
-                            case 4:thursday.add(classes.get(i).getStartTime() + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
+                            case 4:thursday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
                                 break;
-                            case 5:friday.add(classes.get(i).getStartTime() + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
+                            case 5:friday.add(0,classes.get(i).getStartTime().getTimeFormatted()+ " - " + classes.get(i).getName() +"\n\t\t" + classes.get(i).getLocation());
                                 break;
                         }
                     }
@@ -164,4 +155,27 @@ public class Timetable extends ActionBarActivity {
         listDataChild.put(listDataHeader.get(3),thursday);
         listDataChild.put(listDataHeader.get(4),friday);
             }
+    private class RetrieveHTMLcode extends AsyncTask<Void,Void,Void> {
+
+        private BufferedReader in;
+        private StringBuffer code;
+        private BufferedReader theCode;
+        @Override
+        protected Void doInBackground(Void... uri) {
+            try {
+                classes = new TimetableExtractor().getTimetable(new BufferedReader(new InputStreamReader(new URL(url).openStream())));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
         }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            //Do anything with response..
+        }
+
+    }
+}
+
