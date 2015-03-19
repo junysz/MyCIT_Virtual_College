@@ -52,7 +52,7 @@ public class ItServicesSupport extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
                 tempName = itServicesSupportNames.get(position);
                 int x = position + 1;
-                String message = "You clicked # " + x + " " + tempName;
+                String message = tempName + " opening";
                 Toast.makeText(ItServicesSupport.this, message, Toast.LENGTH_LONG).show();
                 viewWeb(itServicesSupportNames.get(position).toString(), itServicesSupportLinks.get(position).toString());
             }

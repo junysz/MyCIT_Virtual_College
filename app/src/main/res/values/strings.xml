@@ -1276,5 +1276,6 @@
     </string-array>
     <string name="title_activity_timetable">Timetable</string>
     <string name="view_timetable">View Timetable</string>
+    <string name="ClassGroupTimetables">Class Group Timetables</string>
 
 </resources>

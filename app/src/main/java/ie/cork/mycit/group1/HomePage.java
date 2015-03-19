@@ -27,6 +27,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import ie.cork.mycit.settings.HomePageSettings;
+import ie.cork.mycit.timetable.Timetables;
 
 public class HomePage extends ActionBarActivity implements
 	NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -100,10 +101,10 @@ public class HomePage extends ActionBarActivity implements
         ListView list = (ListView) findViewById(R.id.listHomePage);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
-                tempApp = allAppNames.get(position);
+                tempApp = chosenApps.get(position);
                 int x = position + 1;
                 int pos = findPosition(tempApp);
-                String message = "You clicked # " + x + " " + tempApp;
+                String message = tempApp + " opening";
                 Toast.makeText(HomePage.this, message, Toast.LENGTH_LONG).show();
                 menuSelect(allAppNames.get(pos).toString(), appLinks.get(pos).toString());
             }

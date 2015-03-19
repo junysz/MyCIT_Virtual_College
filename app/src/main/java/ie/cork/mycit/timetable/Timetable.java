@@ -96,15 +96,6 @@ public class Timetable extends ActionBarActivity {
         listDataHeader.add(getResources().getString(R.string.friday));
 
         int i = 0;
-        while(classes==null&&i<5)
-        {
-            try {
-                this.wait(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            i++;
-        }
         if(classes!=null)
         {
             for(i=0;i<classes.size();i++)

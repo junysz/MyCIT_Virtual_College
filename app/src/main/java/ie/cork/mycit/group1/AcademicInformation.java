@@ -52,7 +52,7 @@ public class AcademicInformation extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
                 tempName = academicInformationNames.get(position);
                 int x = position + 1;
-                String message = "You clicked # " + x + " " + tempName;
+                String message = tempName + " opening";
                 Toast.makeText(AcademicInformation.this, message, Toast.LENGTH_LONG).show();
                 viewWeb(academicInformationNames.get(position).toString(), academicInformationLinks.get(position).toString());
             }
