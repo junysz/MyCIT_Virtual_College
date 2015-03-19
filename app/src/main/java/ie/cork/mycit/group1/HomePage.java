@@ -5,7 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,11 +17,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.Toast;
-
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
-
+import java.util.Iterator;
+import java.util.List;
 import ie.cork.mycit.settings.HomePageSettings;
 
 public class HomePage extends ActionBarActivity implements
@@ -31,10 +35,29 @@ public class HomePage extends ActionBarActivity implements
 	//Used to store the last screen title. For use in{@link #restoreActionBar()}.
 	private CharSequence mTitle;
 
+    List<String> chosenApps = new ArrayList<String>();
+    List<String> allAppNames = new ArrayList<String>();
+    List<String> appLinks = new ArrayList<String>();
+    String tempApp = "";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_page);
+
+        Resources res = this.getResources();
+        String[] studentappsnames = res.getStringArray(R.array.studentappsnames);
+        String[] studentappslinks = res.getStringArray(R.array.studentappslinks);
+        allAppNames = Arrays.asList(studentappsnames);
+        startCustom();
+        appLinks = Arrays.asList(studentappslinks);
+
+        ListView listApps = (ListView) findViewById(R.id.listHomePage);
+
+        CustomViewAdapter adapter = new CustomViewAdapter(HomePage.this, chosenApps);
+        listApps.setAdapter(adapter);
+
+        registerClickCallback();
 
         loadTime();
         saveTime();
@@ -46,20 +69,78 @@ public class HomePage extends ActionBarActivity implements
 		mNavigationDrawerFragment.setUp(R.id.navigation_drawer,(DrawerLayout) findViewById(R.id.drawer_layout));		
 	}
 
-	public void email(View v) {
-        viewWeb("Student Email", "http://mail.mycit.ie/");
-	}
-	
-	public void timetables(View v) {
-		Intent timetables = new Intent(HomePage.this, Timetables.class);
-		startActivity(timetables);
-	}
-	
-	public void card(View v) {
-        viewWeb("Student Card Top-Up", "https://citcard.cit.ie/icmserver/#student_number");
-	}
-	
-	@Override
+    public void startCustom(){
+        checkCustom(0);
+        checkCustom(1);
+        checkCustom(2);
+        checkCustom(3);
+        checkCustom(4);
+        checkCustom(5);
+        checkCustom(6);
+        checkCustom(7);
+        checkCustom(8);
+        checkCustom(9);
+        checkCustom(10);
+    }
+
+    public void checkCustom(int x){
+        String a = "" + x;
+        boolean check = getFromSP(a);
+        if(check){
+            chosenApps.add(allAppNames.get(x));
+        }
+    }
+
+    private boolean getFromSP(String key){
+        SharedPreferences preferences = getApplicationContext().getSharedPreferences("PROJECT_NAME", android.content.Context.MODE_PRIVATE);
+        return preferences.getBoolean(key, true);
+    }
+
+    private void registerClickCallback() {
+        ListView list = (ListView) findViewById(R.id.listHomePage);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
+                tempApp = chosenApps.get(position);
+                int x = position + 1;
+                int pos = findPosition(tempApp);
+                String message = "You clicked # " + x + " " + tempApp;
+                Toast.makeText(HomePage.this, message, Toast.LENGTH_LONG).show();
+                menuSelect(allAppNames.get(pos).toString(), appLinks.get(pos).toString());
+            }
+
+        });
+    }
+
+    public int findPosition(String selected) {
+        Iterator<String> itr = allAppNames.iterator();
+        int x = 0;
+        while (itr.hasNext()) {
+            if(selected.equalsIgnoreCase(allAppNames.get(x))){
+                return x;
+            }
+            x++;
+        }
+        return 0;
+    }
+
+    public void menuSelect(String title, String url) {
+        if(title.equalsIgnoreCase("Timetables")){
+            Intent timetables = new Intent(HomePage.this, Timetables.class);
+            startActivity(timetables);
+        }
+        else{
+            viewWeb(title, url);
+        }
+    }
+
+    public void viewWeb(String title, String url) {
+        Intent web = new Intent(HomePage.this, Web.class);
+        web.putExtra("title", title);
+        web.putExtra("url", url);
+        startActivity(web);
+    }
+
+    @Override
 	public void onNavigationDrawerItemSelected(int position) {
 		// update the main content by replacing fragments
 		FragmentManager fragmentManager = getSupportFragmentManager();
@@ -210,13 +291,6 @@ public class HomePage extends ActionBarActivity implements
 					ARG_SECTION_NUMBER));
 		}
 	}
-
-    public void viewWeb(String title, String url) {
-        Intent web = new Intent(HomePage.this, Web.class);
-        web.putExtra("title", title);
-        web.putExtra("url", url);
-        startActivity(web);
-    }
 
     @SuppressLint("SimpleDateFormat")
     public void saveTime(){
