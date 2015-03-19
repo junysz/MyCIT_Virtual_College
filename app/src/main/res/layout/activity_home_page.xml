@@ -28,6 +28,12 @@
          the container.
     -->
 
+    <ListView
+        android:id="@+id/listHomePage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </ListView>
+
     <fragment
         android:id="@+id/navigation_drawer"
         android:name="ie.cork.mycit.group1.NavigationDrawerFragment"
