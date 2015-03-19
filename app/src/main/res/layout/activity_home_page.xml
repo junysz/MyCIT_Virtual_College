@@ -11,10 +11,69 @@
          space available using match_parent in both dimensions.
     -->
 
-    <FrameLayout
+    <RelativeLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <ListView
+            android:id="@+id/listHomePage"
+            android:layout_width="fill_parent"
+            android:layout_height="445dp"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1.11"
+            android:layout_above="@+id/linearLayout">
+        </ListView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout"
+            android:layout_alignParentRight="true">
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/button"
+                android:background="@drawable/twitter_feed_icon"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/button2"
+                android:background="@drawable/youtube_feed_icon"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/button3"
+                android:background="@drawable/facebook_feed_icon" />
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/button4"
+                android:background="@drawable/google_feed_icon"
+                android:layout_marginLeft="5dp" />
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/button5"
+                android:background="@drawable/linkedin_feed_icon"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <!--
          android:layout_gravity="start" tells DrawerLayout to treat
@@ -27,12 +86,6 @@
          The drawer is given a fixed width in dp and extends the full height of
          the container.
     -->
-
-    <ListView
-        android:id="@+id/listHomePage"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-    </ListView>
 
     <fragment
         android:id="@+id/navigation_drawer"
