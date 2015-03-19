@@ -53,7 +53,7 @@ public class UsefulResources extends Activity {
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
                 tempName = usefulResourcesNames.get(position);
                 int x = position + 1;
-                String message = "You clicked # " + x + " " + tempName;
+                String message = tempName + " opening";
                 Toast.makeText(UsefulResources.this, message, Toast.LENGTH_LONG).show();
                 viewWeb(usefulResourcesNames.get(position).toString(), usefulResourcesLinks.get(position).toString());
             }

@@ -18,14 +18,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ae9952a-b824-4d1c-b124-e943d5d1ebba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/AcademicInformation.java" afterPath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/AcademicInformation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/HomePage.java" afterPath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/HomePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/ItServicesSupport.java" afterPath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/ItServicesSupport.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/StudentApplications.java" afterPath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/StudentApplications.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/timetable/Timetable.java" afterPath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/timetable/Timetable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_timetables.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_timetables.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/NewStudents.java" afterPath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/NewStudents.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/SupportServices.java" afterPath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/SupportServices.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/UsefulResources.java" afterPath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/UsefulResources.java" />
     </list>
     <ignored path="MyCitApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,21 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HomePageSettings.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/settings/HomePageSettings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1802">
-              <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomePage.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HomePage.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1785">
-              <caret line="106" column="53" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.6387283" vertical-offset="544" max-vertical-offset="1785">
+              <caret line="107" column="81" selection-start-line="107" selection-start-column="81" selection-end-line="107" selection-end-column="81" />
               <folding>
                 <element signature="e#1319#1327#0" expanded="true" />
                 <element signature="e#1375#1383#0" expanded="true" />
@@ -80,36 +65,6 @@
                 <element signature="method#saveTime#0;class#HomePage#0" expanded="false" />
                 <element signature="method#loadTime#0;class#HomePage#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AcademicInformation.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/AcademicInformation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1037">
-              <caret line="54" column="54" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentApplications.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/StudentApplications.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1207">
-              <caret line="54" column="53" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItServicesSupport.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/ItServicesSupport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48410404" vertical-offset="345" max-vertical-offset="1037">
-              <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -891,12 +846,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/Downloader.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/ImportantDocuments.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/NavigationDrawerFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/NewStudents.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/SiteAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/StudentHandbooks.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/SupportServices.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/Timetables.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/UsefulResources.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/Web.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/rss/GeneralNewsRssItem.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/StudentNews.java" />
@@ -917,6 +869,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/AcademicInformation.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/StudentApplications.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/ItServicesSupport.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/NewStudents.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/SupportServices.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/UsefulResources.java" />
       </list>
     </option>
   </component>
@@ -1660,31 +1615,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/NewStudents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/StudentHandbooks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27023122" vertical-offset="0" max-vertical-offset="692">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/SupportServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4913295" vertical-offset="0" max-vertical-offset="692">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/UsefulResources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1833,14 +1767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/settings/HomePageSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1666">
-          <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home_page.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -1901,42 +1827,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1785">
-          <caret line="106" column="53" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="53" />
-          <folding>
-            <element signature="e#1319#1327#0" expanded="true" />
-            <element signature="e#1375#1383#0" expanded="true" />
-            <element signature="method#startCustom#0;class#HomePage#0" expanded="false" />
-            <element signature="method#checkCustom#0;class#HomePage#0" expanded="false" />
-            <element signature="method#getFromSP#0;class#HomePage#0" expanded="false" />
-            <element signature="method#findPosition#0;class#HomePage#0" expanded="false" />
-            <element signature="method#viewWeb#0;class#HomePage#0" expanded="false" />
-            <element signature="method#onNavigationDrawerItemSelected#0;class#HomePage#0" expanded="false" />
-            <element signature="method#onSectionAttached#0;class#HomePage#0" expanded="false" />
-            <element signature="method#restoreActionBar#0;class#HomePage#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#HomePage#0" expanded="false" />
-            <element signature="class#PlaceholderFragment#0;class#HomePage#0" expanded="false" />
-            <element signature="method#saveTime#0;class#HomePage#0" expanded="false" />
-            <element signature="method#loadTime#0;class#HomePage#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/AcademicInformation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1037">
           <caret line="54" column="54" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/StudentApplications.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1207">
-          <caret line="54" column="53" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="53" />
           <folding />
         </state>
       </provider>
@@ -1964,9 +1858,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/ItServicesSupport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48410404" vertical-offset="345" max-vertical-offset="1037">
-          <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1037">
+          <caret line="54" column="54" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="54" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/NewStudents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1037">
+          <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/StudentApplications.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1207">
+          <caret line="54" column="53" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/SupportServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="1020">
+          <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/UsefulResources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1037">
+          <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/settings/HomePageSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1666">
+          <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6387283" vertical-offset="544" max-vertical-offset="1785">
+          <caret line="107" column="81" selection-start-line="107" selection-start-column="81" selection-end-line="107" selection-end-column="81" />
+          <folding>
+            <element signature="e#1319#1327#0" expanded="true" />
+            <element signature="e#1375#1383#0" expanded="true" />
+            <element signature="method#startCustom#0;class#HomePage#0" expanded="false" />
+            <element signature="method#checkCustom#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getFromSP#0;class#HomePage#0" expanded="false" />
+            <element signature="method#findPosition#0;class#HomePage#0" expanded="false" />
+            <element signature="method#viewWeb#0;class#HomePage#0" expanded="false" />
+            <element signature="method#onNavigationDrawerItemSelected#0;class#HomePage#0" expanded="false" />
+            <element signature="method#onSectionAttached#0;class#HomePage#0" expanded="false" />
+            <element signature="method#restoreActionBar#0;class#HomePage#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#HomePage#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#HomePage#0" expanded="false" />
+            <element signature="class#PlaceholderFragment#0;class#HomePage#0" expanded="false" />
+            <element signature="method#saveTime#0;class#HomePage#0" expanded="false" />
+            <element signature="method#loadTime#0;class#HomePage#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
