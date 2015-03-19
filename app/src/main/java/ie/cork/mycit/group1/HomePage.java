@@ -1,8 +1,6 @@
 package ie.cork.mycit.group1;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -20,10 +18,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import ie.cork.mycit.settings.HomePageSettings;
@@ -59,9 +55,6 @@ public class HomePage extends ActionBarActivity implements
         listApps.setAdapter(adapter);
 
         registerClickCallback();
-
-        loadTime();
-        saveTime();
 
 		mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
 		mTitle = getTitle();
@@ -292,30 +285,5 @@ public class HomePage extends ActionBarActivity implements
 					ARG_SECTION_NUMBER));
 		}
 	}
-
-    @SuppressLint("SimpleDateFormat")
-    public void saveTime(){
-        long millis = System.currentTimeMillis();
-        Date date = new Date(millis);
-        String formattedDate = new SimpleDateFormat("MMM d y h:ma").format(date);
-        String message = "You last started MyCIT's Android app on\n\t" + formattedDate;
-
-        SharedPreferences sharedpreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedpreferences.edit();
-        editor.putString("Time", message);
-        editor.commit();
-    }
-
-    public void loadTime(){
-        SharedPreferences sharedpreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
-        String defValue = "This is the first time you have opened MyCIT's android app";
-        String message = sharedpreferences.getString("Time", defValue);
-        if(message.equalsIgnoreCase(defValue)){
-            Toast.makeText(HomePage.this, defValue, Toast.LENGTH_LONG).show();
-        }
-        else{
-            Toast.makeText(HomePage.this, message, Toast.LENGTH_LONG).show();
-        }
-    }
 
 }
