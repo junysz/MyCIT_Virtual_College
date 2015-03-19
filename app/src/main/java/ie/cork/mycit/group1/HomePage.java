@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 import java.util.ArrayList;
@@ -42,6 +43,12 @@ public class HomePage extends ActionBarActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_page);
 
+        setupTwitterButton();
+        setupFacebookButton();
+        setupYoutubeButton();
+        setupGoogleButton();
+        setupLinkedinButton();
+
         Resources res = this.getResources();
         String[] studentappsnames = res.getStringArray(R.array.studentappsnames);
         String[] studentappslinks = res.getStringArray(R.array.studentappslinks);
@@ -60,8 +67,9 @@ public class HomePage extends ActionBarActivity implements
 		mTitle = getTitle();
 
 		// Set up the drawer.
-		mNavigationDrawerFragment.setUp(R.id.navigation_drawer,(DrawerLayout) findViewById(R.id.drawer_layout));		
-	}
+		mNavigationDrawerFragment.setUp(R.id.navigation_drawer,(DrawerLayout) findViewById(R.id.drawer_layout));
+
+    }
 
     public void startCustom(){
         checkCustom(0);
@@ -286,4 +294,58 @@ public class HomePage extends ActionBarActivity implements
 		}
 	}
 
+    public void setupTwitterButton(){
+        Button twitterButton = (Button) findViewById(R.id.twitter_feed_button);
+
+        twitterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewWeb("CIT Twitter", "http://mycit.16mb.com/html/open_CIT_twitter.html");
+            }
+        });
+    }
+
+    public void setupFacebookButton(){
+        Button facebookButton = (Button) findViewById(R.id.facebook_feed_button);
+
+        facebookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewWeb("CIT Facebook", "http://mycit.16mb.com/html/open_CIT_facebook.html");
+            }
+        });
+    }
+
+    public void setupYoutubeButton(){
+        Button youtubeButton = (Button) findViewById(R.id.youtube_feed_button);
+
+        youtubeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewWeb("CIT Youtube", "http://mycit.16mb.com/html/open_CIT_youtube.html");
+            }
+        });
+    }
+
+    public void setupGoogleButton(){
+        Button googleButton = (Button) findViewById(R.id.google_feed_button);
+
+        googleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewWeb("CIT Google+", "http://mycit.16mb.com/html/open_CIT_googlePlus.html");
+            }
+        });
+    }
+
+    public void setupLinkedinButton(){
+        Button linkedinButton = (Button) findViewById(R.id.linkedin_feed_button);
+
+        linkedinButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewWeb("CIT Linkedin", "http://mycit.16mb.com/html/open_CIT_linkedin.html");
+            }
+        });
+    }
 }

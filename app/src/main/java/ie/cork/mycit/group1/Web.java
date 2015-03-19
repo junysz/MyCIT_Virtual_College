@@ -5,7 +5,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class Web extends ActionBarActivity {
 
@@ -20,9 +22,26 @@ public class Web extends ActionBarActivity {
 
         setTitle(title);
 
+
+
         WebView webView = (WebView)findViewById(R.id.webViewURL);
+
+        WebSettings settings = webView.getSettings();
+
+        //setup auto zoom for embedded-browser
+        settings.setUseWideViewPort(true);
+        settings.setLoadWithOverviewMode(true);
+
+        //allow zoom in and out for embedded-browser
+        webView.getSettings().setBuiltInZoomControls(true);
+
+        //allow Java Script
         webView.getSettings().setJavaScriptEnabled(true);
+
+        //setup to use only embedded-browser
+        webView.setWebViewClient(new WebViewClient());
         webView.loadUrl(url);
+
     }
 
     @Override
