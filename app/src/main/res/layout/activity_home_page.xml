@@ -4,7 +4,8 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ie.cork.mycit.group1.HomePage" >
+    tools:context="ie.cork.mycit.group1.HomePage"
+    android:background="@drawable/home_background">
 
     <!--
          As the main content view, the view below consumes the entire
@@ -20,11 +21,16 @@
         <ListView
             android:id="@+id/listHomePage"
             android:layout_width="fill_parent"
-            android:layout_height="445dp"
+            android:layout_height="fill_parent"
             android:layout_gravity="center_horizontal|top"
             android:layout_alignParentTop="true"
             android:layout_weight="1.11"
-            android:layout_above="@+id/linearLayout">
+            android:layout_above="@+id/linearLayout"
+            android:textFilterEnabled="false"
+            android:divider="#ffffffff"
+            android:dividerHeight="1dp"
+            android:drawSelectorOnTop="false"
+            android:fastScrollAlwaysVisible="false">
         </ListView>
 
         <LinearLayout
@@ -41,36 +47,36 @@
             <Button
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:id="@+id/button"
-                android:background="@drawable/twitter_feed_icon"
-                android:layout_marginRight="5dp" />
+                android:id="@+id/twitter_feed_button"
+                android:background="@drawable/twitter"
+                android:layout_marginRight="8dp" />
 
             <Button
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:id="@+id/button2"
-                android:background="@drawable/youtube_feed_icon"
-                android:layout_marginRight="5dp" />
+                android:id="@+id/youtube_feed_button"
+                android:background="@drawable/youtube"
+                android:layout_marginRight="8dp" />
 
             <Button
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:id="@+id/button3"
-                android:background="@drawable/facebook_feed_icon" />
+                android:id="@+id/facebook_feed_button"
+                android:background="@drawable/facebook" />
 
             <Button
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:id="@+id/button4"
-                android:background="@drawable/google_feed_icon"
-                android:layout_marginLeft="5dp" />
+                android:id="@+id/google_feed_button"
+                android:background="@drawable/google"
+                android:layout_marginLeft="8dp" />
 
             <Button
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:id="@+id/button5"
-                android:background="@drawable/linkedin_feed_icon"
-                android:layout_marginLeft="5dp" />
+                android:id="@+id/linkedin_feed_button"
+                android:background="@drawable/linkedin"
+                android:layout_marginLeft="8dp" />
         </LinearLayout>
 
     </RelativeLayout>
