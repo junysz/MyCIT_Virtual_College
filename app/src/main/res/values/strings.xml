@@ -59,6 +59,11 @@
     <string name="title_activity_site_adapter">SiteAdapter</string>
     <string name="title_activity_gen_news">GenNews</string>
     <string name="title_activity_home_page_settings">HomePageSettings</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
 
     <string-array name="drawer">
         <item>Home</item>
@@ -1269,5 +1274,7 @@
         <item>UQ.WW2B</item>
         <item>UQ.WW2C</item>
     </string-array>
+    <string name="title_activity_timetable">Timetable</string>
+    <string name="view_timetable">View Timetable</string>
 
 </resources>

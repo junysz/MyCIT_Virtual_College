@@ -9,7 +9,6 @@
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <android:uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
@@ -89,7 +88,7 @@
                 android:value="ie.cork.mycit.group1.HomePage" />
         </activity>
         <activity
-            android:name=".Timetables"
+            android:name="ie.cork.mycit.timetable.Timetables"
             android:label="@string/title_activity_timetables"
             android:parentActivityName=".HomePage" >
             <meta-data
@@ -183,6 +182,14 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ie.cork.mycit.group1.HomePage" />
+        </activity>
+        <activity
+            android:name="ie.cork.mycit.timetable.Timetable"
+            android:label="@string/title_activity_timetable"
+            android:parentActivityName="ie.cork.mycit.timetable.Timetables" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ie.cork.mycit.timetable.Timetables" />
         </activity>
     </application>
 

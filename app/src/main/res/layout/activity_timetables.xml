@@ -6,15 +6,19 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ie.cork.mycit.group1.Timetables" >
+    tools:context="ie.cork.mycit.timetable.Timetables" >
 
     <Button
         android:id="@+id/buttonSubmit"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/submit"
+        android:text="@string/view_timetable"
         android:onClick="submit"
-        android:layout_alignParentBottom="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_below="@+id/spinnerClassGroups"
+        android:layout_marginTop="77dp"
+        android:layout_alignLeft="@+id/spinnerClassGroups"
+        android:layout_alignStart="@+id/spinnerClassGroups"
         android:layout_alignRight="@+id/spinnerClassGroups"
         android:layout_alignEnd="@+id/spinnerClassGroups" />
 
@@ -23,36 +27,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ClassGroups"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_above="@+id/spinnerClassGroups"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp" />
 
     <Spinner
         android:id="@+id/spinnerClassGroups"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dropdown"
-        android:layout_below="@+id/textViewClassGroups"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/textViewTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/time_period"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_below="@+id/spinnerClassGroups"
-        android:layout_alignLeft="@+id/textViewClassGroups"
-        android:layout_alignStart="@+id/textViewClassGroups" />
-
-    <Spinner
-        android:id="@+id/spinnerTime"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
         android:spinnerMode="dropdown"
-        android:layout_below="@+id/textViewTime"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textViewClassGroups"
+        android:layout_alignStart="@+id/textViewClassGroups"
+        android:layout_alignRight="@+id/textViewClassGroups"
+        android:layout_alignEnd="@+id/textViewClassGroups" />
 
 </RelativeLayout>
