@@ -100,7 +100,7 @@ public class HomePage extends ActionBarActivity implements
         ListView list = (ListView) findViewById(R.id.listHomePage);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
-                tempApp = chosenApps.get(position);
+                tempApp = allAppNames.get(position);
                 int x = position + 1;
                 int pos = findPosition(tempApp);
                 String message = "You clicked # " + x + " " + tempApp;

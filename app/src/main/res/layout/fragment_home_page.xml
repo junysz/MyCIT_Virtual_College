@@ -8,10 +8,5 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ie.cork.mycit.group1.HomePage$PlaceholderFragment" >
 
-    <ListView
-        android:id="@+id/listHomePage"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-    </ListView>
 
 </RelativeLayout>
