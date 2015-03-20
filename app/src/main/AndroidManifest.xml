@@ -192,6 +192,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ie.cork.mycit.timetable.Timetables" />
         </activity>
+        <activity
+            android:name="ie.cork.mycit.settings.CustomSettingsAdapter"
+            android:label="@string/title_activity_custom_settings_adapter" >
+        </activity>
     </application>
 
 </manifest>
