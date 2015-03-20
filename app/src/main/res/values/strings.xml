@@ -1,70 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MyCit</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_example">Example action</string>
-    <string name="action_settings">Settings</string>
-    <string name="mycit_homepage">MyCit HomePage</string>
-    <string name="title_activity_new_students">New Students</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="new_students">New Students</string>
-    <string name="title_activity_it_services_support">IT Services Support</string>
-    <string name="it_services_support">IT Services Support</string>
-    <string name="title_activity_support_services">Support Services</string>
-    <string name="support_services">Support Services</string>
-    <string name="title_activity_academic_information">Academic Information</string>
-    <string name="academic_information">Academic Information</string>
-    <string name="title_activity_useful_resources">Useful Resources</string>
-    <string name="useful_resources">Useful Resources</string>
-    <string name="title_activity_student_calendar">Student Calendar</string>
-    <string name="student_calendar">Student Calendar</string>
-    <string name="title_activity_student_news">Student News</string>
-    <string name="student_news">Student News</string>
-    <string name="card_topup">Card Topup</string>
-    <string name="student_email">Student Email</string>
-    <string name="timetables">Timetables</string>
-    <string name="title_activity_timetables">Timetables</string>
-    <string name="submit">Submit</string>
-    <string name="semester_2">Semester 2</string>
-    <string name="semester_1">Semester 1</string>
-    <string name="class_group">Class group</string>
-    <string name="time_period">Time Period</string>
-    <string name="title_activity_timetable_view">Timetables</string>
-    <string name="title_activity_student_applications">Student Applications</string>
-    <string name="student_applications">Student Applications</string>
-    <string name="title_activity_pay_fees_online">Pay Fees Online</string>
-    <string name="pay_fees_online">Pay Fees Online</string>
-    <string name="title_activity_student_handbooks">Student Handbooks</string>
-    <string name="student_handbooks">Student Handbooks</string>
-    <string name="title_activity_citvideos">CIT Videos</string>
-    <string name="cit_videos">CIT Videos</string>
-    <string name="title_activity_campus_map">Campus Map</string>
-    <string name="campus_map">Campus Map</string>
-    <string name="title_activity_important_documents">Important Documents</string>
-    <string name="important_documents">Important Documents</string>
-    <string name="title_activity_public_folders">Public Folders</string>
-    <string name="public_folders">Public Folders</string>
-    <string name="ClassGroups">Class Groups</string>
-    <string name="Department">Department</string>
-    <string name="title_activity_web">MyCIT</string>
-    <string name="title_activity_custom_view_adapter">CustomViewAdapter</string>
-    <string name="facebook">Facebook</string>
-    <string name="general">General News</string>
-    <string name="twitter">Twitter</string>
-    <string name="title_activity_site_adapter">SiteAdapter</string>
-    <string name="title_activity_gen_news">GenNews</string>
-    <string name="title_activity_home_page_settings">HomePageSettings</string>
-    <string name="monday">Monday</string>
-    <string name="tuesday">Tuesday</string>
-    <string name="wednesday">Wednesday</string>
-    <string name="thursday">Thursday</string>
-    <string name="friday">Friday</string>
-
     <string-array name="drawer">
         <item>Home</item>
         <item>New Students</item>
@@ -271,9 +207,18 @@
         <item>http://events.cit.ie/#headlineEvents</item>
     </string-array>
 
-    <string-array name="news">
-        <item>Semester 1</item>
-        <item>Semester 2</item>
+    <string-array name="videoNames">
+        <item>Student Life - CIT 2013/2014</item>
+        <item>Student Induction Video 2013</item>
+        <item>Student Password Reset</item>
+        <item>mySOCIETIES - CIT</item>
+    </string-array>
+
+    <string-array name="videoLinks">
+        <item>https://www.youtube.com/watch?v=KGyocpAWF08</item>
+        <item>https://www.youtube.com/watch?v=IelqhowPAYU</item>
+        <item>https://www.youtube.com/watch?v=PahOwq6g9iY</item>
+        <item>https://www.youtube.com/watch?v=u8oWPkPXHKE</item>
     </string-array>
 
     <string-array name="department">
@@ -1274,8 +1219,75 @@
         <item>UQ.WW2B</item>
         <item>UQ.WW2C</item>
     </string-array>
+
     <string name="title_activity_timetable">Timetable</string>
     <string name="view_timetable">View Timetable</string>
     <string name="ClassGroupTimetables">Class Group Timetables</string>
+    <string name="title_activity_cityoutube_videos">CITYoutubeVideos</string>
+    <string name="cityoutubechannel">View CIT YouTube Channel</string>
+    <string name="app_name">MyCit</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="mycit_homepage">MyCit HomePage</string>
+    <string name="title_activity_new_students">New Students</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="new_students">New Students</string>
+    <string name="title_activity_it_services_support">IT Services Support</string>
+    <string name="it_services_support">IT Services Support</string>
+    <string name="title_activity_support_services">Support Services</string>
+    <string name="support_services">Support Services</string>
+    <string name="title_activity_academic_information">Academic Information</string>
+    <string name="academic_information">Academic Information</string>
+    <string name="title_activity_useful_resources">Useful Resources</string>
+    <string name="useful_resources">Useful Resources</string>
+    <string name="title_activity_student_calendar">Student Calendar</string>
+    <string name="student_calendar">Student Calendar</string>
+    <string name="title_activity_student_news">Student News</string>
+    <string name="student_news">Student News</string>
+    <string name="card_topup">Card Topup</string>
+    <string name="student_email">Student Email</string>
+    <string name="timetables">Timetables</string>
+    <string name="title_activity_timetables">Timetables</string>
+    <string name="submit">Submit</string>
+    <string name="semester_2">Semester 2</string>
+    <string name="semester_1">Semester 1</string>
+    <string name="class_group">Class group</string>
+    <string name="time_period">Time Period</string>
+    <string name="title_activity_timetable_view">Timetables</string>
+    <string name="title_activity_student_applications">Student Applications</string>
+    <string name="student_applications">Student Applications</string>
+    <string name="title_activity_pay_fees_online">Pay Fees Online</string>
+    <string name="pay_fees_online">Pay Fees Online</string>
+    <string name="title_activity_student_handbooks">Student Handbooks</string>
+    <string name="student_handbooks">Student Handbooks</string>
+    <string name="title_activity_citvideos">CIT Videos</string>
+    <string name="cit_videos">CIT Videos</string>
+    <string name="title_activity_campus_map">Campus Map</string>
+    <string name="campus_map">Campus Map</string>
+    <string name="title_activity_important_documents">Important Documents</string>
+    <string name="important_documents">Important Documents</string>
+    <string name="title_activity_public_folders">Public Folders</string>
+    <string name="public_folders">Public Folders</string>
+    <string name="ClassGroups">Class Groups</string>
+    <string name="Department">Department</string>
+    <string name="title_activity_web">MyCIT</string>
+    <string name="title_activity_custom_view_adapter">CustomViewAdapter</string>
+    <string name="facebook">Facebook</string>
+    <string name="general">General News</string>
+    <string name="twitter">Twitter</string>
+    <string name="title_activity_site_adapter">SiteAdapter</string>
+    <string name="title_activity_gen_news">GenNews</string>
+    <string name="title_activity_home_page_settings">HomePageSettings</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="title_activity_custom_settings_adapter">CustomSettingsAdapter</string>
 
 </resources>

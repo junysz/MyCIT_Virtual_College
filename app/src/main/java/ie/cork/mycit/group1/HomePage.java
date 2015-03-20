@@ -58,8 +58,14 @@ public class HomePage extends ActionBarActivity implements
 
         ListView listApps = (ListView) findViewById(R.id.listHomePage);
 
-        CustomViewAdapter adapter = new CustomViewAdapter(HomePage.this, chosenApps);
-        listApps.setAdapter(adapter);
+        if(chosenApps != null){
+            CustomViewAdapter adapter = new CustomViewAdapter(HomePage.this, chosenApps);
+            listApps.setAdapter(adapter);
+        }
+        else{
+            CustomViewAdapter adapter = new CustomViewAdapter(HomePage.this, allAppNames);
+            listApps.setAdapter(adapter);
+        }
 
         registerClickCallback();
 
