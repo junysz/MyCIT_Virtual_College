@@ -4,17 +4,87 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ie.cork.mycit.group1.HomePage" >
+    tools:context="ie.cork.mycit.group1.HomePage"
+    android:background="@drawable/app_background">
 
     <!--
          As the main content view, the view below consumes the entire
          space available using match_parent in both dimensions.
     -->
 
-    <FrameLayout
+    <RelativeLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <ListView
+            android:id="@+id/listHomePage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1.11"
+            android:layout_above="@+id/linearLayout"
+            android:textFilterEnabled="false"
+            android:divider="#ffffffff"
+            android:dividerHeight="1dp"
+            android:drawSelectorOnTop="false"
+            android:fastScrollAlwaysVisible="false">
+        </ListView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout"
+            android:layout_alignParentRight="true">
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/twitter_feed_button"
+                android:background="@drawable/twitter"
+                android:layout_marginRight="15dp"
+                android:clickable="true" />
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/youtube_feed_button"
+                android:background="@drawable/youtube"
+                android:layout_marginRight="15dp"
+                android:clickable="true" />
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/facebook_feed_button"
+                android:background="@drawable/facebook"
+                android:clickable="true" />
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/google_feed_button"
+                android:background="@drawable/google"
+                android:layout_marginLeft="15dp"
+                android:clickable="true" />
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/linkedin_feed_button"
+                android:background="@drawable/linkedin"
+                android:layout_marginLeft="15dp"
+                android:clickable="true" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <!--
          android:layout_gravity="start" tells DrawerLayout to treat
@@ -27,12 +97,6 @@
          The drawer is given a fixed width in dp and extends the full height of
          the container.
     -->
-
-    <ListView
-        android:id="@+id/listHomePage"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-    </ListView>
 
     <fragment
         android:id="@+id/navigation_drawer"
