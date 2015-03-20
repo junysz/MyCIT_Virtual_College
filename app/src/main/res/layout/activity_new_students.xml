@@ -8,7 +8,7 @@
         android:id="@+id/listViewNewStudents"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/app_background" >
+        android:background="@drawable/background_red" >
     </ListView>
 
 </RelativeLayout>
