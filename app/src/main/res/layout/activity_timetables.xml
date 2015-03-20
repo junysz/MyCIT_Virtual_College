@@ -19,7 +19,9 @@
         android:layout_below="@+id/spinnerClassGroups"
         android:layout_marginTop="77dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:textColor="#ffffffff"
+        />
 
     <TextView
         android:id="@+id/textViewClassGroups"
@@ -29,7 +31,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_above="@+id/spinnerClassGroups"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="58dp" />
+        android:layout_marginBottom="58dp"
+        android:textColor="#ffffffff" />
 
     <Spinner
         android:id="@+id/spinnerClassGroups"
@@ -38,6 +41,7 @@
         android:spinnerMode="dropdown"
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:textColor="#ffffffff" />
 
 </RelativeLayout>

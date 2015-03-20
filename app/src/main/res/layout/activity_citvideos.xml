@@ -12,7 +12,8 @@
         android:id="@+id/buttonChannel"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="viewChannel" />
+        android:onClick="viewChannel"
+        android:textColor="#ffffffff" />
 
     <ListView
         android:layout_width="fill_parent"
