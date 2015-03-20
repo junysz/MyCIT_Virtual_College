@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="ie.cork.mycit.group1.SupportServices"
-    android:background="@drawable/app_background">
+    android:background="@drawable/background_red">
 
     <ListView
         android:id="@+id/listViewSupportServices"
