@@ -8,7 +8,11 @@ android:paddingLeft="@dimen/activity_horizontal_margin"
 android:paddingRight="@dimen/activity_horizontal_margin"
 android:paddingTop="@dimen/activity_vertical_margin"
 tools:context="ie.cork.mycit.settings.HomePageSettings"
+<<<<<<< HEAD
 android:background="@drawable/app_background">
+=======
+    android:background="@drawable/background_blue">
+>>>>>>> Adrian_Branch
 
 <RelativeLayout
     android:layout_width="fill_parent"
@@ -26,7 +30,8 @@ android:background="@drawable/app_background">
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Customize Home Page "
-                android:id="@+id/textView" />
+                android:id="@+id/textView"
+                android:textColor="#ffffffff" />
         </TableRow>
 
         <TableRow>
@@ -35,7 +40,8 @@ android:background="@drawable/app_background">
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="New CheckBox"
-                android:id="@+id/checkBox1"/>
+                android:id="@+id/checkBox1"
+                android:textColor="#ffffffff" />
         </TableRow>
 
         <TableRow>
@@ -44,7 +50,8 @@ android:background="@drawable/app_background">
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="New CheckBox"
-                android:id="@+id/checkBox2"/>
+                android:id="@+id/checkBox2"
+                android:textColor="#ffffffff" />
         </TableRow>
 
         <TableRow>
@@ -53,7 +60,8 @@ android:background="@drawable/app_background">
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="New CheckBox"
-                android:id="@+id/checkBox3" />
+                android:id="@+id/checkBox3"
+                android:textColor="#ffffffff" />
         </TableRow>
 
         <TableRow>
@@ -62,7 +70,8 @@ android:background="@drawable/app_background">
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="New CheckBox"
-                android:id="@+id/checkBox4" />
+                android:id="@+id/checkBox4"
+                android:textColor="#ffffffff" />
         </TableRow>
 
         <TableRow>
@@ -71,7 +80,8 @@ android:background="@drawable/app_background">
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="New CheckBox"
-                android:id="@+id/checkBox5"/>
+                android:id="@+id/checkBox5"
+                android:textColor="#ffffffff" />
         </TableRow>
 
         <TableRow>
@@ -80,7 +90,8 @@ android:background="@drawable/app_background">
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="New CheckBox"
-                android:id="@+id/checkBox6" />
+                android:id="@+id/checkBox6"
+                android:textColor="#ffffffff" />
         </TableRow>
 
         <TableRow>
@@ -89,7 +100,8 @@ android:background="@drawable/app_background">
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="New CheckBox"
-                android:id="@+id/checkBox7" />
+                android:id="@+id/checkBox7"
+                android:textColor="#ffffffff" />
         </TableRow>
 
         <TableRow>
@@ -98,7 +110,8 @@ android:background="@drawable/app_background">
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="New CheckBox"
-                android:id="@+id/checkBox8" />
+                android:id="@+id/checkBox8"
+                android:textColor="#ffffffff" />
         </TableRow>
 
         <TableRow>
@@ -107,7 +120,8 @@ android:background="@drawable/app_background">
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="New CheckBox"
-                android:id="@+id/checkBox9" />
+                android:id="@+id/checkBox9"
+                android:textColor="#ffffffff" />
         </TableRow>
 
         <TableRow>
@@ -116,7 +130,8 @@ android:background="@drawable/app_background">
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="New CheckBox"
-                android:id="@+id/checkBox10"  />
+                android:id="@+id/checkBox10"
+                android:textColor="#ffffffff" />
         </TableRow>
 
         <TableRow>
@@ -125,7 +140,8 @@ android:background="@drawable/app_background">
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="New CheckBox"
-                android:id="@+id/checkBox11"  />
+                android:id="@+id/checkBox11"
+                android:textColor="#ffffffff" />
         </TableRow>
 
         <TableRow>
@@ -138,7 +154,8 @@ android:background="@drawable/app_background">
                 android:id="@+id/buttonSave"
                 android:gravity="center"
                 android:onClick="save"
-                android:layout_column="0" />
+                android:layout_column="0"
+                android:textColor="#ffffffff" />
         </TableRow>
 
     </TableLayout>
