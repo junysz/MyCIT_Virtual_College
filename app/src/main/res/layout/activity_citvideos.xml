@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ie.cork.mycit.group1.CITVideos" >
+    tools:context="ie.cork.mycit.group1.CITVideos"
+    android:background="@drawable/app_background">
 
     <Button
         android:layout_width="fill_parent"
