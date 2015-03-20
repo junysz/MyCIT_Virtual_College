@@ -51,7 +51,7 @@ public class Timetables extends Activity{
         Intent timetable = new Intent(Timetables.this, Timetable.class);
         timetable.putExtra("title", title);
         timetable.putExtra("url", url);
-        Toast.makeText(this,url,Toast.LENGTH_SHORT);
+        Toast.makeText(this,url,Toast.LENGTH_LONG);
         startActivity(timetable);
 	}
 }
