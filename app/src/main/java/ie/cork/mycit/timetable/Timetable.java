@@ -1,5 +1,7 @@
 package ie.cork.mycit.timetable;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
@@ -7,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import ie.cork.mycit.group1.R;
 
@@ -41,7 +44,6 @@ public class Timetable extends ActionBarActivity {
         setTitle(intent.getExtras().getString("title"));
         url = intent.getExtras().getString("url");
 
-
         try {
             new RetrieveHTMLcode().execute().get();
         } catch (InterruptedException e) {
@@ -55,12 +57,29 @@ public class Timetable extends ActionBarActivity {
         ExpandableListView expListView = (ExpandableListView) findViewById(R.id.timetableView);
 
         // preparing list data
-        prepareListData();
+        if(!prepareListData())
+        {
+            AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+            dlgAlert.setMessage("Please check internet connection. And try again.");
+            dlgAlert.setTitle("Couldn't retrieve the timetable");
+            dlgAlert.setPositiveButton("OK", null);
+            dlgAlert.setCancelable(true);
+            dlgAlert.create().show();
+            dlgAlert.setPositiveButton("Ok",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(null, Timetables.class);
+                        startActivity(intent);
+                    }
+                });
+        }
+        else{
+            ClassComparator.ExpandableListAdapter listAdapter = new ClassComparator.ExpandableListAdapter(this, listDataHeader, listDataChild);
+            expListView.setAdapter(listAdapter);
+        }
 
-        ClassComparator.ExpandableListAdapter listAdapter = new ClassComparator.ExpandableListAdapter(this, listDataHeader, listDataChild);
 
         // setting list adapter
-        expListView.setAdapter(listAdapter);
 
     }
 
@@ -88,7 +107,7 @@ public class Timetable extends ActionBarActivity {
     }
 
 
-    private void prepareListData() {
+    private boolean prepareListData() {
         listDataHeader.add(getResources().getString(R.string.monday));
         listDataHeader.add(getResources().getString(R.string.tuesday));
         listDataHeader.add(getResources().getString(R.string.wednesday));
@@ -96,6 +115,15 @@ public class Timetable extends ActionBarActivity {
         listDataHeader.add(getResources().getString(R.string.friday));
 
         int i = 0;
+        while (classes==null&&i<5)
+        {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            i++;
+        }
         if(classes!=null)
         {
             for(i=0;i<classes.size();i++)
@@ -138,6 +166,7 @@ public class Timetable extends ActionBarActivity {
                         }
                 }
             }
+            return true;
         }
         else{
                     monday.add("no classes found");
@@ -151,6 +180,7 @@ public class Timetable extends ActionBarActivity {
         listDataChild.put(listDataHeader.get(2),wednesday);
         listDataChild.put(listDataHeader.get(3),thursday);
         listDataChild.put(listDataHeader.get(4),friday);
+        return false;
             }
     private class RetrieveHTMLcode extends AsyncTask<Void,Void,Void> {
 
@@ -159,6 +189,7 @@ public class Timetable extends ActionBarActivity {
             try {
                 classes = new TimetableExtractor().getTimetable(new BufferedReader(new InputStreamReader(new URL(url).openStream())));
             } catch (IOException e) {
+                classes = null;
                 e.printStackTrace();
             }
             return null;
