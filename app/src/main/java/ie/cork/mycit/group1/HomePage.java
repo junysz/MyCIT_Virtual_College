@@ -101,7 +101,7 @@ public class HomePage extends ActionBarActivity implements
 
     private boolean getFromSP(String key){
         SharedPreferences preferences = getApplicationContext().getSharedPreferences("PROJECT_NAME", android.content.Context.MODE_PRIVATE);
-        return preferences.getBoolean(key, true);
+        return preferences.getBoolean(key, false);
     }
 
     private void registerClickCallback() {
