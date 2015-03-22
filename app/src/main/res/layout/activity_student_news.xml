@@ -2,31 +2,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ie.cork.mycit.group1.StudentNews" >
+    tools:context="ie.cork.mycit.group1.StudentNews"
+    android:background="@drawable/background_red">
 
-    <Button
+    <ListView
+        android:id="@+id/listViewStudentNews"
+        android:divider="#34648d"
+        android:dividerHeight="1dp"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/facebook"
-        android:id="@+id/buttonFacebook"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:text="@string/general"
-        android:id="@+id/buttonGN"
-        android:layout_above="@+id/buttonFacebook"
-        android:layout_centerHorizontal="true"
-        android:onClick="general" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/twitter"
-        android:id="@+id/buttonTwitter"
-        android:layout_below="@+id/buttonFacebook"
-        android:layout_centerHorizontal="true" />
+        android:layout_height="fill_parent" >
+    </ListView>
 
 </RelativeLayout>
+

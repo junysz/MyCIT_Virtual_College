@@ -18,6 +18,8 @@
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:divider="#34648d"
+        android:dividerHeight="1dp"
         android:id="@+id/listViewVideos"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
