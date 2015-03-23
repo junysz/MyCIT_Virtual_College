@@ -6,17 +6,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Created by Edmond on 23/03/2015.
- */
-public class connection {
+public class ConnectionClass {
 
     public static void connection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Connected..");
         } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -42,16 +38,16 @@ public class connection {
                         + "Medicine: " + data.getString(2) + "Procedure: "
                         + data.getString(3) + "Description: "
                         + data.getString(4));
-                tList.append("Name: " + data.getString(1) + " Medicine: "
+                /*tList.append("Name: " + data.getString(1) + " Medicine: "
                         + data.getString(2) + " Procedure: "
                         + data.getString(3) + " Description: "
                         + data.getString(4)
                         + System.getProperty("line.separator"));
+                */
             }
             statement.close();
             connect.close();
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
