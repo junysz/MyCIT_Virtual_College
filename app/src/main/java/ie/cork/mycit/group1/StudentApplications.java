@@ -9,11 +9,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import ie.cork.mycit.timetable.Timetables;
 
 public class StudentApplications extends Activity {
@@ -54,7 +52,7 @@ public class StudentApplications extends Activity {
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
                 tempApp = appNames.get(position);
                 int x = position + 1;
-                String message = "You clicked # " + x + " " + tempApp;
+                String message = tempApp + " opening";
                 Toast.makeText(StudentApplications.this, message, Toast.LENGTH_LONG).show();
                 menuSelect(appNames.get(position).toString(), appLinks.get(position).toString());
             }

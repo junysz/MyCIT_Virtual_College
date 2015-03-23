@@ -1,12 +1,18 @@
 package ie.cork.mycit.timetable;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import ie.cork.mycit.group1.R;
 
@@ -31,6 +37,7 @@ public class Timetable extends ActionBarActivity {
     private final List<String> wednesday = new ArrayList<String>();
     private final List<String> thursday = new ArrayList<String>();
     private final List<String> friday = new ArrayList<String>();
+    boolean gotTimetable=false;
     private String url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,12 +62,32 @@ public class Timetable extends ActionBarActivity {
         ExpandableListView expListView = (ExpandableListView) findViewById(R.id.timetableView);
 
         // preparing list data
-        prepareListData();
+        if(!isNetworkConnected())
+        {
+            AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+            dlgAlert.setMessage("Please make sure you have internet connection and try again.");
+            dlgAlert.setTitle("No Internet Connection!");
+            dlgAlert.setPositiveButton("OK", null);
+            dlgAlert.setCancelable(true);
+            dlgAlert.setPositiveButton("Ok",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent timetable = new Intent(Timetable.this, Timetables.class);
+                            startActivity(timetable);
+                        }
+                    });
+            dlgAlert.create().show();
+        }
+        else {
+            prepareListData();
+        }
 
         ClassComparator.ExpandableListAdapter listAdapter = new ClassComparator.ExpandableListAdapter(this, listDataHeader, listDataChild);
 
         // setting list adapter
         expListView.setAdapter(listAdapter);
+
+
 
     }
 
@@ -87,7 +114,15 @@ public class Timetable extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
+    private boolean isNetworkConnected() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo ni = cm.getActiveNetworkInfo();
+        if (ni == null) {
+            // There are no active networks.
+            return false;
+        } else
+            return true;
+    }
     private void prepareListData() {
         listDataHeader.add(getResources().getString(R.string.monday));
         listDataHeader.add(getResources().getString(R.string.tuesday));
@@ -96,10 +131,10 @@ public class Timetable extends ActionBarActivity {
         listDataHeader.add(getResources().getString(R.string.friday));
 
         int i = 0;
-        while(classes==null&&i<5)
-        {
+        while(gotTimetable==false&&i<50){
+
             try {
-                this.wait(1000);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -167,6 +202,7 @@ public class Timetable extends ActionBarActivity {
         protected Void doInBackground(Void... uri) {
             try {
                 classes = new TimetableExtractor().getTimetable(new BufferedReader(new InputStreamReader(new URL(url).openStream())));
+                gotTimetable=true;
             } catch (IOException e) {
                 e.printStackTrace();
             }

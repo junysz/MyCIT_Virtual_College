@@ -1,128 +1,160 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ie.cork.mycit.settings.HomePageSettings">
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+tools:context="ie.cork.mycit.settings.HomePageSettings"
+android:background="@drawable/background_blue">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Customize Home Page "
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
-    <Button
+    <TableLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Save Changes"
-        android:id="@+id/buttonSave"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="save" />
+        android:layout_height="fill_parent"
+        android:stretchColumns="0,1" >
 
-    <CheckBox
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="New CheckBox"
-        android:id="@+id/checkBox1"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <TableRow>
+            android:layout_width="fill_parent"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Customize Home Page "
+                android:id="@+id/textView"
+                android:textColor="#ffffffff" />
+        </TableRow>
 
-    <CheckBox
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="New CheckBox"
-        android:id="@+id/checkBox2"
-        android:layout_below="@+id/checkBox1"
-        android:layout_alignLeft="@+id/checkBox1"
-        android:layout_alignStart="@+id/checkBox1" />
+        <TableRow>
+            android:layout_width="fill_parent"
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New CheckBox"
+                android:id="@+id/checkBox1"
+                android:textColor="#ffffffff" />
+        </TableRow>
 
-    <CheckBox
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="New CheckBox"
-        android:id="@+id/checkBox3"
-        android:layout_below="@+id/checkBox2"
-        android:layout_alignLeft="@+id/checkBox2"
-        android:layout_alignStart="@+id/checkBox2" />
+        <TableRow>
+            android:layout_width="fill_parent"
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New CheckBox"
+                android:id="@+id/checkBox2"
+                android:textColor="#ffffffff" />
+        </TableRow>
 
-    <CheckBox
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="New CheckBox"
-        android:id="@+id/checkBox4"
-        android:layout_below="@+id/checkBox3"
-        android:layout_alignRight="@+id/checkBox3"
-        android:layout_alignEnd="@+id/checkBox3" />
+        <TableRow>
+            android:layout_width="fill_parent"
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New CheckBox"
+                android:id="@+id/checkBox3"
+                android:textColor="#ffffffff" />
+        </TableRow>
 
-    <CheckBox
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="New CheckBox"
-        android:id="@+id/checkBox5"
-        android:layout_below="@+id/checkBox4"
-        android:layout_alignRight="@+id/checkBox4"
-        android:layout_alignEnd="@+id/checkBox4" />
+        <TableRow>
+            android:layout_width="fill_parent"
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New CheckBox"
+                android:id="@+id/checkBox4"
+                android:textColor="#ffffffff" />
+        </TableRow>
 
-    <CheckBox
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="New CheckBox"
-        android:id="@+id/checkBox6"
-        android:layout_below="@+id/checkBox5"
-        android:layout_alignRight="@+id/checkBox5"
-        android:layout_alignEnd="@+id/checkBox5" />
+        <TableRow>
+            android:layout_width="fill_parent"
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New CheckBox"
+                android:id="@+id/checkBox5"
+                android:textColor="#ffffffff" />
+        </TableRow>
 
-    <CheckBox
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="New CheckBox"
-        android:id="@+id/checkBox7"
-        android:layout_below="@+id/checkBox6"
-        android:layout_alignRight="@+id/checkBox6"
-        android:layout_alignEnd="@+id/checkBox6" />
+        <TableRow>
+            android:layout_width="fill_parent"
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New CheckBox"
+                android:id="@+id/checkBox6"
+                android:textColor="#ffffffff" />
+        </TableRow>
 
-    <CheckBox
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="New CheckBox"
-        android:id="@+id/checkBox8"
-        android:layout_below="@+id/checkBox7"
-        android:layout_alignRight="@+id/checkBox7"
-        android:layout_alignEnd="@+id/checkBox7" />
+        <TableRow>
+            android:layout_width="fill_parent"
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New CheckBox"
+                android:id="@+id/checkBox7"
+                android:textColor="#ffffffff" />
+        </TableRow>
 
-    <CheckBox
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="New CheckBox"
-        android:id="@+id/checkBox9"
-        android:layout_below="@+id/checkBox8"
-        android:layout_alignLeft="@+id/checkBox8"
-        android:layout_alignStart="@+id/checkBox8" />
+        <TableRow>
+            android:layout_width="fill_parent"
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New CheckBox"
+                android:id="@+id/checkBox8"
+                android:textColor="#ffffffff" />
+        </TableRow>
 
-    <CheckBox
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="New CheckBox"
-        android:id="@+id/checkBox10"
-        android:layout_below="@+id/checkBox9"
-        android:layout_alignLeft="@+id/checkBox9"
-        android:layout_alignStart="@+id/checkBox9"  />
+        <TableRow>
+            android:layout_width="fill_parent"
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New CheckBox"
+                android:id="@+id/checkBox9"
+                android:textColor="#ffffffff" />
+        </TableRow>
 
-    <CheckBox
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="New CheckBox"
-        android:id="@+id/checkBox11"
-        android:layout_below="@+id/checkBox10"
-        android:layout_alignLeft="@+id/checkBox10"
-        android:layout_alignStart="@+id/checkBox10"  />
+        <TableRow>
+            android:layout_width="fill_parent"
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New CheckBox"
+                android:id="@+id/checkBox10"
+                android:textColor="#ffffffff" />
+        </TableRow>
 
+        <TableRow>
+            android:layout_width="fill_parent"
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New CheckBox"
+                android:id="@+id/checkBox11"
+                android:textColor="#ffffffff" />
+        </TableRow>
+
+        <TableRow>
+            android:layout_width="fill_parent"
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Changes"
+                android:id="@+id/buttonSave"
+                android:gravity="center"
+                android:onClick="save"
+                android:layout_column="0"
+                android:textColor="#ffffffff" />
+        </TableRow>
+
+    </TableLayout>
 </RelativeLayout>
+
+</ScrollView>

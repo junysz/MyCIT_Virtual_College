@@ -2,19 +2,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ie.cork.mycit.group1.CITVideos" >
+    tools:context="ie.cork.mycit.group1.CITVideos"
+    android:background="@drawable/background_red">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:text="@string/cityoutubechannel"
+        android:id="@+id/buttonChannel"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/cit_videos"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:onClick="viewChannel"
+        android:textColor="#ffffffff" />
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="#34648d"
+        android:dividerHeight="1dp"
+        android:id="@+id/listViewVideos"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/buttonChannel" />
 
 </RelativeLayout>

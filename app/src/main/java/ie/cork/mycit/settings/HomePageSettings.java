@@ -1,28 +1,14 @@
 package ie.cork.mycit.settings;
+
 import android.app.Activity;
 import android.content.SharedPreferences;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.view.View;
 import ie.cork.mycit.group1.R;
 import android.content.Intent;
-import android.content.res.Resources;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.widget.CheckBox;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 import ie.cork.mycit.group1.HomePage;
-import ie.cork.mycit.group1.R;
-
 
 public class HomePageSettings extends Activity implements CompoundButton.OnCheckedChangeListener {
 
@@ -50,8 +36,9 @@ public class HomePageSettings extends Activity implements CompoundButton.OnCheck
 
     public void startBoxes(String text, int x, View v){
         CheckBox cb = (CheckBox) v;
+        String a = "" + x;
         cb.setText(text);
-        cb.setChecked(getFromSP("x"));
+        cb.setChecked(getFromSP(a));
         cb.setOnCheckedChangeListener(this);
     }
 
@@ -68,170 +55,178 @@ public class HomePageSettings extends Activity implements CompoundButton.OnCheck
     }
 
     public void save(View v) {
-        saveBoxes(0, findViewById(R.id.checkBox1));
-        saveBoxes(1, findViewById(R.id.checkBox2));
-        saveBoxes(2, findViewById(R.id.checkBox3));
-        saveBoxes(3, findViewById(R.id.checkBox4));
-        saveBoxes(4, findViewById(R.id.checkBox5));
-        saveBoxes(5, findViewById(R.id.checkBox6));
-        saveBoxes(6, findViewById(R.id.checkBox7));
-        saveBoxes(7, findViewById(R.id.checkBox8));
-        saveBoxes(8, findViewById(R.id.checkBox9));
-        saveBoxes(9, findViewById(R.id.checkBox10));
-        saveBoxes(10, findViewById(R.id.checkBox11));
-        try{
-           // saveFile();
-        } catch (Exception e) {
-            // e.printStackTrace();
-        }
         Intent homepage = new Intent(HomePageSettings.this, HomePage.class);
         startActivity(homepage);
     }
 
-    public void saveBoxes(int x, View v) {
-        CheckBox cb = (CheckBox) v;
-        if(cb.isChecked() == true){
-           // checkList.add(x, "true");
-        }
-        else {
-          //  checkList.add(x, "false");
-        }
-    }
-
     @Override
-    public void onCheckedChanged(CompoundButton buttonView,
-                                 boolean isChecked) {
-        // TODO Auto-generated method stub
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
         switch(buttonView.getId()){
             case R.id.checkBox1:
-                saveInSp("cb1",isChecked);
+                saveInSp("0",isChecked);
                 break;
             case R.id.checkBox2:
-                saveInSp("cb2",isChecked);
+                saveInSp("1",isChecked);
                 break;
-
             case R.id.checkBox3:
-                saveInSp("cb3",isChecked);
+                saveInSp("2",isChecked);
                 break;
-
             case R.id.checkBox4:
-                saveInSp("cb4",isChecked);
+                saveInSp("3",isChecked);
+                break;
+            case R.id.checkBox5:
+                saveInSp("4",isChecked);
+                break;
+            case R.id.checkBox6:
+                saveInSp("5",isChecked);
+                break;
+            case R.id.checkBox7:
+                saveInSp("6",isChecked);
+                break;
+            case R.id.checkBox8:
+                saveInSp("7",isChecked);
+                break;
+            case R.id.checkBox9:
+                saveInSp("8",isChecked);
+                break;
+            case R.id.checkBox10:
+                saveInSp("9",isChecked);
+                break;
+            case R.id.checkBox11:
+                saveInSp("10",isChecked);
                 break;
         }
 
     }
 }
+
 /*
-import android.content.Intent;
-import android.content.res.Resources;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.CheckBox;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import ie.cork.mycit.group1.HomePage;
-import ie.cork.mycit.group1.R;
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ie.cork.mycit.settings.HomePageSettings">
 
-public class HomePageSettings extends ActionBarActivity {
-    List<String> checkList = new ArrayList<String>();
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Customize Home Page "
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page_settings);
-        setTitle("Settings");
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Changes"
+        android:id="@+id/buttonSave"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="save" />
 
-        Resources res = this.getResources();
-        String[] optionNames = res.getStringArray(R.array.studentappsnames);
-        try{
-            loadFile();
-        } catch (Exception e) {
-            // e.printStackTrace();
-        }
-        start();
-    }
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New CheckBox"
+        android:id="@+id/checkBox1"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    public void save(View v) {
-        saveBoxes(0, findViewById(R.id.checkBox1));
-        saveBoxes(1, findViewById(R.id.checkBox2));
-        saveBoxes(2, findViewById(R.id.checkBox3));
-        saveBoxes(3, findViewById(R.id.checkBox4));
-        saveBoxes(4, findViewById(R.id.checkBox5));
-        saveBoxes(5, findViewById(R.id.checkBox6));
-        saveBoxes(6, findViewById(R.id.checkBox7));
-        saveBoxes(7, findViewById(R.id.checkBox8));
-        saveBoxes(8, findViewById(R.id.checkBox9));
-        saveBoxes(9, findViewById(R.id.checkBox10));
-        saveBoxes(10, findViewById(R.id.checkBox11));
-        try{
-            saveFile();
-        } catch (Exception e) {
-            // e.printStackTrace();
-        }
-        Intent homepage = new Intent(HomePageSettings.this, HomePage.class);
-        startActivity(homepage);
-    }
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New CheckBox"
+        android:id="@+id/checkBox2"
+        android:layout_below="@+id/checkBox1"
+        android:layout_alignLeft="@+id/checkBox1"
+        android:layout_alignStart="@+id/checkBox1" />
 
-    public void saveBoxes(int x, View v) {
-        CheckBox cb = (CheckBox) v;
-        if(cb.isChecked() == true){
-            checkList.add(x, "true");
-        }
-        else {
-            checkList.add(x, "false");
-        }
-    }
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New CheckBox"
+        android:id="@+id/checkBox3"
+        android:layout_below="@+id/checkBox2"
+        android:layout_alignLeft="@+id/checkBox2"
+        android:layout_alignStart="@+id/checkBox2" />
 
-    public void start(){
-        startBoxes("Student E-mail", 0, findViewById(R.id.checkBox1));
-        startBoxes("Blackboard", 1, findViewById(R.id.checkBox2));
-        startBoxes("Timetables", 2, findViewById(R.id.checkBox3));
-        startBoxes("Exam Papers", 3, findViewById(R.id.checkBox4));
-        startBoxes("Library Search", 4, findViewById(R.id.checkBox5));
-        startBoxes("Student Card Top-Up", 5, findViewById(R.id.checkBox6));
-        startBoxes("Web for Student", 6, findViewById(R.id.checkBox7));
-        startBoxes("CIT Password Reset", 7, findViewById(R.id.checkBox8));
-        startBoxes("Wifi Registration", 8, findViewById(R.id.checkBox9));
-        startBoxes("Student Drive", 9, findViewById(R.id.checkBox10));
-        startBoxes("Job Listings", 10, findViewById(R.id.checkBox11));
-    }
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New CheckBox"
+        android:id="@+id/checkBox4"
+        android:layout_below="@+id/checkBox3"
+        android:layout_alignRight="@+id/checkBox3"
+        android:layout_alignEnd="@+id/checkBox3" />
 
-    public void startBoxes(String text, int x, View v){
-        CheckBox cb = (CheckBox) v;
-        cb.setText(text);
-        if(checkList.get(x).equalsIgnoreCase("true")){
-            cb.setChecked(true);
-        }
-    }
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New CheckBox"
+        android:id="@+id/checkBox5"
+        android:layout_below="@+id/checkBox4"
+        android:layout_alignRight="@+id/checkBox4"
+        android:layout_alignEnd="@+id/checkBox4" />
 
-    private void loadFile() throws FileNotFoundException{
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New CheckBox"
+        android:id="@+id/checkBox6"
+        android:layout_below="@+id/checkBox5"
+        android:layout_alignRight="@+id/checkBox5"
+        android:layout_alignEnd="@+id/checkBox5" />
 
-        InputStream inStream = null;
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New CheckBox"
+        android:id="@+id/checkBox7"
+        android:layout_below="@+id/checkBox6"
+        android:layout_alignRight="@+id/checkBox6"
+        android:layout_alignEnd="@+id/checkBox6" />
 
-        try {
-            Resources res = getResources();
-            inStream = res.openRawResource(R.raw.listfile);
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New CheckBox"
+        android:id="@+id/checkBox8"
+        android:layout_below="@+id/checkBox7"
+        android:layout_alignRight="@+id/checkBox7"
+        android:layout_alignEnd="@+id/checkBox7" />
 
-            Scanner scan = new Scanner(inStream);
-            String line;
-            while (scan.hasNextLine()) {
-                line = scan.nextLine();
-                checkList.add(line);
-            }
-            scan.close();
-        } catch (Exception e) {
-            // e.printStackTrace();
-        }
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New CheckBox"
+        android:id="@+id/checkBox9"
+        android:layout_below="@+id/checkBox8"
+        android:layout_alignLeft="@+id/checkBox8"
+        android:layout_alignStart="@+id/checkBox8" />
 
-    }
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New CheckBox"
+        android:id="@+id/checkBox10"
+        android:layout_below="@+id/checkBox9"
+        android:layout_alignLeft="@+id/checkBox9"
+        android:layout_alignStart="@+id/checkBox9"  />
 
-    private void saveFile() throws IOException{
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New CheckBox"
+        android:id="@+id/checkBox11"
+        android:layout_below="@+id/checkBox10"
+        android:layout_alignLeft="@+id/checkBox10"
+        android:layout_alignStart="@+id/checkBox10"  />
 
-    }
-
-}*/
+</RelativeLayout>
+ */

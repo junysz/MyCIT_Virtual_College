@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ie.cork.mycit.timetable.Timetables" >
+    tools:context="ie.cork.mycit.timetable.Timetables"
+    android:background="@drawable/background_red" >
 
     <Button
         android:id="@+id/buttonSubmit"
@@ -17,30 +18,31 @@
         android:layout_alignWithParentIfMissing="false"
         android:layout_below="@+id/spinnerClassGroups"
         android:layout_marginTop="77dp"
-        android:layout_alignLeft="@+id/spinnerClassGroups"
-        android:layout_alignStart="@+id/spinnerClassGroups"
-        android:layout_alignRight="@+id/spinnerClassGroups"
-        android:layout_alignEnd="@+id/spinnerClassGroups" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#ffffffff"
+        />
 
     <TextView
         android:id="@+id/textViewClassGroups"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ClassGroups"
+        android:text="@string/ClassGroupTimetables"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_above="@+id/spinnerClassGroups"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="58dp" />
+        android:layout_marginBottom="58dp"
+        android:textColor="#ffffffff" />
 
     <Spinner
         android:id="@+id/spinnerClassGroups"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:spinnerMode="dropdown"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/textViewClassGroups"
-        android:layout_alignStart="@+id/textViewClassGroups"
-        android:layout_alignRight="@+id/textViewClassGroups"
-        android:layout_alignEnd="@+id/textViewClassGroups" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#ffffffff"
+        android:background="@drawable/abc_spinner_ab_pressed_holo_dark" />
 
 </RelativeLayout>

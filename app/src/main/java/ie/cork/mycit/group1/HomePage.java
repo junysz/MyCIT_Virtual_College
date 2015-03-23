@@ -1,10 +1,9 @@
 package ie.cork.mycit.group1;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,11 +15,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 import ie.cork.mycit.settings.HomePageSettings;
 import ie.cork.mycit.timetable.Timetables;
 
@@ -31,35 +33,122 @@ public class HomePage extends ActionBarActivity implements
 	//Used to store the last screen title. For use in{@link #restoreActionBar()}.
 	private CharSequence mTitle;
 
+    List<String> chosenApps = new ArrayList<String>();
+    List<String> allAppNames = new ArrayList<String>();
+    List<String> appLinks = new ArrayList<String>();
+    String tempApp = "";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_page);
 
-        loadTime();
-        saveTime();
+        setupTwitterButton();
+        setupFacebookButton();
+        setupYoutubeButton();
+        setupGoogleButton();
+        setupLinkedinButton();
+
+        Resources res = this.getResources();
+        String[] studentappsnames = res.getStringArray(R.array.studentappsnames);
+        String[] studentappslinks = res.getStringArray(R.array.studentappslinks);
+        allAppNames = Arrays.asList(studentappsnames);
+        startCustom();
+        appLinks = Arrays.asList(studentappslinks);
+
+        ListView listApps = (ListView) findViewById(R.id.listHomePage);
+
+        if(chosenApps != null){
+            CustomViewAdapter adapter = new CustomViewAdapter(HomePage.this, chosenApps);
+            listApps.setAdapter(adapter);
+        }
+        else{
+            CustomViewAdapter adapter = new CustomViewAdapter(HomePage.this, allAppNames);
+            listApps.setAdapter(adapter);
+        }
+
+        registerClickCallback();
 
 		mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
 		mTitle = getTitle();
 
 		// Set up the drawer.
-		mNavigationDrawerFragment.setUp(R.id.navigation_drawer,(DrawerLayout) findViewById(R.id.drawer_layout));		
-	}
+		mNavigationDrawerFragment.setUp(R.id.navigation_drawer,(DrawerLayout) findViewById(R.id.drawer_layout));
 
-	public void email(View v) {
-        viewWeb("Student Email", "http://mail.mycit.ie/");
-	}
-	
-	public void timetables(View v) {
-		Intent timetables = new Intent(HomePage.this, Timetables.class);
-		startActivity(timetables);
-	}
-	
-	public void card(View v) {
-        viewWeb("Student Card Top-Up", "https://citcard.cit.ie/icmserver/#student_number");
-	}
-	
-	@Override
+    }
+
+    public void startCustom(){
+        checkCustom(0);
+        checkCustom(1);
+        checkCustom(2);
+        checkCustom(3);
+        checkCustom(4);
+        checkCustom(5);
+        checkCustom(6);
+        checkCustom(7);
+        checkCustom(8);
+        checkCustom(9);
+        checkCustom(10);
+    }
+
+    public void checkCustom(int x){
+        String a = "" + x;
+        boolean check = getFromSP(a);
+        if(check){
+            chosenApps.add(allAppNames.get(x));
+        }
+    }
+
+    private boolean getFromSP(String key){
+        SharedPreferences preferences = getApplicationContext().getSharedPreferences("PROJECT_NAME", android.content.Context.MODE_PRIVATE);
+        return preferences.getBoolean(key, false);
+    }
+
+    private void registerClickCallback() {
+        ListView list = (ListView) findViewById(R.id.listHomePage);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
+                tempApp = chosenApps.get(position);
+                int x = position + 1;
+                int pos = findPosition(tempApp);
+                String message = tempApp + " opening";
+                Toast.makeText(HomePage.this, message, Toast.LENGTH_LONG).show();
+                menuSelect(allAppNames.get(pos).toString(), appLinks.get(pos).toString());
+            }
+
+        });
+    }
+
+    public int findPosition(String selected) {
+        Iterator<String> itr = allAppNames.iterator();
+        int x = 0;
+        while (itr.hasNext()) {
+            if(selected.equalsIgnoreCase(allAppNames.get(x))){
+                return x;
+            }
+            x++;
+        }
+        return 0;
+    }
+
+    public void menuSelect(String title, String url) {
+        if(title.equalsIgnoreCase("Timetables")){
+            Intent timetables = new Intent(HomePage.this, Timetables.class);
+            startActivity(timetables);
+        }
+        else{
+            viewWeb(title, url);
+        }
+    }
+
+    public void viewWeb(String title, String url) {
+        Intent web = new Intent(HomePage.this, Web.class);
+        web.putExtra("title", title);
+        web.putExtra("url", url);
+        startActivity(web);
+    }
+
+    @Override
 	public void onNavigationDrawerItemSelected(int position) {
 		// update the main content by replacing fragments
 		FragmentManager fragmentManager = getSupportFragmentManager();
@@ -211,36 +300,58 @@ public class HomePage extends ActionBarActivity implements
 		}
 	}
 
-    public void viewWeb(String title, String url) {
-        Intent web = new Intent(HomePage.this, Web.class);
-        web.putExtra("title", title);
-        web.putExtra("url", url);
-        startActivity(web);
+    public void setupTwitterButton(){
+        Button twitterButton = (Button) findViewById(R.id.twitter_feed_button);
+
+        twitterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewWeb("CIT Twitter", "http://mycit.16mb.com/html/open_CIT_twitter.html");
+            }
+        });
     }
 
-    @SuppressLint("SimpleDateFormat")
-    public void saveTime(){
-        long millis = System.currentTimeMillis();
-        Date date = new Date(millis);
-        String formattedDate = new SimpleDateFormat("MMM d y h:ma").format(date);
-        String message = "You last started MyCIT's Android app on\n\t" + formattedDate;
+    public void setupFacebookButton(){
+        Button facebookButton = (Button) findViewById(R.id.facebook_feed_button);
 
-        SharedPreferences sharedpreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedpreferences.edit();
-        editor.putString("Time", message);
-        editor.commit();
+        facebookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewWeb("CIT Facebook", "http://mycit.16mb.com/html/open_CIT_fb.html");
+            }
+        });
     }
 
-    public void loadTime(){
-        SharedPreferences sharedpreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
-        String defValue = "This is the first time you have opened MyCIT's android app";
-        String message = sharedpreferences.getString("Time", defValue);
-        if(message.equalsIgnoreCase(defValue)){
-            Toast.makeText(HomePage.this, defValue, Toast.LENGTH_LONG).show();
-        }
-        else{
-            Toast.makeText(HomePage.this, message, Toast.LENGTH_LONG).show();
-        }
+    public void setupYoutubeButton(){
+        Button youtubeButton = (Button) findViewById(R.id.youtube_feed_button);
+
+        youtubeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewWeb("CIT Youtube", "http://mycit.16mb.com/html/open_CIT_youtube.html");
+            }
+        });
     }
 
+    public void setupGoogleButton(){
+        Button googleButton = (Button) findViewById(R.id.google_feed_button);
+
+        googleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewWeb("CIT Google+", "http://mycit.16mb.com/html/open_CIT_googlePlus.html");
+            }
+        });
+    }
+
+    public void setupLinkedinButton(){
+        Button linkedinButton = (Button) findViewById(R.id.linkedin_feed_button);
+
+        linkedinButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewWeb("CIT Linkedin", "http://mycit.16mb.com/html/open_CIT_linkedin.html");
+            }
+        });
+    }
 }
