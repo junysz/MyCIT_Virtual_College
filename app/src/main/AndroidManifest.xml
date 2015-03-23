@@ -198,6 +198,10 @@
             android:name="ie.cork.mycit.settings.CustomSettingsAdapter"
             android:label="@string/title_activity_custom_settings_adapter" >
         </activity>
+        <activity
+            android:name="ie.cork.mycit.maps.MapPane"
+            android:label="@string/title_activity_map_pane" >
+        </activity>
     </application>
 
 </manifest>
