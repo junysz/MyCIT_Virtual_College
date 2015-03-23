@@ -122,6 +122,8 @@
         <item>Student Assistance Fund</item>
     </string-array>
 
+
+
     <string-array name="supportServicesLinks">
         <item>http://www.mycit.ie/accommodation#pageTitle</item>
         <item>http://www.mycit.ie/medical#pageTitle</item>
@@ -137,6 +139,24 @@
         <item>http://www.mycit.ie/access_disability/disability-support-service/#pageTitle</item>
         <item>http://www.mycit.ie/access_disability/mature-students/#pageTitle</item>
         <item>http://www.mycit.ie/access_disability/student-assistance-fund/#pageTitle</item>
+    </string-array>
+
+    <string-array name="studentNewsNames">
+        <item>General News</item>
+        <item>Facebook</item>
+        <item>Twitter</item>
+        <item>Google+</item>
+        <item>YouTube</item>
+        <item>Linkedin</item>
+    </string-array>
+
+    <string-array name="studentNewsLinks">
+        <item>http://www.mycit.ie/news</item>
+        <item>https://www.facebook.com/myCIT</item>
+        <item>https://twitter.com/CIT_ie</item>
+        <item>https://plus.google.com/u/0/+myCIT/posts</item>
+        <item>https://www.youtube.com/user/cit</item>
+        <item>https://www.linkedin.com/company/cork-institute-of-technology</item>
     </string-array>
 
     <string-array name="academicInformationNames">

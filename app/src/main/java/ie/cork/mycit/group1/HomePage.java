@@ -101,7 +101,7 @@ public class HomePage extends ActionBarActivity implements
 
     private boolean getFromSP(String key){
         SharedPreferences preferences = getApplicationContext().getSharedPreferences("PROJECT_NAME", android.content.Context.MODE_PRIVATE);
-        return preferences.getBoolean(key, true);
+        return preferences.getBoolean(key, false);
     }
 
     private void registerClickCallback() {
@@ -317,7 +317,7 @@ public class HomePage extends ActionBarActivity implements
         facebookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                viewWeb("CIT Facebook", "http://mycit.16mb.com/html/open_CIT_facebook.html");
+                viewWeb("CIT Facebook", "http://mycit.16mb.com/html/open_CIT_fb.html");
             }
         });
     }

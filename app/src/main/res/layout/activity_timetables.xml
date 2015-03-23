@@ -42,6 +42,7 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:textColor="#ffffffff" />
+        android:textColor="#ffffffff"
+        android:background="@drawable/abc_spinner_ab_pressed_holo_dark" />
 
 </RelativeLayout>

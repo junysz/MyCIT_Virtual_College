@@ -27,7 +27,7 @@
             android:layout_weight="1.11"
             android:layout_above="@+id/linearLayout"
             android:textFilterEnabled="false"
-            android:divider="#ffffffff"
+            android:divider="#34648d"
             android:dividerHeight="1dp"
             android:drawSelectorOnTop="false"
             android:fastScrollAlwaysVisible="false">
