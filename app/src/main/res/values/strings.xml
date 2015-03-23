@@ -122,8 +122,6 @@
         <item>Student Assistance Fund</item>
     </string-array>
 
-
-
     <string-array name="supportServicesLinks">
         <item>http://www.mycit.ie/accommodation#pageTitle</item>
         <item>http://www.mycit.ie/medical#pageTitle</item>
@@ -151,7 +149,7 @@
     </string-array>
 
     <string-array name="studentNewsLinks">
-        <item>http://www.mycit.ie/news</item>
+        <item>http://www.mycit.ie/news#pageTitle</item>
         <item>https://www.facebook.com/myCIT</item>
         <item>https://twitter.com/CIT_ie</item>
         <item>https://plus.google.com/u/0/+myCIT/posts</item>
