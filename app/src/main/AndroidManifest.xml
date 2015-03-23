@@ -198,14 +198,6 @@
             android:name="ie.cork.mycit.settings.CustomSettingsAdapter"
             android:label="@string/title_activity_custom_settings_adapter" >
         </activity>
-        <activity
-            android:name="ie.cork.mycit.othercollege.OtherCollege"
-            android:label="@string/title_activity_other_college"
-            android:parentActivityName=".HomePage" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="ie.cork.mycit.group1.HomePage" />
-        </activity>
     </application>
 
 </manifest>

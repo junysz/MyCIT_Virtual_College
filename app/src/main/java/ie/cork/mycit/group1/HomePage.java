@@ -27,7 +27,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import ie.cork.mycit.database.DatabaseSetUp;
-import ie.cork.mycit.othercollege.OtherCollege;
 import ie.cork.mycit.settings.HomePageSettings;
 import ie.cork.mycit.timetable.Timetables;
 
@@ -169,62 +168,74 @@ public class HomePage extends ActionBarActivity implements
 	public void onSectionAttached(int number) {
 		switch (number) {
 		case 1:
+			mTitle = "MyCit Home Page";
+			break;
+		case 2:
 			Intent newStudents = new Intent(HomePage.this, NewStudents.class);
 			startActivity(newStudents);
 			break;
-		case 2:
+		case 3:
 			Intent itServicesSupport = new Intent(HomePage.this, ItServicesSupport.class);
 			startActivity(itServicesSupport);
 			break;
-		case 3:
+		case 4:
 			Intent supportServices = new Intent(HomePage.this, SupportServices.class);
 			startActivity(supportServices);
 			break;
-		case 4:
+		case 5:
 			Intent academicInformation = new Intent(HomePage.this, AcademicInformation.class);
 			startActivity(academicInformation);
 			break;
-		case 5:
+		case 6:
 			Intent usefulResources = new Intent(HomePage.this, UsefulResources.class);
 			startActivity(usefulResources);
 			break;			
-		case 6:
+		case 7:
             viewWeb("Student Calendar", "http://www.mycit.ie/events#eventMonthsId");
 			break;
-		case 7:
+		case 8:
 			Intent studentNews = new Intent(HomePage.this, StudentNews.class);
 			startActivity(studentNews);
 			break;
-		case 8:
+		case 9:
 			Intent studentApplications = new Intent(HomePage.this, StudentApplications.class);
 			startActivity(studentApplications);
 			break;
-		case 9:
+		case 10:
             viewWeb("Pay Fees Online", "https://live.runmyprocess.com/pub/925358723/appli/60224");
 			break;
-		case 10:
+		case 11:
 			Intent studentHandbooks = new Intent(HomePage.this, StudentHandbooks.class);
 			startActivity(studentHandbooks);
+			/*
+			 * File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +"/"+ filename);
+			Intent target = new Intent(Intent.ACTION_VIEW);
+			target.setDataAndType(Uri.fromFile(file),"application/pdf");
+			target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+			
+			Intent intent = Intent.createChooser(target, "Open File");
+			try {
+			    startActivity(intent);
+			} catch (ActivityNotFoundException e) {
+			    // Instruct the user to install a PDF reader here, or something
+			}
+			*/ 
 			break;
-		case 11:
+		case 12:
 			Intent citVideos = new Intent(HomePage.this, CITVideos.class);
 			startActivity(citVideos);
 			break;
-		case 12:
+		case 13:
 			Intent campusMap = new Intent(HomePage.this, CampusMap.class);
 			startActivity(campusMap);
 			break;
-		case 13:
+		case 14:
 			Intent importantDocuments = new Intent(HomePage.this, ImportantDocuments.class);
 			startActivity(importantDocuments);
 			break;
-        case 14:
+		case 15:
             viewWeb("Public Folders", "https://webvpn.cit.ie/+CSCOE+/logon.html#username");
-            break;
-        case 15:
-            Intent othercollege = new Intent(HomePage.this, OtherCollege.class);
-            startActivity(othercollege);
-            break;
+			break;
 		}
 	}
 
