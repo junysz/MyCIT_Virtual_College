@@ -17,6 +17,7 @@
         <item>Campus Map</item>
         <item>Important Documents</item>
         <item>Public Folders</item>
+        <item>Other Cork Colleges</item>
     </string-array>
 
     <string-array name="studentappsnames">
@@ -237,6 +238,36 @@
         <item>https://mapsengine.google.com/map/embed?mid=zQH00h_hX520.k4SoJnz7xdy8</item>
         <item>http://www.mycit.ie/directions-map#pageTitle</item>
         <item>http://www.mycit.ie/panoramas#pageTitle</item>
+    </string-array>
+
+    <string-array name="otherCollegeNames">
+        <item>UCC</item>
+        <item>Cork College Of Commerce</item>
+        <item>St. John\'s Central College</item>
+        <item>Griffith College</item>
+        <item>National Maritime College of Ireland</item>
+        <item>Crawford College of Art &amp; Design</item>
+        <item>Coláiste Stofáin Naofa</item>
+        <item>Cork City College</item>
+        <item>Terence MacSwiney Community College</item>
+        <item>Nagle Community College</item>
+        <item>Coláiste Daibhéid</item>
+        <item>CityNorth College</item>
+    </string-array>
+
+    <string-array name="otherCollegeLinks">
+        <item>http://www.ucc.ie/en/</item>
+        <item>http://www.corkcollegeofcommerce.ie/</item>
+        <item>http://www.stjohnscollege.ie/</item>
+        <item>https://www.griffith.ie/</item>
+        <item>http://www.nmci.ie/</item>
+        <item>http://www.cit.ie/ccad/#pageTitle</item>
+        <item>http://www.csn.ie/</item>
+        <item>http://www.corkcitycollege.com/</item>
+        <item>http://www.corkvec.ie/schools_colleges/terence_macswiney_community_college/index.shtml#sectiontitle</item>
+        <item>http://naglecc.com/</item>
+        <item>http://www.colaistedaibheid.ie/</item>
+        <item>http://citynorthcollege.ie/</item>
     </string-array>
 
     <string-array name="usefulResourcesNames">
@@ -1349,5 +1380,6 @@
     <string name="thursday">Thursday</string>
     <string name="friday">Friday</string>
     <string name="title_activity_custom_settings_adapter">CustomSettingsAdapter</string>
+    <string name="title_activity_other_college">OtherCollege</string>
 
     </resources>

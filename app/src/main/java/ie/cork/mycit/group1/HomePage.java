@@ -27,6 +27,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import ie.cork.mycit.database.DatabaseSetUp;
+import ie.cork.mycit.othercolleges.OtherCollege;
 import ie.cork.mycit.settings.HomePageSettings;
 import ie.cork.mycit.timetable.Timetables;
 
@@ -220,9 +221,13 @@ public class HomePage extends ActionBarActivity implements
 			Intent importantDocuments = new Intent(HomePage.this, ImportantDocuments.class);
 			startActivity(importantDocuments);
 			break;
-		case 15:
+        case 15:
             viewWeb("Public Folders", "https://webvpn.cit.ie/+CSCOE+/logon.html#username");
-			break;
+            break;
+        case 16:
+            Intent othercollege = new Intent(HomePage.this, OtherCollege.class);
+            startActivity(othercollege);
+            break;
 		}
 	}
 
