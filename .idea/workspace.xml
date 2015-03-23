@@ -28,6 +28,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ae9952a-b824-4d1c-b124-e943d5d1ebba" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyCitApp.iws" />
@@ -1780,7 +1781,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="747" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="747" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1801,7 +1802,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3457189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3457189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15277778" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2283,36 +2284,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.8" vertical-offset="240" max-vertical-offset="17505">
-          <caret line="151" column="48" selection-start-line="151" selection-start-column="48" selection-end-line="151" selection-end-column="48" />
-          <folding>
-            <element signature="tag#string-array#0;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#1;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#2;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#3;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#4;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#5;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#6;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#7;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#8;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#9;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#11;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#12;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#13;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#14;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#15;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#16;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#17;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#18;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#19;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#20;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#21;tag#resources#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_campus_map.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39106146" vertical-offset="0" max-vertical-offset="537">
@@ -2346,6 +2317,30 @@
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7773655" vertical-offset="2281" max-vertical-offset="18000">
+          <caret line="340" column="2" selection-start-line="340" selection-start-column="2" selection-end-line="340" selection-end-column="2" />
+          <folding>
+            <element signature="tag#string-array#0;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#1;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#2;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#3;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#4;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#5;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#6;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#7;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#9;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#10;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#11;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#12;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#15;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#17;tag#resources#0" expanded="false" />
+            <element signature="tag#string-array#19;tag#resources#0" expanded="false" />
           </folding>
         </state>
       </provider>

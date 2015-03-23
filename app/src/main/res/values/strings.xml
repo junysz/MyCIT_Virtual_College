@@ -204,7 +204,6 @@
             <item>Exam Papers</item>
             <item>Conferrings</item>
         </string-array>
-<<<<<<< HEAD
 
         <string-array name="academicInformationLinks">
             <item>http://www.mycit.ie/admissions#pageTitle</item>
@@ -226,29 +225,6 @@
             <item>http://www.mycit.ie/examinations/conferrings/#pageTitle</item>
         </string-array>
 
-=======
-
-        <string-array name="academicInformationLinks">
-            <item>http://www.mycit.ie/admissions#pageTitle</item>
-            <item>http://www.mycit.ie/admissions/freechoice/#pageTitle</item>
-            <item>http://library.cit.ie/search#search</item>
-            <item>http://library.cit.ie/screens/Ebook_launch.html</item>
-            <item>http://www.mycit.ie/libraryguide/</item>
-            <item>http://www.mycit.ie/library#pageTitle</item>
-            <item>http://www.mycit.ie/registrar_soffice_studentservi#pageTitle</item>
-            <item>http://www.mycit.ie/internationaloffice#pageTitle</item>
-            <item>http://www.mycit.ie/studentombudsman#pageTitle</item>
-            <item>http://www.mycit.ie/ccad/guides#pageTitle</item>
-            <item>http://www.mycit.ie/examinations#pageTitle</item>
-            <item>http://www.mycit.ie/examinations/timetables/#pageTitle</item>
-            <item>http://www.mycit.ie/examinations/results/#pageTitle</item>
-            <item>http://www.mycit.ie/examinations/regulations/#pageTitle</item>
-            <item>http://www.mycit.ie/examinations/support/#pageTitle</item>
-            <item>http://www.mycit.ie/examinations/exampapers/#pageTitle</item>
-            <item>http://www.mycit.ie/examinations/conferrings/#pageTitle</item>
-        </string-array>
-
-<<<<<<< HEAD
     <string-array name="mapNames">
         <item>Campus Map</item>
         <item>Interactive Map</item>
@@ -263,43 +239,7 @@
         <item>http://www.mycit.ie/panoramas#pageTitle</item>
     </string-array>
 
-    <string-array name="department">
-        <item>All</item>
-        <item>ACCOUNTING</item>
-        <item>ADMIN</item>
-        <item>ALC</item>
-        <item>ARCHITECTURE</item>
-        <item>ARTSOFFICE</item>
-        <item>BIOLOGY</item>
-        <item>CCAD</item>
-        <item>CHEMISTRY</item>
-        <item>CIVIL</item>
-        <item>COMPUTING</item>
-        <item>CONSTRUCTION</item>
-        <item>CRAFTSTUDIES</item>
-        <item>CSM</item>
-        <item>CSMACADEMIC</item>
-        <item>CSMKEYBOARD</item>
-        <item>CSMSTRINGS</item>
-        <item>CSMWIND</item>
-        <item>DEIS</item>
-        <item>ELECTRICAL</item>
-        <item>MANAGEMENT</item>
-        <item>MARKETING</item>
-        <item>MATHS</item>
-        <item>MECHANICAL</item>
-        <item>MEDIA</item>
-        <item>NMCI</item>
-        <item>ONLINE</item>
-        <item>ORGANISATION</item>
-        <item>PHYSICAL SCIENCES</item>
-        <item>PROCESS</item>
-        <item>SOCIAL</item>
-        <item>SPORT</item>
-        <item>TOURISM</item>
-    </string-array>
-=======
->>>>>>> edMaster
+
         <string-array name="usefulResourcesNames">
             <item>CIT Campuses</item>
             <item>Academic Departments</item>
@@ -313,10 +253,6 @@
             <item>CIT Arts Office</item>
             <item>CIT Event Booking</item>
         </string-array>
-<<<<<<< HEAD
-=======
->>>>>>> Adrian_Branch
->>>>>>> edMaster
 
         <string-array name="usefulResourcesLinks">
             <item>http://www.mycit.ie/contacts#pageTitle</item>
