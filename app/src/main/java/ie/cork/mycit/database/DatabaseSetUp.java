@@ -18,6 +18,7 @@ public class DatabaseSetUp extends SQLiteOpenHelper {
     public static final String T_ITSERVICES = "itservices";
     public static final String T_MAPS = "maps";
     public static final String T_NEWSTUDENTS = "newstudents";
+    public static final String T_OTHERCOLLEGES = "othercolleges";
     public static final String T_SIDEMENU = "sidemenu";
     public static final String T_STUDENTAPPS = "studentapplications";
     public static final String T_STUHANDBOOKS = "studenthandbooks";
@@ -61,6 +62,11 @@ public class DatabaseSetUp extends SQLiteOpenHelper {
                     COLUMN_LINK + LVCHAR_TYPE + ")";
     private static final String CREATE_MAPS =
             "CREATE TABLE " + T_MAPS + " (" +
+                    COLUMN_MENUID + INT_TYPE + ", " +
+                    COLUMN_NAME + SVCHAR_TYPE + " PRIMARY KEY," +
+                    COLUMN_LINK + LVCHAR_TYPE + ")";
+    private static final String CREATE_OTHERCOLLEGES =
+            "CREATE TABLE " + T_OTHERCOLLEGES + " (" +
                     COLUMN_MENUID + INT_TYPE + ", " +
                     COLUMN_NAME + SVCHAR_TYPE + " PRIMARY KEY," +
                     COLUMN_LINK + LVCHAR_TYPE + ")";
@@ -111,6 +117,7 @@ public class DatabaseSetUp extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(CREATE_IMPORTANTDOCS);
         sqLiteDatabase.execSQL(CREATE_ITSERVICES);
         sqLiteDatabase.execSQL(CREATE_MAPS);
+        sqLiteDatabase.execSQL(CREATE_OTHERCOLLEGES);
         sqLiteDatabase.execSQL(CREATE_NEWSTUDENTS);
         sqLiteDatabase.execSQL(CREATE_SIDEMENU);
         sqLiteDatabase.execSQL(CREATE_STUDENTAPPS);
@@ -129,6 +136,7 @@ public class DatabaseSetUp extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_IMPORTANTDOCS);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_ITSERVICES);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_MAPS);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_OTHERCOLLEGES);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_NEWSTUDENTS);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_SIDEMENU);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_STUDENTAPPS);

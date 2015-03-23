@@ -29,13 +29,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ae9952a-b824-4d1c-b124-e943d5d1ebba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/othercolleges/OtherCollege.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_other_college.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_other_college.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/HomePage.java" afterPath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/HomePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/ConnectionClass.java" afterPath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/ConnectionClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/DatabaseSetUp.java" afterPath="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/DatabaseSetUp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyCitApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,40 +54,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="strings.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <file leaf-file-name="DatabaseSetUp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/DatabaseSetUp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0884558" vertical-offset="5" max-vertical-offset="2329">
-              <caret line="270" column="19" selection-start-line="270" selection-start-column="19" selection-end-line="270" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="2601">
+              <caret line="128" column="5" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
               <folding>
-                <element signature="tag#string-array#0;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#1;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#2;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#3;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#4;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#5;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#6;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#7;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#8;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#9;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#10;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#11;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#12;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#13;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#14;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#15;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#16;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#17;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#18;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#19;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#20;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#21;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#22;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#23;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#24;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#25;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#26;tag#resources#0" expanded="false" />
-                <element signature="tag#string-array#27;tag#resources#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnectionClass.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/ConnectionClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.32547864" vertical-offset="0" max-vertical-offset="1020">
+              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+              <folding>
+                <element signature="e#301#313#0" expanded="true" />
+                <element signature="e#372#385#0" expanded="true" />
+                <element signature="e#455#476#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -894,13 +877,13 @@
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/DeptIDNameArrayList.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/connection.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/Connection.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/ConnectionClass.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/DatabaseSetUp.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/HomePage.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_other_college.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/othercolleges/OtherCollege.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/DatabaseSetUp.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/ConnectionClass.java" />
       </list>
     </option>
   </component>
@@ -1014,6 +997,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mycit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyCitApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyCIT_Virtual_College" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mycit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1353,7 +1374,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18059126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19280206" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35972223" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1824,24 +1845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/ConnectionClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="362" max-vertical-offset="1054">
-          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/DatabaseSetUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11460674" vertical-offset="102" max-vertical-offset="2465">
-          <caret line="9" column="53" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/group1/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2890" max-vertical-offset="5423">
@@ -1910,8 +1913,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0884558" vertical-offset="5" max-vertical-offset="2329">
-          <caret line="270" column="19" selection-start-line="270" selection-start-column="19" selection-end-line="270" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.6071964" vertical-offset="751" max-vertical-offset="2771">
+          <caret line="269" column="41" selection-start-line="269" selection-start-column="14" selection-end-line="269" selection-end-column="41" />
           <folding>
             <element signature="tag#string-array#0;tag#resources#0" expanded="false" />
             <element signature="tag#string-array#1;tag#resources#0" expanded="false" />
@@ -1932,8 +1935,6 @@
             <element signature="tag#string-array#16;tag#resources#0" expanded="false" />
             <element signature="tag#string-array#17;tag#resources#0" expanded="false" />
             <element signature="tag#string-array#18;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#19;tag#resources#0" expanded="false" />
-            <element signature="tag#string-array#20;tag#resources#0" expanded="false" />
             <element signature="tag#string-array#21;tag#resources#0" expanded="false" />
             <element signature="tag#string-array#22;tag#resources#0" expanded="false" />
             <element signature="tag#string-array#23;tag#resources#0" expanded="false" />
@@ -1941,6 +1942,28 @@
             <element signature="tag#string-array#25;tag#resources#0" expanded="false" />
             <element signature="tag#string-array#26;tag#resources#0" expanded="false" />
             <element signature="tag#string-array#27;tag#resources#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/DatabaseSetUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="2601">
+          <caret line="128" column="5" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ie/cork/mycit/database/ConnectionClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32547864" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding>
+            <element signature="e#301#313#0" expanded="true" />
+            <element signature="e#372#385#0" expanded="true" />
+            <element signature="e#455#476#0" expanded="true" />
           </folding>
         </state>
       </provider>

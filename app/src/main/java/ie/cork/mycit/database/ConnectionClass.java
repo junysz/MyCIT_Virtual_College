@@ -12,11 +12,14 @@ public class ConnectionClass {
     ArrayList<IDNameLink> academicInfoArray = new ArrayList<IDNameLink>();
     ArrayList<DeptIDClass> classesArray = new ArrayList<DeptIDClass>();
     ArrayList<DeptIDNameArrayList> departmentArray = new ArrayList<DeptIDNameArrayList>();
+    ArrayList<IDNameLink> importantDocsArray = new ArrayList<IDNameLink>();
     ArrayList<IDNameLink> itServicesArray = new ArrayList<IDNameLink>();
     ArrayList<IDNameLink> mapsArray = new ArrayList<IDNameLink>();
     ArrayList<IDNameLink> newStudentsArray = new ArrayList<IDNameLink>();
+    ArrayList<IDNameLink> otherCollegesArray = new ArrayList<IDNameLink>();
     ArrayList<IDItem> sideMenuArray = new ArrayList<IDItem>();
     ArrayList<IDNameLink> studentAppsArray = new ArrayList<IDNameLink>();
+    ArrayList<IDNameLink> studentHandbooksArray = new ArrayList<IDNameLink>();
     ArrayList<IDNameLink> supportServicesArray = new ArrayList<IDNameLink>();
     ArrayList<IDNameLink> usefulResourcesArray = new ArrayList<IDNameLink>();
     ArrayList<IDNameLink> videosArray = new ArrayList<IDNameLink>();
