@@ -14,11 +14,13 @@ public class DatabaseSetUp extends SQLiteOpenHelper {
     public static final String T_ACADEMICINFO = "acamdemicinformation";
     public static final String T_CLASSES = "classes";
     public static final String T_DEPARTMENT = "department";
+    public static final String T_IMPORTANTDOCS = "importantdocuments";
     public static final String T_ITSERVICES = "itservices";
     public static final String T_MAPS = "maps";
     public static final String T_NEWSTUDENTS = "newstudents";
     public static final String T_SIDEMENU = "sidemenu";
     public static final String T_STUDENTAPPS = "studentapplications";
+    public static final String T_STUHANDBOOKS = "studenthandbooks";
     public static final String T_SUPPORTSERVICES = "supportservices";
     public static final String T_USEFULRES = "usefulresources";
     public static final String T_VIDEOS = "videos";
@@ -47,6 +49,11 @@ public class DatabaseSetUp extends SQLiteOpenHelper {
             "CREATE TABLE " + T_DEPARTMENT + " (" +
                     COLUMN_DEPTID + INT_TYPE + ", " +
                     COLUMN_NAME + SVCHAR_TYPE + " PRIMARY KEY" + ")";
+    private static final String CREATE_IMPORTANTDOCS =
+            "CREATE TABLE " + T_IMPORTANTDOCS + " (" +
+                    COLUMN_MENUID + INT_TYPE + ", " +
+                    COLUMN_NAME + SVCHAR_TYPE + " PRIMARY KEY," +
+                    COLUMN_LINK + LVCHAR_TYPE + ")";
     private static final String CREATE_ITSERVICES =
             "CREATE TABLE " + T_ITSERVICES + " (" +
                     COLUMN_MENUID + INT_TYPE + ", " +
@@ -68,6 +75,11 @@ public class DatabaseSetUp extends SQLiteOpenHelper {
                     COLUMN_MENUITEM + SVCHAR_TYPE + ")";
     private static final String CREATE_STUDENTAPPS =
             "CREATE TABLE " + T_STUDENTAPPS + " (" +
+                    COLUMN_MENUID + INT_TYPE + ", " +
+                    COLUMN_NAME + SVCHAR_TYPE + " PRIMARY KEY," +
+                    COLUMN_LINK + LVCHAR_TYPE + ")";
+    private static final String CREATE_STUHANDBOOKS =
+            "CREATE TABLE " + T_STUHANDBOOKS + " (" +
                     COLUMN_MENUID + INT_TYPE + ", " +
                     COLUMN_NAME + SVCHAR_TYPE + " PRIMARY KEY," +
                     COLUMN_LINK + LVCHAR_TYPE + ")";
@@ -96,11 +108,13 @@ public class DatabaseSetUp extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(CREATE_ACADEMICINFO);
         sqLiteDatabase.execSQL(CREATE_CLASSES);
         sqLiteDatabase.execSQL(CREATE_DEPARTMENT);
+        sqLiteDatabase.execSQL(CREATE_IMPORTANTDOCS);
         sqLiteDatabase.execSQL(CREATE_ITSERVICES);
         sqLiteDatabase.execSQL(CREATE_MAPS);
         sqLiteDatabase.execSQL(CREATE_NEWSTUDENTS);
         sqLiteDatabase.execSQL(CREATE_SIDEMENU);
         sqLiteDatabase.execSQL(CREATE_STUDENTAPPS);
+        sqLiteDatabase.execSQL(CREATE_STUHANDBOOKS);
         sqLiteDatabase.execSQL(CREATE_SUPPORTSERVICES);
         sqLiteDatabase.execSQL(CREATE_USEFULRES);
         sqLiteDatabase.execSQL(CREATE_VIDEOS);
@@ -112,11 +126,13 @@ public class DatabaseSetUp extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_ACADEMICINFO);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_CLASSES);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_DEPARTMENT);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_IMPORTANTDOCS);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_ITSERVICES);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_MAPS);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_NEWSTUDENTS);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_SIDEMENU);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_STUDENTAPPS);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_STUHANDBOOKS);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_SUPPORTSERVICES);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_USEFULRES);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_VIDEOS);

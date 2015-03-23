@@ -2,54 +2,55 @@ package ie.cork.mycit.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.ResultSetMetaData;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 public class ConnectionClass {
 
-    public static void connection() {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("Connected..");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-    public static void gettingDataFromMySql() {
-        connection();
-        //mycitvappapp.cksebamxxpti.eu-west-1.rds.amazonaws.com:3306
-        //My_CIT_App
-        //UsernameName 	rooTmaster3
-        //pass : 33080okvgnZxjNtvan
-        String host = "jdbc:mysql://localhost/PROJECT";
-        String username = "rooTmaster3";
-        String password = "33080okvgnZxjNtvan";
-        try {
-            Connection connect = DriverManager.getConnection(host, username,
-                    password);
-            PreparedStatement statement = connect.prepareStatement(
-                    "SELECT patient.name, history.histMedicine," +
-                            " history.histProcedure, history.histDescription " +
-                            "FROM patient, history WHERE patient.id = history.patientId GROUP BY patient.name");
-            ResultSet data = statement.executeQuery();
-            while (data.next()) {
-                System.out.println("Name: " + data.getString(1) + " - "
-                        + "Medicine: " + data.getString(2) + "Procedure: "
-                        + data.getString(3) + "Description: "
-                        + data.getString(4));
-                /*tList.append("Name: " + data.getString(1) + " Medicine: "
-                        + data.getString(2) + " Procedure: "
-                        + data.getString(3) + " Description: "
-                        + data.getString(4)
-                        + System.getProperty("line.separator"));
-                */
-            }
-            statement.close();
-            connect.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    ArrayList<IDNameLink> academicInfoArray = new ArrayList<IDNameLink>();
+    ArrayList<DeptIDClass> classesArray = new ArrayList<DeptIDClass>();
+    ArrayList<DeptIDNameArrayList> departmentArray = new ArrayList<DeptIDNameArrayList>();
+    ArrayList<IDNameLink> itServicesArray = new ArrayList<IDNameLink>();
+    ArrayList<IDNameLink> mapsArray = new ArrayList<IDNameLink>();
+    ArrayList<IDNameLink> newStudentsArray = new ArrayList<IDNameLink>();
+    ArrayList<IDItem> sideMenuArray = new ArrayList<IDItem>();
+    ArrayList<IDNameLink> studentAppsArray = new ArrayList<IDNameLink>();
+    ArrayList<IDNameLink> supportServicesArray = new ArrayList<IDNameLink>();
+    ArrayList<IDNameLink> usefulResourcesArray = new ArrayList<IDNameLink>();
+    ArrayList<IDNameLink> videosArray = new ArrayList<IDNameLink>();
+
+    String username = "9bd38f_citdata";
+    String password = "citadmin";
+    String connectionString = "Driver={MySQL ODBC 5.1 Driver};Server=MYSQL5006.Smarterasp.net;Database=db_9bd38f_citdata;Uid=" + username + ";Password=" + password + ";";
+    //"Driver={MySQL ODBC 5.1 Driver};Server=MYSQL5006.Smarterasp.net;Database=db_9bd38f_citdata;Uid=9bd38f_citdata;Password=YOUR_DB_PASSWORD;"
+
+    public void main() throws Exception{
+        Connection conn = getConnection();
+        Statement st = conn.createStatement();
+        // st.executeUpdate("drop table survey;");
+        st.executeUpdate("create table survey (id int,name varchar(30));");
+        st.executeUpdate("insert into survey (id,name ) values (1,'nameValue')");
+
+        st = conn.createStatement();
+        ResultSet rs = st.executeQuery("SELECT * FROM survey");
+
+        ResultSetMetaData rsMetaData = rs.getMetaData();
+
+        int numberOfColumns = rsMetaData.getColumnCount();
+        System.out.println("resultSet MetaData column Count=" + numberOfColumns);
+
+        st.close();
+        conn.close();
     }
 
+    private static Connection getConnection() throws Exception {
+        String driver = "sun.jdbc.odbc.JdbcOdbcDriver";
+        String url = "jdbc:odbc:northwind";
+        String username = "";
+        String password = "";
+        Class.forName(driver);
+        return DriverManager.getConnection(url, username, password);
+    }
 }
