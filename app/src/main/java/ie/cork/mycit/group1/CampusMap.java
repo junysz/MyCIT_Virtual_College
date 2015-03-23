@@ -1,16 +1,44 @@
 package ie.cork.mycit.group1;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import ie.cork.mycit.timetable.Timetables;
 
 public class CampusMap extends Activity {
+
+    List<String> allMapNames = new ArrayList<String>();
+    List<String> allMapLinks = new ArrayList<String>();
+    String tempMapName = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_campus_map);
+
+        Resources res = this.getResources();
+        String[] mapNames = res.getStringArray(R.array.mapNames);
+        String[] mapLinks = res.getStringArray(R.array.mapLinks);
+        allMapNames = Arrays.asList(mapNames);
+        allMapLinks = Arrays.asList(mapLinks);
+
+        ListView listnames = (ListView) findViewById(R.id.listViewMaps);
+
+        CustomViewAdapter adapter = new CustomViewAdapter(CampusMap.this, Arrays.asList(mapNames));
+        listnames.setAdapter(adapter);
+
+        registerClickCallback();
 	}
 
 	@Override
@@ -19,5 +47,36 @@ public class CampusMap extends Activity {
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		return true;
 	}
+
+    private void registerClickCallback() {
+        ListView list = (ListView) findViewById(R.id.listViewMaps);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
+                tempMapName = allMapNames.get(position);
+                int x = position + 1;
+                String message = tempMapName + " opening";
+                Toast.makeText(CampusMap.this, message, Toast.LENGTH_LONG).show();
+                menuSelect(allMapNames.get(position).toString(), allMapLinks.get(position).toString());
+            }
+
+        });
+    }
+
+    public void menuSelect(String title, String url) {
+        if(title.equalsIgnoreCase("Timetables")){
+            Intent timetables = new Intent(CampusMap.this, Timetables.class);
+            startActivity(timetables);
+        }
+        else{
+            viewWeb(title, url);
+        }
+    }
+
+    public void viewWeb(String title, String url) {
+        Intent web = new Intent(CampusMap.this, Web.class);
+        web.putExtra("title", title);
+        web.putExtra("url", url);
+        startActivity(web);
+    }
 
 }
