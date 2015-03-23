@@ -207,19 +207,6 @@ public class HomePage extends ActionBarActivity implements
 		case 11:
 			Intent studentHandbooks = new Intent(HomePage.this, StudentHandbooks.class);
 			startActivity(studentHandbooks);
-			/*
-			 * File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +"/"+ filename);
-			Intent target = new Intent(Intent.ACTION_VIEW);
-			target.setDataAndType(Uri.fromFile(file),"application/pdf");
-			target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-			
-			Intent intent = Intent.createChooser(target, "Open File");
-			try {
-			    startActivity(intent);
-			} catch (ActivityNotFoundException e) {
-			    // Instruct the user to install a PDF reader here, or something
-			}
-			*/ 
 			break;
 		case 12:
 			Intent citVideos = new Intent(HomePage.this, CITVideos.class);
