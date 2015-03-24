@@ -28,6 +28,3 @@ app/src/main/java/ie/cork/mycit/group1/HomePage.java
 app/src/main/java/ie/cork/mycit/group1/HomePage.java
 .idea/workspace.xml
 .idea/misc.xml
-.idea/libraries/appcompat_v7_21_0_3.xml
-app/src/debug/res/values/google_maps_api.xml
-app/src/main/java/ie/cork/mycit/group1/CVampMap.java
