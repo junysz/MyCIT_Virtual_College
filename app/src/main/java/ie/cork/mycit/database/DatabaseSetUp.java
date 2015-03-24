@@ -145,5 +145,6 @@ public class DatabaseSetUp extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_USEFULRES);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_VIDEOS);
         onCreate(sqLiteDatabase);
+        Log.i(LOGTAG, "TABLES WERE UPDATED");
     }
 }

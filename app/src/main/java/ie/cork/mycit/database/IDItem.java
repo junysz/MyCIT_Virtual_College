@@ -2,19 +2,19 @@ package ie.cork.mycit.database;
 
 public class IDItem {
 
-    private int menu_id;
+    private int id;
     private String item;
 
-    public IDItem(int menu_id, String item){
-        this.menu_id = menu_id;
+    public IDItem(int id, String item){
+        this.id = id;
         this.item = item;
     }
 
     public int getID(){
-        return menu_id;
+        return id;
     }
-    public void setID(int menu_id){
-        this.menu_id = menu_id;
+    public void setID(int id){
+        this.id = id;
     }
 
     public String getName(){
