@@ -1381,5 +1381,6 @@
     <string name="friday">Friday</string>
     <string name="title_activity_custom_settings_adapter">CustomSettingsAdapter</string>
     <string name="title_activity_other_college">OtherCollege</string>
+    <string name="title_activity_maps">Map</string>
 
     </resources>
