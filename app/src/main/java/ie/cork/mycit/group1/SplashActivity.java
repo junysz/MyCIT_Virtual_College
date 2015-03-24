@@ -21,6 +21,7 @@ import java.sql.Statement;
 import java.util.concurrent.ExecutionException;
 
 import ie.cork.mycit.database.IDItem;
+import ie.cork.mycit.database.IDNameLink;
 import ie.cork.mycit.database.TableData;
 import ie.cork.mycit.timetable.TimetableExtractor;
 
@@ -74,54 +75,58 @@ public class SplashActivity extends Activity {
         @Override
         protected Void doInBackground(Void... uri) {
 
-            Log.i("result","I;m here");
-            String url = "mycitvappapp.cksebamxxpti.eu-west-1.rds.amazonaws.com:3306";
+            Log.i("result","Starting method doInBackground()");
+            String url = "jdbc:mysql://mycitvappapp.cksebamxxpti.eu-west-1.rds.amazonaws.com:3306/My_CIT_App";
             String username = "andApp";
+            String password = "a";
             Connection con;
             try {
                 Class.forName("com.mysql.jdbc.Driver");
-                Log.i("result","got the driver");
+                Log.i("result", "got the driver");
             } catch (ClassNotFoundException e) {
-                Log.i("result","fail");
+                Log.i("result","failed to get driver");
 
             }
 
-                            try {
-                                con = DriverManager.getConnection(url, username,"a");
-                                Log.i("result","got conn");
-                            } catch (SQLException e) {
-                                e.printStackTrace();
+            try {
+                con = DriverManager.getConnection(url, username,password);
+            } catch (SQLException e) {
+                e.printStackTrace();
+                Log.i("result","Went into catch SQLException con = null");
+                Log.i("result",e.getMessage());
+                con = null;
+            }
 
-                                Log.i("result",e.getMessage());
-                                con = null;
-                            }
+            try {
+                con = DriverManager.getConnection(url, username, password);
+                //   con = DriverManager.getConnection("jdbc:mysql://192.168.1.45:3306/deneme", "ali", "12345");
+                Statement st = con.createStatement();
+                //String ali = "'fff'";
+                //st.execute("INSERT INTO deneme (name) VALUES(" + ali + ")");
+                ResultSet rs = st.executeQuery("select * from sidemenu");
+                ResultSetMetaData rsmd = rs.getMetaData();
+                Log.i("result", "setup");
+                while (rs.next()) {
+                    data.getSideMenuArray().add(new IDItem(rs.getInt(1), rs.getString(2)));
+                    Log.i("result", (rs.getInt(1) + " : " + rsmd.getColumnName(1)));
+                    Log.i("result", (rs.getString(2)+" : "+ rsmd.getColumnName(2)));
+                }
+                rs = st.executeQuery("select * from academicinformation");
+                rsmd = rs.getMetaData();
+                Log.i("result", "setup");
+                while (rs.next()) {
+                    data.getAcademicInfoArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
+                    Log.i("result", (rs.getInt(1) + " : " + rsmd.getColumnName(1)));
+                    Log.i("result", (rs.getString(2)+" : "+ rsmd.getColumnName(2)));
+                    Log.i("result", (rs.getString(3)+" : "+ rsmd.getColumnName(3)));
+                }
 
-
-
-
-
-
-                        if (con != null) {
-                            try {
-                                con = DriverManager.getConnection(url, username, "");
-                                //   con = DriverManager.getConnection("jdbc:mysql://192.168.1.45:3306/deneme", "ali", "12345");
-                                Statement st = con.createStatement();
-                                //String ali = "'fff'";
-                                //st.execute("INSERT INTO deneme (name) VALUES(" + ali + ")");
-                                ResultSet rs = st.executeQuery("select * from sidemenu");
-                                ResultSetMetaData rsmd = rs.getMetaData();
-                                String result = new String();
-
-                                while (rs.next()) {
-                                    data.getSideMenuArray().add(new IDItem(rs.getInt(1),rsmd.getColumnName(2)));
-                                }
-
-                            }
-                            catch (java.sql.SQLException sqlE)
-                            {
-
-                            }
-                        }
+            }
+            catch (java.sql.SQLException sqlE)
+            {
+                Log.i("result","Went into catch SQLException sqlE");
+                Log.i("result",sqlE.getMessage());
+            }
 
             return null;
         }
