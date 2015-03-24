@@ -11,6 +11,8 @@ public class DatabaseSetUp extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "citdatabase.db";
     private static final int DATABASE_VERSION = 1;
 
+    private static final int DATAwadSE_VERSION = 1;
+
     public static final String T_ACADEMICINFO = "acamdemicinformation";
     public static final String T_CLASSES = "classes";
     public static final String T_DEPARTMENT = "department";
