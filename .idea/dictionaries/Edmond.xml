@@ -12,6 +12,8 @@
       <w>breph</w>
       <w>ccad</w>
       <w>cit's</w>
+      <w>citadmin</w>
+      <w>citdata</w>
       <w>citvideos</w>
       <w>citvidlinks</w>
       <w>citvidnames</w>
@@ -89,6 +91,8 @@
       <w>hdcld</w>
       <w>hdmob</w>
       <w>hdsdev</w>
+      <w>jdbc</w>
+      <w>linkedin</w>
       <w>listfile</w>
       <w>listnames</w>
       <w>lvph</w>
@@ -99,6 +103,7 @@
       <w>msce</w>
       <w>mscrsch</w>
       <w>mycit</w>
+      <w>odbc</w>
       <w>pdph</w>
       <w>plbph</w>
       <w>plsph</w>
@@ -108,9 +113,11 @@
       <w>reft</w>
       <w>settingslinks</w>
       <w>settingsnames</w>
+      <w>smarterasp</w>
       <w>studentappslinks</w>
       <w>studentappsnames</w>
       <w>thpy</w>
+      <w>thrd</w>
       <w>timelapse</w>
       <w>waven</w>
       <w>wfph</w>

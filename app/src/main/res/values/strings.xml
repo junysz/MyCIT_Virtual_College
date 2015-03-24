@@ -17,6 +17,7 @@
         <item>Campus Map</item>
         <item>Important Documents</item>
         <item>Public Folders</item>
+        <item>Other Cork Colleges</item>
     </string-array>
 
     <string-array name="studentappsnames">
@@ -165,6 +166,7 @@
     <string-array name="studentHandbooksLinks">
         <item>http://www.mycit.ie/contentFiles/PDF/CIT-Sports.pdf</item>
         <item>http://www.mycit.ie/contentFiles/PDF/CITStudentServicesGuide14%20u.pdf</item>
+<<<<<<< HEAD
     </string-array>
 
     <string-array name="importantDocumentsNames">
@@ -176,6 +178,98 @@
         <item>Emergency Procedures</item>
     </string-array>
 
+    <string-array name="importantDocumentsLinks">
+        <item>http://www.mycit.ie/contentFiles/PDF/CIT_Student_Regulations_2011.pdf</item>
+        <item>http://www.mycit.ie/contentFiles/PDF/Student_Grievance_Procedure.pdf</item>
+        <item>http://www.mycit.ie/contentFiles/PDF/admissions_faqs.pdf</item>
+        <item>http://www.mycit.ie/contentFiles/PDF/elective_enrollment.pdf</item>
+        <item>http://www.mycit.ie/contentFiles/PDF/Regulations_Marks_and_Standards.pdf</item>
+        <item>http://www.mycit.ie/contentFiles/PDF/cit_safety_card.pdf</item>
+    </string-array>
+
+    <string-array name="academicInformationNames">
+        <item>Admissions Office</item>
+        <item>Free Choice Electives</item>
+        <item>Search Library Catalogue</item>
+        <item>eBooks Collections</item>
+        <item>Library Guide</item>
+        <item>Library Services</item>
+        <item>Registrar\'s Office &amp; Student Services</item>
+        <item>International Office</item>
+        <item>Student Ombudsman</item>
+        <item>CCAD Students Guide</item>
+        <item>Exams Office</item>
+        <item>Exam Timetables</item>
+        <item>Results</item>
+        <item>Regulations</item>
+        <item>Exam Support</item>
+        <item>Exam Papers</item>
+        <item>Conferrings</item>
+=======
+>>>>>>> Adrian_Branch
+    </string-array>
+
+    <string-array name="importantDocumentsNames">
+        <item>Student Regulations</item>
+        <item>Student Grievance Procedure</item>
+        <item>Admissions FAQs</item>
+        <item>Elective Enrollment</item>
+        <item>Regulations Marks and Standards</item>
+        <item>Emergency Procedures</item>
+    </string-array>
+
+<<<<<<< HEAD
+    <string-array name="mapNames">
+        <item>Campus Map</item>
+        <item>Interactive Map</item>
+        <item>Directions to CIT</item>
+        <item>Panoramic Photos of CIT</item>
+    </string-array>
+
+    <string-array name="mapLinks">
+        <item>http://www.mycit.ie/contentfiles/images/cit-map.jpg</item>
+        <item>https://mapsengine.google.com/map/embed?mid=zQH00h_hX520.k4SoJnz7xdy8</item>
+        <item>http://www.mycit.ie/directions-map#pageTitle</item>
+        <item>http://www.mycit.ie/panoramas#pageTitle</item>
+    </string-array>
+
+    <string-array name="otherCollegeNames">
+        <item>UCC</item>
+        <item>Cork College Of Commerce</item>
+        <item>St. John\'s Central College</item>
+        <item>Griffith College</item>
+        <item>National Maritime College of Ireland</item>
+        <item>Crawford College of Art &amp; Design</item>
+        <item>Coláiste Stofáin Naofa</item>
+        <item>Cork City College</item>
+        <item>Terence MacSwiney Community College</item>
+        <item>Nagle Community College</item>
+        <item>Coláiste Daibhéid</item>
+        <item>CityNorth College</item>
+    </string-array>
+
+    <string-array name="otherCollegeLinks">
+        <item>http://www.ucc.ie/en/</item>
+        <item>http://www.corkcollegeofcommerce.ie/</item>
+        <item>http://www.stjohnscollege.ie/</item>
+        <item>https://www.griffith.ie/</item>
+        <item>http://www.nmci.ie/</item>
+        <item>http://www.cit.ie/ccad/#pageTitle</item>
+        <item>http://www.csn.ie/</item>
+        <item>http://www.corkcitycollege.com/</item>
+        <item>http://www.corkvec.ie/schools_colleges/terence_macswiney_community_college/index.shtml</item>
+        <item>http://naglecc.com/</item>
+        <item>http://www.colaistedaibheid.ie/</item>
+        <item>http://citynorthcollege.ie/</item>
+    </string-array>
+
+    <string-array name="usefulResourcesNames">
+        <item>CIT Campuses</item>
+        <item>Academic Departments</item>
+        <item>Student Services</item>
+        <item>Other Helplines</item>
+        <item>Bishopstown Campus</item>
+=======
     <string-array name="importantDocumentsLinks">
         <item>http://www.mycit.ie/contentFiles/PDF/CIT_Student_Regulations_2011.pdf</item>
         <item>http://www.mycit.ie/contentFiles/PDF/Student_Grievance_Procedure.pdf</item>
@@ -227,6 +321,7 @@
 
     <string-array name="mapNames">
         <item>Campus Map</item>
+>>>>>>> Adrian_Branch
         <item>Interactive Map</item>
         <item>Directions to CIT</item>
         <item>Panoramic Photos of CIT</item>
@@ -1281,6 +1376,78 @@
             <item>UQ.WW2C</item>
         </string-array>
 
+<<<<<<< HEAD
+    <string name="title_activity_timetable">Timetable</string>
+    <string name="view_timetable">View Timetable</string>
+    <string name="ClassGroupTimetables">Class Group Timetables</string>
+    <string name="title_activity_cityoutube_videos">CITYoutubeVideos</string>
+    <string name="cityoutubechannel">View CIT YouTube Channel</string>
+    <string name="app_name">MyCit</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="mycit_homepage">MyCit HomePage</string>
+    <string name="title_activity_new_students">New Students</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="new_students">New Students</string>
+    <string name="title_activity_it_services_support">IT Services Support</string>
+    <string name="it_services_support">IT Services Support</string>
+    <string name="title_activity_support_services">Support Services</string>
+    <string name="support_services">Support Services</string>
+    <string name="title_activity_academic_information">Academic Information</string>
+    <string name="academic_information">Academic Information</string>
+    <string name="title_activity_useful_resources">Useful Resources</string>
+    <string name="useful_resources">Useful Resources</string>
+    <string name="title_activity_student_calendar">Student Calendar</string>
+    <string name="student_calendar">Student Calendar</string>
+    <string name="title_activity_student_news">Student News</string>
+    <string name="student_news">Student News</string>
+    <string name="card_topup">Card Topup</string>
+    <string name="student_email">Student Email</string>
+    <string name="timetables">Timetables</string>
+    <string name="title_activity_timetables">Timetables</string>
+    <string name="submit">Submit</string>
+    <string name="semester_2">Semester 2</string>
+    <string name="semester_1">Semester 1</string>
+    <string name="class_group">Class group</string>
+    <string name="time_period">Time Period</string>
+    <string name="title_activity_timetable_view">Timetables</string>
+    <string name="title_activity_student_applications">Student Applications</string>
+    <string name="student_applications">Student Applications</string>
+    <string name="title_activity_pay_fees_online">Pay Fees Online</string>
+    <string name="pay_fees_online">Pay Fees Online</string>
+    <string name="title_activity_student_handbooks">Student Handbooks</string>
+    <string name="student_handbooks">Student Handbooks</string>
+    <string name="title_activity_citvideos">CIT Videos</string>
+    <string name="cit_videos">CIT Videos</string>
+    <string name="title_activity_campus_map">Campus Map</string>
+    <string name="campus_map">Campus Map</string>
+    <string name="title_activity_important_documents">Important Documents</string>
+    <string name="important_documents">Important Documents</string>
+    <string name="title_activity_public_folders">Public Folders</string>
+    <string name="public_folders">Public Folders</string>
+    <string name="ClassGroups">Class Groups</string>
+    <string name="Department">Department</string>
+    <string name="title_activity_web">MyCIT</string>
+    <string name="title_activity_custom_view_adapter">CustomViewAdapter</string>
+    <string name="facebook">Facebook</string>
+    <string name="general">General News</string>
+    <string name="twitter">Twitter</string>
+    <string name="title_activity_site_adapter">SiteAdapter</string>
+    <string name="title_activity_gen_news">GenNews</string>
+    <string name="title_activity_home_page_settings">HomePageSettings</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="title_activity_custom_settings_adapter">CustomSettingsAdapter</string>
+    <string name="title_activity_other_college">OtherCollege</string>
+=======
         <string name="title_activity_timetable">Timetable</string>
         <string name="view_timetable">View Timetable</string>
         <string name="ClassGroupTimetables">Class Group Timetables</string>
@@ -1350,5 +1517,6 @@
         <string name="thursday">Thursday</string>
         <string name="friday">Friday</string>
         <string name="title_activity_custom_settings_adapter">CustomSettingsAdapter</string>
+>>>>>>> Adrian_Branch
 
     </resources>

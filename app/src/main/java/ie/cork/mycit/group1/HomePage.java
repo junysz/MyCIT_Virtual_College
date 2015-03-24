@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -23,6 +25,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+
+import ie.cork.mycit.database.DatabaseSetUp;
+import ie.cork.mycit.othercolleges.OtherCollege;
 import ie.cork.mycit.settings.HomePageSettings;
 import ie.cork.mycit.timetable.Timetables;
 
@@ -38,10 +43,16 @@ public class HomePage extends ActionBarActivity implements
     List<String> appLinks = new ArrayList<String>();
     String tempApp = "";
 
+    SQLiteOpenHelper dbHelper;
+    SQLiteDatabase database;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_page);
+
+        dbHelper = new DatabaseSetUp(this);
+        database = dbHelper.getWritableDatabase();
 
         setupTwitterButton();
         setupFacebookButton();
@@ -197,19 +208,6 @@ public class HomePage extends ActionBarActivity implements
 		case 11:
 			Intent studentHandbooks = new Intent(HomePage.this, StudentHandbooks.class);
 			startActivity(studentHandbooks);
-			/*
-			 * File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +"/"+ filename);
-			Intent target = new Intent(Intent.ACTION_VIEW);
-			target.setDataAndType(Uri.fromFile(file),"application/pdf");
-			target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-			
-			Intent intent = Intent.createChooser(target, "Open File");
-			try {
-			    startActivity(intent);
-			} catch (ActivityNotFoundException e) {
-			    // Instruct the user to install a PDF reader here, or something
-			}
-			*/ 
 			break;
 		case 12:
 			Intent citVideos = new Intent(HomePage.this, CITVideos.class);
@@ -223,9 +221,13 @@ public class HomePage extends ActionBarActivity implements
 			Intent importantDocuments = new Intent(HomePage.this, ImportantDocuments.class);
 			startActivity(importantDocuments);
 			break;
-		case 15:
+        case 15:
             viewWeb("Public Folders", "https://webvpn.cit.ie/+CSCOE+/logon.html#username");
-			break;
+            break;
+        case 16:
+            Intent othercollege = new Intent(HomePage.this, OtherCollege.class);
+            startActivity(othercollege);
+            break;
 		}
 	}
 
@@ -354,4 +356,5 @@ public class HomePage extends ActionBarActivity implements
             }
         });
     }
+
 }
