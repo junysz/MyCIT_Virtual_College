@@ -58,7 +58,6 @@ public class SplashActivity extends Activity {
         public void run() {
             try {
                 // Sleeping
-
                 Thread.sleep(SLEEP_TIME*1000);
             } catch (Exception e) {
                 Log.e(TAG, e.getMessage());
@@ -70,6 +69,7 @@ public class SplashActivity extends Activity {
             SplashActivity.this.finish();
         }
     }
+
     private class RetrieveData extends AsyncTask<Void,Void,Void> {
 
         @Override
@@ -99,27 +99,83 @@ public class SplashActivity extends Activity {
 
             try {
                 con = DriverManager.getConnection(url, username, password);
-                //   con = DriverManager.getConnection("jdbc:mysql://192.168.1.45:3306/deneme", "ali", "12345");
                 Statement st = con.createStatement();
-                //String ali = "'fff'";
-                //st.execute("INSERT INTO deneme (name) VALUES(" + ali + ")");
+
+                //Log.i("result", (rs.getInt(1) + " : " + rsmd.getColumnName(1)));
+                //Log.i("result", (rs.getString(2)+" : "+ rsmd.getColumnName(2)));
+                //Log.i("result", (rs.getString(3)+" : "+ rsmd.getColumnName(3)));
+
                 ResultSet rs = st.executeQuery("select * from sidemenu");
-                ResultSetMetaData rsmd = rs.getMetaData();
-                Log.i("result", "setup");
                 while (rs.next()) {
                     data.getSideMenuArray().add(new IDItem(rs.getInt(1), rs.getString(2)));
-                    Log.i("result", (rs.getInt(1) + " : " + rsmd.getColumnName(1)));
-                    Log.i("result", (rs.getString(2)+" : "+ rsmd.getColumnName(2)));
                 }
+
                 rs = st.executeQuery("select * from academicinformation");
-                rsmd = rs.getMetaData();
-                Log.i("result", "setup");
                 while (rs.next()) {
                     data.getAcademicInfoArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
-                    Log.i("result", (rs.getInt(1) + " : " + rsmd.getColumnName(1)));
-                    Log.i("result", (rs.getString(2)+" : "+ rsmd.getColumnName(2)));
-                    Log.i("result", (rs.getString(3)+" : "+ rsmd.getColumnName(3)));
                 }
+
+                rs = st.executeQuery("select * from classes");
+                while (rs.next()) {
+                    data.getClassesArray().add(new IDItem(rs.getInt(1), rs.getString(2)));
+                }
+
+                rs = st.executeQuery("select * from department");
+                while (rs.next()) {
+                    data.getDepartmentArray().add(new IDItem(rs.getInt(1), rs.getString(2)));
+                }
+
+                rs = st.executeQuery("select * from importantdocuments");
+                while (rs.next()) {
+                    data.getImportantDocsArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
+                }
+
+                rs = st.executeQuery("select * from itservices");
+                while (rs.next()) {
+                    data.getItServicesArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
+                }
+
+                rs = st.executeQuery("select * from maps");
+                while (rs.next()) {
+                    data.getMapsArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
+                }
+
+                rs = st.executeQuery("select * from newstudents");
+                while (rs.next()) {
+                    data.getNewStudentsArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
+                }
+
+                rs = st.executeQuery("select * from othercolleges");
+                while (rs.next()) {
+                    data.getOtherCollegesArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
+                }
+
+                rs = st.executeQuery("select * from studentapplications");
+                while (rs.next()) {
+                    data.getStudentAppsArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
+                }
+
+                rs = st.executeQuery("select * from studenthandbooks");
+                while (rs.next()) {
+                    data.getStudentHandbooksArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
+                }
+
+                rs = st.executeQuery("select * from supportservices");
+                while (rs.next()) {
+                    data.getSupportServicesArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
+                }
+
+                rs = st.executeQuery("select * from usefulresources");
+                while (rs.next()) {
+                    data.getUsefulResourcesArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
+                }
+
+                rs = st.executeQuery("select * from videos");
+                while (rs.next()) {
+                    data.getVideosArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
+                }
+
+                //data
 
             }
             catch (java.sql.SQLException sqlE)
