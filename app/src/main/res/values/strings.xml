@@ -225,6 +225,7 @@
             <item>http://www.mycit.ie/examinations/conferrings/#pageTitle</item>
         </string-array>
 
+<<<<<<< HEAD
     <string-array name="mapNames">
         <item>Campus Map</item>
         <item>Interactive Map</item>
@@ -239,6 +240,42 @@
         <item>http://www.mycit.ie/panoramas#pageTitle</item>
     </string-array>
 
+    <string-array name="department">
+        <item>All</item>
+        <item>ACCOUNTING</item>
+        <item>ADMIN</item>
+        <item>ALC</item>
+        <item>ARCHITECTURE</item>
+        <item>ARTSOFFICE</item>
+        <item>BIOLOGY</item>
+        <item>CCAD</item>
+        <item>CHEMISTRY</item>
+        <item>CIVIL</item>
+        <item>COMPUTING</item>
+        <item>CONSTRUCTION</item>
+        <item>CRAFTSTUDIES</item>
+        <item>CSM</item>
+        <item>CSMACADEMIC</item>
+        <item>CSMKEYBOARD</item>
+        <item>CSMSTRINGS</item>
+        <item>CSMWIND</item>
+        <item>DEIS</item>
+        <item>ELECTRICAL</item>
+        <item>MANAGEMENT</item>
+        <item>MARKETING</item>
+        <item>MATHS</item>
+        <item>MECHANICAL</item>
+        <item>MEDIA</item>
+        <item>NMCI</item>
+        <item>ONLINE</item>
+        <item>ORGANISATION</item>
+        <item>PHYSICAL SCIENCES</item>
+        <item>PROCESS</item>
+        <item>SOCIAL</item>
+        <item>SPORT</item>
+        <item>TOURISM</item>
+    </string-array>
+=======
         <string-array name="usefulResourcesNames">
             <item>CIT Campuses</item>
             <item>Academic Departments</item>
@@ -252,6 +289,7 @@
             <item>CIT Arts Office</item>
             <item>CIT Event Booking</item>
         </string-array>
+>>>>>>> Adrian_Branch
 
         <string-array name="usefulResourcesLinks">
             <item>http://www.mycit.ie/contacts#pageTitle</item>
@@ -1349,6 +1387,5 @@
         <string name="thursday">Thursday</string>
         <string name="friday">Friday</string>
         <string name="title_activity_custom_settings_adapter">CustomSettingsAdapter</string>
-    <string name="title_activity_maps_activity_campus">Map</string>
 
     </resources>
