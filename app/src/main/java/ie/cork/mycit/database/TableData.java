@@ -1,8 +1,11 @@
 package ie.cork.mycit.database;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class TableData implements java.io.Serializable {
+public class TableData implements Serializable {
+
+    private static final int serialVersionUID = 50;
 
     private ArrayList<IDNameLink> academicInfoArray = new ArrayList<IDNameLink>();
     private ArrayList<IDItem> classesArray = new ArrayList<IDItem>();
@@ -15,6 +18,7 @@ public class TableData implements java.io.Serializable {
     private ArrayList<IDItem> sideMenuArray = new ArrayList<IDItem>();
     private ArrayList<IDNameLink> studentAppsArray = new ArrayList<IDNameLink>();
     private ArrayList<IDNameLink> studentHandbooksArray = new ArrayList<IDNameLink>();
+    private ArrayList<IDNameLink> studentNewsArray = new ArrayList<IDNameLink>();
     private ArrayList<IDNameLink> supportServicesArray = new ArrayList<IDNameLink>();
     private ArrayList<IDNameLink> usefulResourcesArray = new ArrayList<IDNameLink>();
     private ArrayList<IDNameLink> videosArray = new ArrayList<IDNameLink>();
@@ -94,6 +98,13 @@ public class TableData implements java.io.Serializable {
     }
     public void setStudentHandbooksArray(ArrayList<IDNameLink> studentHandbooksArray) {
         this.studentHandbooksArray = studentHandbooksArray;
+    }
+
+    public ArrayList<IDNameLink> getStudentNewsArray() {
+        return studentNewsArray;
+    }
+    public void setStudentNewsArray(ArrayList<IDNameLink> studentNewsArray) {
+        this.studentNewsArray = studentNewsArray;
     }
 
     public ArrayList<IDNameLink> getSupportServicesArray() {

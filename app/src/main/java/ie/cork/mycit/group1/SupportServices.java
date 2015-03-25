@@ -14,6 +14,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import ie.cork.mycit.database.IDNameLink;
+import ie.cork.mycit.database.LocalPersistence;
+import ie.cork.mycit.database.TableData;
+
 public class SupportServices extends ActionBarActivity {
 
     List<String> supportServicesNames = new ArrayList<String>();
@@ -25,15 +29,14 @@ public class SupportServices extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_support_services);
 
-        Resources res = this.getResources();
-        String[] names = res.getStringArray(R.array.supportServicesNames);
-        String[] links = res.getStringArray(R.array.supportServicesLinks);
-        supportServicesNames = Arrays.asList(names);
-        supportServicesLinks = Arrays.asList(links);
+        TableData readData = LocalPersistence.readObjectFromFile(SupportServices.this);
+        ArrayList<IDNameLink> data = readData.getSupportServicesArray();
+        supportServicesNames = LocalPersistence.readIDNameLink(2, data);
+        supportServicesLinks = LocalPersistence.readIDNameLink(3, data);
 
         ListView listnames = (ListView) findViewById(R.id.listViewSupportServices);
 
-        CustomViewAdapter adapter = new CustomViewAdapter(SupportServices.this, Arrays.asList(names));
+        CustomViewAdapter adapter = new CustomViewAdapter(SupportServices.this, supportServicesNames);
         listnames.setAdapter(adapter);
 
         registerClickCallback();

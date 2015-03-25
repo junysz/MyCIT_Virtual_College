@@ -12,6 +12,11 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import ie.cork.mycit.database.IDNameLink;
+import ie.cork.mycit.database.LocalPersistence;
+import ie.cork.mycit.database.TableData;
+import ie.cork.mycit.timetable.Departments;
 import ie.cork.mycit.timetable.Timetables;
 
 public class StudentApplications extends Activity {
@@ -25,15 +30,14 @@ public class StudentApplications extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_student_applications);
 
-        Resources res = this.getResources();
-        String[] studentappsnames = res.getStringArray(R.array.studentappsnames);
-        String[] studentappslinks = res.getStringArray(R.array.studentappslinks);
-        appNames = Arrays.asList(studentappsnames);
-        appLinks = Arrays.asList(studentappslinks);
+        TableData readData = LocalPersistence.readObjectFromFile(StudentApplications.this);
+        ArrayList<IDNameLink> data = readData.getStudentAppsArray();
+        appNames = LocalPersistence.readIDNameLink(2, data);
+        appLinks = LocalPersistence.readIDNameLink(3, data);
 
         ListView listnames = (ListView) findViewById(R.id.listViewNames);
 
-        CustomViewAdapter adapter = new CustomViewAdapter(StudentApplications.this, Arrays.asList(studentappsnames));
+        CustomViewAdapter adapter = new CustomViewAdapter(StudentApplications.this, appNames);
         listnames.setAdapter(adapter);
 
         registerClickCallback();
@@ -62,7 +66,7 @@ public class StudentApplications extends Activity {
 
     public void menuSelect(String title, String url) {
         if(title.equalsIgnoreCase("Timetables")){
-            Intent timetables = new Intent(StudentApplications.this, Timetables.class);
+            Intent timetables = new Intent(StudentApplications.this, Departments.class);
             startActivity(timetables);
         }
         else{

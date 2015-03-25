@@ -26,6 +26,8 @@
       <w>cpfph</w>
       <w>dcom</w>
       <w>dcrm</w>
+      <w>deptid</w>
+      <w>depts</w>
       <w>descrip</w>
       <w>dipadt</w>
       <w>dnet</w>
@@ -91,6 +93,7 @@
       <w>hdcld</w>
       <w>hdmob</w>
       <w>hdsdev</w>
+      <w>interal</w>
       <w>jdbc</w>
       <w>linkedin</w>
       <w>listfile</w>

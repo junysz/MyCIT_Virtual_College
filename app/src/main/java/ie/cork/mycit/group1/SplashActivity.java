@@ -1,6 +1,7 @@
 package ie.cork.mycit.group1;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -8,35 +9,46 @@ import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
-
 import ie.cork.mycit.database.IDItem;
 import ie.cork.mycit.database.IDNameLink;
+import ie.cork.mycit.database.LocalPersistence;
 import ie.cork.mycit.database.TableData;
-import ie.cork.mycit.timetable.TimetableExtractor;
 
 public class SplashActivity extends Activity {
     private TableData data = new TableData();
     private static String TAG = SplashActivity.class.getName();
     private static long SLEEP_TIME = 3;    // Sleep for some time
 
+    private FileOutputStream fos;
+    private static String FILENAME = "InteralString";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        try {
+            fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
+            Log.i("result", "File Created");
+            fos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         try {
             new RetrieveData().execute().get();
         } catch (InterruptedException e) {
@@ -75,6 +87,9 @@ public class SplashActivity extends Activity {
     }
 
     private class RetrieveData extends AsyncTask<Void,Void,Void> {
+
+        private FileOutputStream fos;
+        private String FILENAME = "InteralString";
 
         @Override
         protected Void doInBackground(Void... uri) {
@@ -164,6 +179,11 @@ public class SplashActivity extends Activity {
                     data.getStudentHandbooksArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
                 }
 
+                rs = st.executeQuery("select * from studentnews");
+                while (rs.next()) {
+                    data.getStudentNewsArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
+                }
+
                 rs = st.executeQuery("select * from supportservices");
                 while (rs.next()) {
                     data.getSupportServicesArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
@@ -178,44 +198,11 @@ public class SplashActivity extends Activity {
                 while (rs.next()) {
                     data.getVideosArray().add(new IDNameLink(rs.getInt(1), rs.getString(2), rs.getString(3)));
                 }
+                Log.i("result", "Got all DB info");
 
-                //data
-                /*
-                Saving
-                try{
-                    FileOutputStream fileOut =
-                    new FileOutputStream("/tmp/employee.ser");
-                    ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(data);
-                    out.close();
-                    fileOut.close();
-                    System.out.printf("Serialized data is saved in /tmp/employee.ser");
-                }catch(IOException i){
-                    i.printStackTrace();
-                }
+                LocalPersistence.writeObjectToFile(SplashActivity.this, data);
 
-                /////////////////////////////////////////////////////////////////////
-                Opening
-                TableData storedData = null;
-                try{
-                    FileInputStream fileIn = new FileInputStream("/tmp/employee.ser");
-                    ObjectInputStream in = new ObjectInputStream(fileIn);
-                    storedData = (TableData) in.readObject();
-                    in.close();
-                    fileIn.close();
-                }catch(IOException i){
-                    i.printStackTrace();
-                    return;
-                }catch(ClassNotFoundException c){
-                    System.out.println("Employee class not found");
-                    c.printStackTrace();
-                    return;
-                }
-                */
-
-            }
-            catch (java.sql.SQLException sqlE)
-            {
+            }catch (java.sql.SQLException sqlE){
                 Log.i("result","Went into catch SQLException sqlE");
                 Log.i("result",sqlE.getMessage());
             }

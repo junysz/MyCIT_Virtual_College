@@ -14,6 +14,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import ie.cork.mycit.database.IDNameLink;
+import ie.cork.mycit.database.LocalPersistence;
+import ie.cork.mycit.database.TableData;
+
 public class AcademicInformation extends ActionBarActivity {
 
     List<String> academicInformationNames = new ArrayList<String>();
@@ -25,15 +29,14 @@ public class AcademicInformation extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_academic_information);
 
-        Resources res = this.getResources();
-        String[] names = res.getStringArray(R.array.academicInformationNames);
-        String[] links = res.getStringArray(R.array.academicInformationLinks);
-        academicInformationNames = Arrays.asList(names);
-        academicInformationLinks = Arrays.asList(links);
+        TableData readData = LocalPersistence.readObjectFromFile(AcademicInformation.this);
+        ArrayList<IDNameLink> data = readData.getAcademicInfoArray();
+        academicInformationNames = LocalPersistence.readIDNameLink(2, data);
+        academicInformationLinks = LocalPersistence.readIDNameLink(3, data);
 
         ListView listnames = (ListView) findViewById(R.id.listViewAcademicInformation);
 
-        CustomViewAdapter adapter = new CustomViewAdapter(AcademicInformation.this, Arrays.asList(names));
+        CustomViewAdapter adapter = new CustomViewAdapter(AcademicInformation.this, academicInformationNames);
         listnames.setAdapter(adapter);
 
         registerClickCallback();
