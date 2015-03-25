@@ -1,6 +1,10 @@
 package ie.cork.mycit.database;
 
-public class IDItem {
+import java.io.Serializable;
+
+public class IDItem implements Serializable {
+
+    private static final int serialVersionUID = 60;
 
     private int id;
     private String item;

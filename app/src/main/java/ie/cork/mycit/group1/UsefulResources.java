@@ -15,6 +15,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import ie.cork.mycit.database.IDNameLink;
+import ie.cork.mycit.database.LocalPersistence;
+import ie.cork.mycit.database.TableData;
+
 public class UsefulResources extends Activity {
 
     List<String> usefulResourcesNames = new ArrayList<String>();
@@ -26,15 +30,14 @@ public class UsefulResources extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_useful_resources);
 
-        Resources res = this.getResources();
-        String[] names = res.getStringArray(R.array.usefulResourcesNames);
-        String[] links = res.getStringArray(R.array.usefulResourcesLinks);
-        usefulResourcesNames = Arrays.asList(names);
-        usefulResourcesLinks = Arrays.asList(links);
+        TableData readData = LocalPersistence.readObjectFromFile(UsefulResources.this);
+        ArrayList<IDNameLink> data = readData.getUsefulResourcesArray();
+        usefulResourcesNames = LocalPersistence.readIDNameLink(2, data);
+        usefulResourcesLinks = LocalPersistence.readIDNameLink(3, data);
 
         ListView listnames = (ListView) findViewById(R.id.listViewUsefulResources);
 
-        CustomViewAdapter adapter = new CustomViewAdapter(UsefulResources.this, Arrays.asList(names));
+        CustomViewAdapter adapter = new CustomViewAdapter(UsefulResources.this, usefulResourcesNames);
         listnames.setAdapter(adapter);
 
         registerClickCallback();

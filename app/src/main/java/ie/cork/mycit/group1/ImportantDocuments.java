@@ -16,6 +16,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import ie.cork.mycit.database.IDNameLink;
+import ie.cork.mycit.database.LocalPersistence;
+import ie.cork.mycit.database.TableData;
+
 public class ImportantDocuments extends ActionBarActivity {
 
     List<String> importantDocumentsNames = new ArrayList<String>();
@@ -27,15 +31,14 @@ public class ImportantDocuments extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_important_documents);
 
-        Resources res = this.getResources();
-        String[] names = res.getStringArray(R.array.importantDocumentsNames);
-        String[] links = res.getStringArray(R.array.importantDocumentsLinks);
-        importantDocumentsNames = Arrays.asList(names);
-        importantDocumentsLinks = Arrays.asList(links);
+        TableData readData = LocalPersistence.readObjectFromFile(ImportantDocuments.this);
+        ArrayList<IDNameLink> data = readData.getImportantDocsArray();
+        importantDocumentsNames = LocalPersistence.readIDNameLink(2, data);
+        importantDocumentsLinks = LocalPersistence.readIDNameLink(3, data);
 
         ListView listnames = (ListView) findViewById(R.id.listViewImportantDocuments);
 
-        CustomViewAdapter adapter = new CustomViewAdapter(ImportantDocuments.this, Arrays.asList(names));
+        CustomViewAdapter adapter = new CustomViewAdapter(ImportantDocuments.this, importantDocumentsNames);
         listnames.setAdapter(adapter);
 
         registerClickCallback();

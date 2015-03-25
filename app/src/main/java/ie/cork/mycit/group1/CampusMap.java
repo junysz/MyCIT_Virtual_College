@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import ie.cork.mycit.database.IDNameLink;
+import ie.cork.mycit.database.LocalPersistence;
+import ie.cork.mycit.database.TableData;
 import ie.cork.mycit.timetable.Timetables;
 
 public class CampusMap extends Activity {
@@ -27,15 +30,14 @@ public class CampusMap extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_campus_map);
 
-        Resources res = this.getResources();
-        String[] mapNames = res.getStringArray(R.array.mapNames);
-        String[] mapLinks = res.getStringArray(R.array.mapLinks);
-        allMapNames = Arrays.asList(mapNames);
-        allMapLinks = Arrays.asList(mapLinks);
+        TableData readData = LocalPersistence.readObjectFromFile(CampusMap.this);
+        ArrayList<IDNameLink> data = readData.getMapsArray();
+        allMapNames = LocalPersistence.readIDNameLink(2, data);
+        allMapLinks = LocalPersistence.readIDNameLink(3, data);
 
         ListView listnames = (ListView) findViewById(R.id.listViewMaps);
 
-        CustomViewAdapter adapter = new CustomViewAdapter(CampusMap.this, Arrays.asList(mapNames));
+        CustomViewAdapter adapter = new CustomViewAdapter(CampusMap.this, allMapNames);
         listnames.setAdapter(adapter);
 
         registerClickCallback();

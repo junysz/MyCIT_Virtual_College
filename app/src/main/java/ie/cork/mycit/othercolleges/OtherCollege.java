@@ -12,6 +12,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import ie.cork.mycit.database.IDNameLink;
+import ie.cork.mycit.database.LocalPersistence;
+import ie.cork.mycit.database.TableData;
 import ie.cork.mycit.group1.CustomViewAdapter;
 import ie.cork.mycit.group1.R;
 import ie.cork.mycit.group1.Web;
@@ -28,15 +32,14 @@ public class OtherCollege extends ActionBarActivity {
         setContentView(R.layout.activity_other_college);
         setTitle("Other Cork Colleges");
 
-        Resources res = this.getResources();
-        String[] names = res.getStringArray(R.array.otherCollegeNames);
-        String[] links = res.getStringArray(R.array.otherCollegeLinks);
-        otherCollegeNames = Arrays.asList(names);
-        otherCollegeLinks = Arrays.asList(links);
+        TableData readData = LocalPersistence.readObjectFromFile(OtherCollege.this);
+        ArrayList<IDNameLink> data = readData.getOtherCollegesArray();
+        otherCollegeNames = LocalPersistence.readIDNameLink(2, data);
+        otherCollegeLinks = LocalPersistence.readIDNameLink(3, data);
 
         ListView listnames = (ListView) findViewById(R.id.listViewOtherCollege);
 
-        CustomViewAdapter adapter = new CustomViewAdapter(OtherCollege.this, Arrays.asList(names));
+        CustomViewAdapter adapter = new CustomViewAdapter(OtherCollege.this, otherCollegeNames);
         listnames.setAdapter(adapter);
 
         registerClickCallback();

@@ -40,6 +40,7 @@ public class Timetable extends ActionBarActivity {
     boolean gotTimetable=false;
     private String url;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         classes=new LinkedList<Lclass>();
         Intent intent = getIntent();
@@ -48,7 +49,6 @@ public class Timetable extends ActionBarActivity {
         setTitle(intent.getExtras().getString("title"));
         url = intent.getExtras().getString("url");
 
-
         try {
             new RetrieveHTMLcode().execute().get();
         } catch (InterruptedException e) {
@@ -56,7 +56,6 @@ public class Timetable extends ActionBarActivity {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-
 
         // get the listview
         ExpandableListView expListView = (ExpandableListView) findViewById(R.id.timetableView);
@@ -87,31 +86,14 @@ public class Timetable extends ActionBarActivity {
         // setting list adapter
         expListView.setAdapter(listAdapter);
 
-
-
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_timetable, menu);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     private boolean isNetworkConnected() {
@@ -123,6 +105,7 @@ public class Timetable extends ActionBarActivity {
         } else
             return true;
     }
+
     private void prepareListData() {
         listDataHeader.add(getResources().getString(R.string.monday));
         listDataHeader.add(getResources().getString(R.string.tuesday));
@@ -184,11 +167,11 @@ public class Timetable extends ActionBarActivity {
             }
         }
         else{
-                    monday.add("no classes found");
-                    tuesday.add("no classes found");
-                    wednesday.add("no classes found");
-                    thursday.add("no classes found");
-                    friday.add("no classes found");
+                    monday.add("No classes found");
+                    tuesday.add("No classes found");
+                    wednesday.add("No classes found");
+                    thursday.add("No classes found");
+                    friday.add("No classes found");
                 }
         listDataChild.put(listDataHeader.get(0),monday);
         listDataChild.put(listDataHeader.get(1),tuesday);

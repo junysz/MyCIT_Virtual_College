@@ -15,6 +15,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import ie.cork.mycit.database.IDNameLink;
+import ie.cork.mycit.database.LocalPersistence;
+import ie.cork.mycit.database.TableData;
+
 public class CITVideos extends Activity {
 
     List<String> videoNames = new ArrayList<String>();
@@ -26,15 +30,14 @@ public class CITVideos extends Activity {
 		super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citvideos);
 
-        Resources res = this.getResources();
-        String[] citvidnames = res.getStringArray(R.array.videoNames);
-        String[] citvidlinks = res.getStringArray(R.array.videoLinks);
-        videoNames = Arrays.asList(citvidnames);
-        videoLinks = Arrays.asList(citvidlinks);
+        TableData readData = LocalPersistence.readObjectFromFile(CITVideos.this);
+        ArrayList<IDNameLink> data = readData.getVideosArray();
+        videoNames = LocalPersistence.readIDNameLink(2, data);
+        videoLinks = LocalPersistence.readIDNameLink(3, data);
 
         ListView listnames = (ListView) findViewById(R.id.listViewVideos);
 
-        CustomViewAdapter adapter = new CustomViewAdapter(CITVideos.this, Arrays.asList(citvidnames));
+        CustomViewAdapter adapter = new CustomViewAdapter(CITVideos.this, videoNames);
         listnames.setAdapter(adapter);
 
         registerClickCallback();

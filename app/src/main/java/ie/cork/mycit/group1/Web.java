@@ -22,8 +22,6 @@ public class Web extends ActionBarActivity {
 
         setTitle(title);
 
-
-
         WebView webView = (WebView)findViewById(R.id.webViewURL);
 
         WebSettings settings = webView.getSettings();
