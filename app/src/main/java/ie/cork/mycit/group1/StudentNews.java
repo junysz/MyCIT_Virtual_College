@@ -31,16 +31,10 @@ public class StudentNews extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_news);
 
-        //TableData readData = LocalPersistence.readObjectFromFile(StudentNews.this);
-        //ArrayList<IDNameLink> data = readData.getStudentNewsArray();
-        //studentNewsNames = LocalPersistence.readIDNameLink(2, data);
-        //studentNewsLinks = LocalPersistence.readIDNameLink(3, data);
-
-        Resources res = this.getResources();
-        String[] names = res.getStringArray(R.array.studentNewsNames);
-        String[] links = res.getStringArray(R.array.studentNewsLinks);
-        studentNewsNames = Arrays.asList(names);
-        studentNewsLinks = Arrays.asList(links);
+        TableData readData = LocalPersistence.readObjectFromFile(StudentNews.this);
+        ArrayList<IDNameLink> data = readData.getStudentNewsArray();
+        studentNewsNames = LocalPersistence.readIDNameLink(2, data);
+        studentNewsLinks = LocalPersistence.readIDNameLink(3, data);
 
         ListView listnames = (ListView) findViewById(R.id.listViewStudentNews);
 
