@@ -264,7 +264,6 @@
 
     <string-array name="mapNames">
         <item>Campus Map</item>
->>>>>>> Adrian_Branch
         <item>Interactive Map</item>
         <item>Directions to CIT</item>
         <item>Panoramic Photos of CIT</item>
@@ -272,7 +271,7 @@
 
     <string-array name="mapLinks">
         <item>http://www.mycit.ie/contentfiles/images/cit-map.jpg</item>
-        <item>https://mapsengine.google.com/map/embed?mid=zQH00h_hX520.k4SoJnz7xdy8</item>
+        <item>geo:51.8848019,-8.5346794,19z?hl=en</item>
         <item>http://www.mycit.ie/directions-map#pageTitle</item>
         <item>http://www.mycit.ie/panoramas#pageTitle</item>
     </string-array>
@@ -1389,4 +1388,5 @@
         <string name="friday">Friday</string>
         <string name="title_activity_custom_settings_adapter">CustomSettingsAdapter</string>
         <string name="title_activity_other_college">Other College</string>
+    <string name="title_activity_google_map">Map</string>
     </resources>
