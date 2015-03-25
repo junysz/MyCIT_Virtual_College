@@ -1,6 +1,10 @@
 package ie.cork.mycit.database;
 
-public class IDNameLink {
+import java.io.Serializable;
+
+public class IDNameLink implements Serializable {
+
+    private static final int serialVersionUID = 70;
 
     private int menu_id;
     private String name;

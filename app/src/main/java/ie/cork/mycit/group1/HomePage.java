@@ -3,9 +3,6 @@ package ie.cork.mycit.group1;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -18,41 +15,37 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-
-import ie.cork.mycit.database.DatabaseSetUp;
+import ie.cork.mycit.database.IDItem;
+import ie.cork.mycit.database.IDNameLink;
+import ie.cork.mycit.database.LocalPersistence;
+import ie.cork.mycit.database.TableData;
 import ie.cork.mycit.othercolleges.OtherCollege;
 import ie.cork.mycit.settings.HomePageSettings;
+import ie.cork.mycit.timetable.Departments;
 import ie.cork.mycit.timetable.Timetables;
 
 public class HomePage extends ActionBarActivity implements
 	NavigationDrawerFragment.NavigationDrawerCallbacks {
 
 	private NavigationDrawerFragment mNavigationDrawerFragment;
-	//Used to store the last screen title. For use in{@link #restoreActionBar()}.
 	private CharSequence mTitle;
 
     List<String> chosenApps = new ArrayList<String>();
-    List<String> allAppNames = new ArrayList<String>();
-    List<String> appLinks = new ArrayList<String>();
+    List<String> listNames = new ArrayList<String>();
+    List<String> listLinks = new ArrayList<String>();
     String tempApp = "";
-
-    SQLiteOpenHelper dbHelper;
-    SQLiteDatabase database;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_page);
-
-        dbHelper = new DatabaseSetUp(this);
-        database = dbHelper.getWritableDatabase();
 
         setupTwitterButton();
         setupFacebookButton();
@@ -60,12 +53,12 @@ public class HomePage extends ActionBarActivity implements
         setupGoogleButton();
         setupLinkedinButton();
 
-        Resources res = this.getResources();
-        String[] studentappsnames = res.getStringArray(R.array.studentappsnames);
-        String[] studentappslinks = res.getStringArray(R.array.studentappslinks);
-        allAppNames = Arrays.asList(studentappsnames);
+        TableData readData = LocalPersistence.readObjectFromFile(HomePage.this);
+        ArrayList<IDNameLink> data = readData.getStudentAppsArray();
+        listNames = LocalPersistence.readIDNameLink(2, data);
+        listLinks = LocalPersistence.readIDNameLink(3, data);
+
         startCustom();
-        appLinks = Arrays.asList(studentappslinks);
 
         ListView listApps = (ListView) findViewById(R.id.listHomePage);
 
@@ -74,11 +67,23 @@ public class HomePage extends ActionBarActivity implements
             listApps.setAdapter(adapter);
         }
         else{
-            CustomViewAdapter adapter = new CustomViewAdapter(HomePage.this, allAppNames);
+            CustomViewAdapter adapter = new CustomViewAdapter(HomePage.this, listNames);
             listApps.setAdapter(adapter);
         }
 
         registerClickCallback();
+
+        /*Trying to update the sidemenu options
+        ArrayList<IDItem> sideMenuData = readData.getSideMenuArray();
+        List<String> listItems = LocalPersistence.readIDItem(2, sideMenuData);
+
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerList = (ListView) findViewById(R.id.navigation_drawer);
+
+        // Set the adapter for the list view
+        mDrawerList.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_list_item, listItems));
+        */
 
 		mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
 		mTitle = getTitle();
@@ -106,7 +111,7 @@ public class HomePage extends ActionBarActivity implements
         String a = "" + x;
         boolean check = getFromSP(a);
         if(check){
-            chosenApps.add(allAppNames.get(x));
+            chosenApps.add(listNames.get(x));
         }
     }
 
@@ -124,17 +129,17 @@ public class HomePage extends ActionBarActivity implements
                 int pos = findPosition(tempApp);
                 String message = tempApp + " opening";
                 Toast.makeText(HomePage.this, message, Toast.LENGTH_LONG).show();
-                menuSelect(allAppNames.get(pos).toString(), appLinks.get(pos).toString());
+                menuSelect(listNames.get(pos).toString(), listLinks.get(pos).toString());
             }
 
         });
     }
 
     public int findPosition(String selected) {
-        Iterator<String> itr = allAppNames.iterator();
+        Iterator<String> itr = listNames.iterator();
         int x = 0;
         while (itr.hasNext()) {
-            if(selected.equalsIgnoreCase(allAppNames.get(x))){
+            if(selected.equalsIgnoreCase(listNames.get(x))){
                 return x;
             }
             x++;
@@ -144,7 +149,7 @@ public class HomePage extends ActionBarActivity implements
 
     public void menuSelect(String title, String url) {
         if(title.equalsIgnoreCase("Timetables")){
-            Intent timetables = new Intent(HomePage.this, Timetables.class);
+            Intent timetables = new Intent(HomePage.this, Departments.class);
             startActivity(timetables);
         }
         else{
