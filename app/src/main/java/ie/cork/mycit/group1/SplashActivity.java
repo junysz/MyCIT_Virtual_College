@@ -8,6 +8,9 @@ import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -18,6 +21,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 import ie.cork.mycit.database.IDItem;
@@ -176,6 +180,38 @@ public class SplashActivity extends Activity {
                 }
 
                 //data
+                /*
+                Saving
+                try{
+                    FileOutputStream fileOut =
+                    new FileOutputStream("/tmp/employee.ser");
+                    ObjectOutputStream out = new ObjectOutputStream(fileOut);
+                    out.writeObject(data);
+                    out.close();
+                    fileOut.close();
+                    System.out.printf("Serialized data is saved in /tmp/employee.ser");
+                }catch(IOException i){
+                    i.printStackTrace();
+                }
+
+                /////////////////////////////////////////////////////////////////////
+                Opening
+                TableData storedData = null;
+                try{
+                    FileInputStream fileIn = new FileInputStream("/tmp/employee.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    storedData = (TableData) in.readObject();
+                    in.close();
+                    fileIn.close();
+                }catch(IOException i){
+                    i.printStackTrace();
+                    return;
+                }catch(ClassNotFoundException c){
+                    System.out.println("Employee class not found");
+                    c.printStackTrace();
+                    return;
+                }
+                */
 
             }
             catch (java.sql.SQLException sqlE)
