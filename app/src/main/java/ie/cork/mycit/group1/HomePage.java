@@ -77,7 +77,6 @@ public class HomePage extends ActionBarActivity implements
         mTitle = getTitle();
         mNavigationDrawerFragment.setUp(R.id.navigation_drawer,(DrawerLayout) findViewById(R.id.drawer_layout));
 
-
     }
 
     public void startCustom(){
