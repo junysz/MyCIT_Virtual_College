@@ -21,7 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/iconImg"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#ffffffff" />
 
     <TextView
         android:id="@+id/descripTxt"
@@ -29,7 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/iconImg"
         android:textSize="12sp"
-        android:layout_below="@id/nameTxt" />
+        android:layout_below="@id/nameTxt"
+        android:textColor="#ffffffff" />
 
     <TextView
         android:id="@+id/pubDateTxt"
@@ -38,6 +40,7 @@
         android:layout_toRightOf="@id/iconImg"
         android:textSize="10sp"
         android:layout_below="@id/descripTxt"
-        android:textStyle="italic" />
+        android:textStyle="italic"
+        android:textColor="#ffffffff" />
 
 </RelativeLayout>
