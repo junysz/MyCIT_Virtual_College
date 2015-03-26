@@ -1,6 +1,7 @@
 package ie.cork.mycit.database;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.util.Log;
 import java.io.FileInputStream;
@@ -13,29 +14,57 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Locale;
 
 import ie.cork.mycit.group1.R;
-
 public class LocalPersistence {
 
-    private static String FILENAME = "InteralString";
-    //Offline File Name = "enofflinebackup260215"
+    //Offline File Name = "enofflinebackup"
     //en stands for the english back up
     //pl is the polish backup
     //offlinebackup is the name of the file
     //260215 stands for the data this offline file was updated from online file
 
-    public static void offlineFile(Context context, String lang) {
+    private static String sysLang;
 
-        Resources res;
-        InputStream in;
-        if(lang.equalsIgnoreCase("en")){
-            in = context.getResources().openRawResource(R.raw.enofflinebackup260215);
-        }else if(lang.equalsIgnoreCase("pl")){
-            in = context.getResources().openRawResource(R.raw.plofflinebackup260215);
+    private static String en = "en";
+    private static String enFile = "enDB";
+
+    private static String pl = "pl";
+    private static String plFile = "plDB";
+
+    public static void offlineFile(Context context) {
+
+        sysLang = Locale.getDefault().getLanguage();
+        int number;
+        if(sysLang.equalsIgnoreCase(en)){
+            if(getFromSP(context, en)){
+                Log.i("Files", "read en saved file");
+            }else{
+                offLineFile(context, enFile, R.raw.enofflinebackup);
+                Log.i("Files", "read en backup");
+            }
+        }else if(sysLang.equalsIgnoreCase(pl)){
+            if(getFromSP(context, pl)){
+                Log.i("Files", "read pl saved file");
+            }else{
+                offLineFile(context, plFile, R.raw.plofflinebackup);
+                Log.i("Files", "read pl backup");
+            }
         }else{
-            in = context.getResources().openRawResource(R.raw.enofflinebackup260215);
+            if(getFromSP(context, en)){
+                Log.i("Files", "read en saved file");
+            }else{
+                offLineFile(context, enFile, R.raw.enofflinebackup);
+                Log.i("Files", "read en backup");
+            }
         }
+
+    }
+
+    public static void offLineFile(Context context, String FILENAME, int BackupFile) {
+
+        InputStream in = context.getResources().openRawResource(BackupFile);
         FileOutputStream out = null;
         try {
             out = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
@@ -60,8 +89,35 @@ public class LocalPersistence {
 
     }
 
+    private static boolean getFromSP(Context context, String key){
+        SharedPreferences preferences = context.getSharedPreferences("PROJECT_NAME", android.content.Context.MODE_PRIVATE);
+        return preferences.getBoolean(key, false);
+    }
+
+    private static void saveInSp(Context context, String key, boolean value){
+        SharedPreferences preferences = context.getSharedPreferences("PROJECT_NAME", android.content.Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean(key, value);
+        editor.commit();
+    }
+
     public static void writeObjectToFile(Context context, Object object) {
 
+        sysLang = Locale.getDefault().getLanguage();
+        String FILENAME;
+        if(sysLang.equalsIgnoreCase(en)){
+            FILENAME = enFile;
+            saveInSp(context, en, true);
+            Log.i("Files", "Saved preference en");
+        }else if(sysLang.equalsIgnoreCase(pl)){
+            FILENAME = plFile;
+            saveInSp(context, pl, true);
+            Log.i("Files", "Saved preference pl");
+        }else{
+            FILENAME = enFile;
+            saveInSp(context, en, true);
+            Log.i("Files", "Saved preference en");
+        }
         try {
             FileOutputStream fos = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
             ObjectOutputStream os = new ObjectOutputStream(fos);
@@ -73,9 +129,25 @@ public class LocalPersistence {
         } catch (IOException e) {
             Log.i("result", e.getMessage());
         }
+
     }
 
+
     public static TableData readObjectFromFile(Context context) {
+
+        sysLang = Locale.getDefault().getLanguage();
+        int number;
+        if(sysLang.equalsIgnoreCase(en)){
+            return readObjectFromFileCode(context, enFile);
+        }else if(sysLang.equalsIgnoreCase(pl)){
+            return readObjectFromFileCode(context, plFile);
+        }else{
+            return readObjectFromFileCode(context, enFile);
+        }
+
+    }
+
+    public static TableData readObjectFromFileCode(Context context, String FILENAME) {
 
         ObjectInputStream objectIn = null;
         TableData object = null;

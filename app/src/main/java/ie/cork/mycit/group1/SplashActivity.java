@@ -36,9 +36,6 @@ public class SplashActivity extends Activity {
     private static String TAG = SplashActivity.class.getName();
     private static long SLEEP_TIME = 3;    // Sleep for some time
 
-    private FileOutputStream fos;
-    private static String FILENAME = "InteralString";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,13 +52,7 @@ public class SplashActivity extends Activity {
             }
         }else{
             Log.i("result", "There is no internet");
-            if(Locale.getDefault().getLanguage().equals("en")){
-                LocalPersistence.offlineFile(SplashActivity.this, "en");
-            }else if(Locale.getDefault().getLanguage().equals("pl")){
-                LocalPersistence.offlineFile(SplashActivity.this, "pl");
-            }else{
-                LocalPersistence.offlineFile(SplashActivity.this, "en");
-            }
+            LocalPersistence.offlineFile(SplashActivity.this);
 
         }
 
