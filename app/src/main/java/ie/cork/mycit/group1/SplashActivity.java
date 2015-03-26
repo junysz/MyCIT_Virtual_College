@@ -40,16 +40,6 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         try {
-            fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
-            Log.i("result", "File Created");
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        try {
             new RetrieveData().execute().get();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -87,9 +77,6 @@ public class SplashActivity extends Activity {
     }
 
     private class RetrieveData extends AsyncTask<Void,Void,Void> {
-
-        private FileOutputStream fos;
-        private String FILENAME = "InteralString";
 
         @Override
         protected Void doInBackground(Void... uri) {
