@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -66,8 +67,8 @@ public class CampusMap extends Activity {
     }
 
     public void menuSelect(String title, String url) {
-        String interactivemap = getResources().getString(R.string.title_activity_google_map);
-        if(title.equalsIgnoreCase(interactivemap)){
+        String map = getResources().getString(R.string.title_activity_google_map);
+        if(title.equalsIgnoreCase(map)){
             Uri gmmIntentUri = Uri.parse(url);
             Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
             mapIntent.setPackage("com.google.android.apps.maps");
