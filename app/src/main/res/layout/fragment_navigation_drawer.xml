@@ -5,8 +5,8 @@
     android:background="@drawable/background_blue"
     android:choiceMode="singleChoice"
     android:entries="@array/drawer"
-    android:divider="@android:color/transparent"
-    android:dividerHeight="0dp"
+    android:divider="#cb1142"
+    android:dividerHeight="1dp"
     tools:context="ie.cork.mycit.group1.NavigationDrawerFragment" />
 
 
