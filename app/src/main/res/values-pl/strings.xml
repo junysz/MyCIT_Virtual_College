@@ -93,4 +93,16 @@
     <string name="selectdepartments">Wybierz Departament</string>
     <string name="listofdepartments">Lista Departamentów</string>
     <string name="title_activity_google_map">Mapa Interaktywna</string>
+    <string name="cb1">E-mail Studencki</string>
+    <string name="cb2">Blackboard</string>
+    <string name="cb3">Plan Zajęć</string>
+    <string name="cb4">Egzaminy</string>
+    <string name="cb5">Wyszukiwarka Biblioteczna</string>
+    <string name="cb6">Dołąduj Kartę Studencką</string>
+    <string name="cb7">Strona Studencka</string>
+    <string name="cb8">Zresetuj Hasło CIT</string>
+    <string name="cb9">Rejestracja Wifi</string>
+    <string name="cb10">Dysk Studencki</string>
+    <string name="cb11">Oferty Pracy</string>
+    <string name="saveButton">Zapisz Zmiany</string>
 </resources>
