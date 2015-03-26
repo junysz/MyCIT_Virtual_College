@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="drawer">
+        <item>Strona Główna</item>
+        <item>Nowi Studenci</item>
+        <item>Pomoc Techniczna IT</item>
+        <item>Wsparcie</item>
+        <item>Informacje Akademickie</item>
+        <item>Użyteczne Informacje</item>
+        <item>Kalendarz</item>
+        <item>Wiadomości Studenckie</item>
+        <item>Formy Studenckie</item>
+        <item>Zrób Opłaty</item>
+        <item>Broszury</item>
+        <item>Wideo CIT</item>
+        <item>Mapa Uczelni</item>
+        <item>Ważne Dokumenty</item>
+        <item>Foldery Publiczne</item>
+        <item>Inne Uczelnie</item>
+    </string-array>
+    <string name="title_activity_timetable">Plan Zajęć</string>
+    <string name="view_timetable">Zobacz Plan Zajęć</string>
+    <string name="ClassGroupTimetables">Plan Zajęć Grupy Klasowej</string>
+    <string name="title_activity_cityoutube_videos">YouTube wideo CIT</string>
+    <string name="cityoutubechannel">Zobacz kanał CIT YouTube</string>
+    <string name="app_name">MyCit</string>
+    <string name="title_section1">Sekcja 1</string>
+    <string name="title_section2">Sekcja 2</string>
+    <string name="title_section3">Sekcja 3</string>
+    <string name="navigation_drawer_open">Otwórz Panel Nawigacyjny</string>
+    <string name="navigation_drawer_close">Zamknij Panel Nawigacyjny</string>
+    <string name="action_example">Przykłądowa Akcja</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="mycit_homepage">Strona Główna MyCIT</string>
+    <string name="title_activity_new_students">Nowi Studenci</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="new_students">Nowi Studenci</string>
+    <string name="title_activity_it_services_support">Pomoc Techniczna IT</string>
+    <string name="it_services_support">Pomoc Techniczna IT</string>
+    <string name="title_activity_support_services">Wsparcie</string>
+    <string name="support_services">Wsparcie</string>
+    <string name="title_activity_academic_information">Informacje Akademickie</string>
+    <string name="academic_information">Informacje Akademickie</string>
+    <string name="title_activity_useful_resources">Użyteczne Informacje</string>
+    <string name="useful_resources">Użyteczne Informacje</string>
+    <string name="title_activity_student_calendar">Kalendarz</string>
+    <string name="student_calendar">Kalendarz</string>
+    <string name="title_activity_student_news">Studenckie Wiadomości</string>
+    <string name="student_news">Studenckie Wiadomości</string>
+    <string name="card_topup">Doładuj Karte</string>
+    <string name="student_email">Email Studencki</string>
+    <string name="timetables">Email Studencki</string>
+    <string name="title_activity_timetables">Email Studencki</string>
+    <string name="submit">Wyślij</string>
+    <string name="semester_2">Semestr 2</string>
+    <string name="semester_1">Semestr 1</string>
+    <string name="class_group">Grupa Klasowa</string>
+    <string name="time_period">Okres Czasu</string>
+    <string name="title_activity_timetable_view">Plan Zajęć</string>
+    <string name="title_activity_student_applications">Aplikacje Studenckie</string>
+    <string name="student_applications">Aplikacje Studenckie</string>
+    <string name="title_activity_pay_fees_online">Zrób Opłatę</string>
+    <string name="pay_fees_online">Zrób Opłatę</string>
+    <string name="title_activity_student_handbooks">Broszury Studenckie</string>
+    <string name="student_handbooks">Broszury Studenckie</string>
+    <string name="title_activity_citvideos">Widea CIT</string>
+    <string name="cit_videos">Widea CIT</string>
+    <string name="title_activity_campus_map">Mapa Uczelni</string>
+    <string name="campus_map">Mapa Uczelni</string>
+    <string name="title_activity_important_documents">Ważne Dokumenty</string>
+    <string name="important_documents">Ważne Dokumenty</string>
+    <string name="title_activity_public_folders">Foldery Studenckie</string>
+    <string name="public_folders">Foldery Studenckie</string>
+    <string name="ClassGroups">Grupy Klasowe</string>
+    <string name="Department">Departament</string>
+    <string name="title_activity_web">MyCIT</string>
+    <string name="title_activity_custom_view_adapter">DostosowanyAdapterWidoku</string>
+    <string name="facebook">Facebook</string>
+    <string name="general">Wiadomości</string>
+    <string name="twitter">Twitter</string>
+    <string name="title_activity_site_adapter">AdapterStrony</string>
+    <string name="title_activity_gen_news">WiadomościGen</string>
+    <string name="title_activity_home_page_settings">UstawieniaStronyGłównej</string>
+    <string name="monday">Poniedziałek</string>
+    <string name="tuesday">Wtorek</string>
+    <string name="wednesday">Środa</string>
+    <string name="thursday">Czwartek</string>
+    <string name="friday">Piątek</string>
+    <string name="title_activity_custom_settings_adapter">DostosowanyAdapterUstawień</string>
+    <string name="title_activity_other_college">Inne Uczelnie</string>
+    <string name="title_activity_departments">Departamenty</string>
+    <string name="selectdepartments">Wybierz Departament</string>
+    <string name="listofdepartments">Lista Departamentów</string>
+    <string name="title_activity_google_map">Mapa Interaktywna</string>
+</resources>
