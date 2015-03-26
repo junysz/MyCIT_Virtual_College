@@ -21,23 +21,22 @@ public class HomePageSettings extends Activity implements CompoundButton.OnCheck
     }
 
     public void start(){
-        startBoxes("Student E-mail", 0, findViewById(R.id.checkBox1));
-        startBoxes("Blackboard", 1, findViewById(R.id.checkBox2));
-        startBoxes("Timetables", 2, findViewById(R.id.checkBox3));
-        startBoxes("Exam Papers", 3, findViewById(R.id.checkBox4));
-        startBoxes("Library Search", 4, findViewById(R.id.checkBox5));
-        startBoxes("Student Card Top-Up", 5, findViewById(R.id.checkBox6));
-        startBoxes("Web for Student", 6, findViewById(R.id.checkBox7));
-        startBoxes("CIT Password Reset", 7, findViewById(R.id.checkBox8));
-        startBoxes("Wifi Registration", 8, findViewById(R.id.checkBox9));
-        startBoxes("Student Drive", 9, findViewById(R.id.checkBox10));
-        startBoxes("Job Listings", 10, findViewById(R.id.checkBox11));
+        startBoxes(0, findViewById(R.id.checkBox1));
+        startBoxes(1, findViewById(R.id.checkBox2));
+        startBoxes(2, findViewById(R.id.checkBox3));
+        startBoxes(3, findViewById(R.id.checkBox4));
+        startBoxes(4, findViewById(R.id.checkBox5));
+        startBoxes(5, findViewById(R.id.checkBox6));
+        startBoxes(6, findViewById(R.id.checkBox7));
+        startBoxes(7, findViewById(R.id.checkBox8));
+        startBoxes(8, findViewById(R.id.checkBox9));
+        startBoxes(9, findViewById(R.id.checkBox10));
+        startBoxes(10, findViewById(R.id.checkBox11));
     }
 
-    public void startBoxes(String text, int x, View v){
+    public void startBoxes(int x, View v){
         CheckBox cb = (CheckBox) v;
         String a = "" + x;
-        cb.setText(text);
         cb.setChecked(getFromSP(a));
         cb.setOnCheckedChangeListener(this);
     }

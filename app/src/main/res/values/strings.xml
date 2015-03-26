@@ -93,4 +93,16 @@
     <string name="selectdepartments">Select Department</string>
     <string name="listofdepartments">List of Departments</string>
     <string name="title_activity_google_map">Interactive Map</string>
+    <string name="cb1">Student E-mail</string>
+    <string name="cb2">Blackboard</string>
+    <string name="cb3">Timetables</string>
+    <string name="cb4">Exam Papers</string>
+    <string name="cb5">Library Search</string>
+    <string name="cb6">Student Card Top-Up</string>
+    <string name="cb7">Web for Student</string>
+    <string name="cb8">CIT Password Reset</string>
+    <string name="cb9">Wifi Registration</string>
+    <string name="cb10">Student Drive</string>
+    <string name="cb11">Job Listings</string>
+    <string name="saveButton">Save Changes</string>
 </resources>
