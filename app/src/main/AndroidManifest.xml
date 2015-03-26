@@ -88,14 +88,6 @@
                 android:value="ie.cork.mycit.group1.HomePage" />
         </activity>
         <activity
-            android:name=".StudentCalendar"
-            android:label="@string/title_activity_student_calendar"
-            android:parentActivityName=".HomePage" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="ie.cork.mycit.group1.HomePage" />
-        </activity>
-        <activity
             android:name=".StudentNews"
             android:label="@string/title_activity_student_news"
             android:parentActivityName=".HomePage" >
@@ -114,14 +106,6 @@
         <activity
             android:name=".StudentApplications"
             android:label="@string/title_activity_student_applications"
-            android:parentActivityName=".HomePage" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="ie.cork.mycit.group1.HomePage" />
-        </activity>
-        <activity
-            android:name=".PayFeesOnline"
-            android:label="@string/title_activity_pay_fees_online"
             android:parentActivityName=".HomePage" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -160,14 +144,6 @@
                 android:value="ie.cork.mycit.group1.HomePage" />
         </activity>
         <activity
-            android:name=".PublicFolders"
-            android:label="@string/title_activity_public_folders"
-            android:parentActivityName=".HomePage" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="ie.cork.mycit.group1.HomePage" />
-        </activity>
-        <activity
             android:name=".Web"
             android:label="@string/title_activity_web"
             android:parentActivityName=".HomePage" >
@@ -178,18 +154,6 @@
         <activity
             android:name=".CustomViewAdapter"
             android:label="@string/title_activity_custom_view_adapter" >
-        </activity>
-        <activity
-            android:name=".SiteAdapter"
-            android:label="@string/title_activity_site_adapter" >
-        </activity>
-        <activity
-            android:name=".GenNews"
-            android:label="@string/title_activity_gen_news"
-            android:parentActivityName=".StudentNews" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="ie.cork.mycit.group1.StudentNews" />
         </activity>
         <activity
             android:name="ie.cork.mycit.settings.HomePageSettings"
@@ -208,25 +172,19 @@
                 android:value="ie.cork.mycit.group1.HomePage" />
         </activity>
         <activity
-            android:name="ie.cork.mycit.settings.CustomSettingsAdapter"
-            android:label="@string/title_activity_custom_settings_adapter" >
-        </activity>
-        <activity
             android:name="ie.cork.mycit.othercolleges.OtherCollege"
             android:label="@string/title_activity_other_college" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ie.cork.mycit.group1.HomePage" />
         </activity>
-<<<<<<< HEAD
         <activity
             android:name="ie.cork.mycit.timetable.Departments"
             android:label="@string/title_activity_departments"
-            android:parentActivityName=".HomePage" >
+            android:parentActivityName=".HomePage" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ie.cork.mycit.group1.HomePage" />
-=======
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -238,7 +196,6 @@
         <activity
             android:name=".GoogleInteractiveMap"
             android:label="@string/title_activity_google_map" >
->>>>>>> origin/dejot
         </activity>
     </application>
 
