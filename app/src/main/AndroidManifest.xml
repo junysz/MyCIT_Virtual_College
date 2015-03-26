@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="16"
-        android:targetSdkVersion="21" />
+        android:minSdkVersion="20"
+        android:targetSdkVersion="22" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -19,6 +19,14 @@
     <android:uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -210,6 +218,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ie.cork.mycit.group1.HomePage" />
         </activity>
+<<<<<<< HEAD
         <activity
             android:name="ie.cork.mycit.timetable.Departments"
             android:label="@string/title_activity_departments"
@@ -217,6 +226,19 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ie.cork.mycit.group1.HomePage" />
+=======
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".GoogleInteractiveMap"
+            android:label="@string/title_activity_google_map" >
+>>>>>>> origin/dejot
         </activity>
     </application>
 

@@ -3,6 +3,7 @@ package ie.cork.mycit.group1;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -65,9 +66,12 @@ public class CampusMap extends Activity {
     }
 
     public void menuSelect(String title, String url) {
-        if(title.equalsIgnoreCase("Timetables")){
-            Intent timetables = new Intent(CampusMap.this, Timetables.class);
-            startActivity(timetables);
+        if(title.equalsIgnoreCase("Interactive Map")){
+
+            Uri gmmIntentUri = Uri.parse(url);
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+            mapIntent.setPackage("com.google.android.apps.maps");
+            startActivity(mapIntent);
         }
         else{
             viewWeb(title, url);
