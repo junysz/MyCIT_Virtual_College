@@ -49,7 +49,7 @@
                 android:layout_height="45dp"
                 android:id="@+id/twitter_feed_button"
                 android:background="@drawable/twitter"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="8dp"
                 android:clickable="true" />
 
             <Button
@@ -57,7 +57,7 @@
                 android:layout_height="45dp"
                 android:id="@+id/youtube_feed_button"
                 android:background="@drawable/youtube"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="8dp"
                 android:clickable="true" />
 
             <Button
@@ -72,7 +72,7 @@
                 android:layout_height="45dp"
                 android:id="@+id/google_feed_button"
                 android:background="@drawable/google"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="8dp"
                 android:clickable="true" />
 
             <Button
@@ -80,7 +80,7 @@
                 android:layout_height="45dp"
                 android:id="@+id/linkedin_feed_button"
                 android:background="@drawable/linkedin"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="8dp"
                 android:clickable="true" />
         </LinearLayout>
 
