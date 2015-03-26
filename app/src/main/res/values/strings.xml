@@ -19,7 +19,6 @@
         <item>Public Folders</item>
         <item>Other Cork Colleges</item>
     </string-array>
-
     <string name="title_activity_timetable">Timetable</string>
     <string name="view_timetable">View Timetable</string>
     <string name="ClassGroupTimetables">Class Group Timetables</string>
@@ -93,4 +92,5 @@
     <string name="title_activity_departments">Departments</string>
     <string name="selectdepartments">Select Department</string>
     <string name="listofdepartments">List of Departments</string>
+    <string name="title_activity_google_map">Interactive Map</string>
 </resources>
