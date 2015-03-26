@@ -31,16 +31,16 @@ public class TimetableExtractor {
 	
 	
 	private LinkedList<Lclass> myClasses = new LinkedList<Lclass>();
-	private final Time[] timesIndex = {new Time(8, 0), new Time(8,15), new Time(8,30), new Time(8,45),
-								new Time(9, 0), new Time(9,15), new Time(9,30), new Time(9,45),
-								new Time(10, 0), new Time(10,15), new Time(10,30), new Time(10,45),
-								new Time(11, 0), new Time(11,15), new Time(11,30), new Time(11,45),
-								new Time(12, 0), new Time(12,15), new Time(12,30), new Time(12,45),
-								new Time(13, 0), new Time(13,15), new Time(13,30), new Time(13,45),
-								new Time(14, 0), new Time(14,15), new Time(14,30), new Time(14,45),
-								new Time(15, 0), new Time(15,15), new Time(15,30), new Time(15,45),
-								new Time(16, 0), new Time(16,15), new Time(16,30), new Time(16,45),
-								new Time(17, 0), new Time(17,15), new Time(17,30), new Time(17,45), new Time(18, 0)};
+	private final Time[] timesIndex = {new Time(8,00), new Time(8,15), new Time(8,30), new Time(8,45),
+								new Time(9,00), new Time(9,15), new Time(9,30), new Time(9,45),
+								new Time(10,00), new Time(10,15), new Time(10,30), new Time(10,45),
+								new Time(11,00), new Time(11,15), new Time(11,30), new Time(11,45),
+								new Time(12,00), new Time(12,15), new Time(12,30), new Time(12,45),
+								new Time(13,00), new Time(13,15), new Time(13,30), new Time(13,45),
+								new Time(14,00), new Time(14,15), new Time(14,30), new Time(14,45),
+								new Time(15,00), new Time(15,15), new Time(15,30), new Time(15,45),
+								new Time(16,00), new Time(16,15), new Time(16,30), new Time(16,45),
+								new Time(17,00), new Time(17,15), new Time(17,30), new Time(17,45), new Time(18,00)};
 
     public LinkedList<Lclass> getTimetable(BufferedReader code) throws IOException
 	{
