@@ -12,7 +12,7 @@ android:background="@drawable/background_blue">
 
 <RelativeLayout
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="wrap_content" >
 
     <TableLayout
         android:layout_width="fill_parent"
@@ -35,9 +35,10 @@ android:background="@drawable/background_blue">
             <CheckBox
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New CheckBox"
+                android:text="@string/cb1"
                 android:id="@+id/checkBox1"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:checked="false" />
         </TableRow>
 
         <TableRow>
@@ -45,9 +46,10 @@ android:background="@drawable/background_blue">
             <CheckBox
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New CheckBox"
+                android:text="@string/cb2"
                 android:id="@+id/checkBox2"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:checked="false" />
         </TableRow>
 
         <TableRow>
@@ -55,9 +57,10 @@ android:background="@drawable/background_blue">
             <CheckBox
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New CheckBox"
+                android:text="@string/cb3"
                 android:id="@+id/checkBox3"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:checked="false" />
         </TableRow>
 
         <TableRow>
@@ -65,9 +68,10 @@ android:background="@drawable/background_blue">
             <CheckBox
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New CheckBox"
+                android:text="@string/cb4"
                 android:id="@+id/checkBox4"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:checked="false" />
         </TableRow>
 
         <TableRow>
@@ -75,9 +79,10 @@ android:background="@drawable/background_blue">
             <CheckBox
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New CheckBox"
+                android:text="@string/cb5"
                 android:id="@+id/checkBox5"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:checked="false" />
         </TableRow>
 
         <TableRow>
@@ -85,9 +90,10 @@ android:background="@drawable/background_blue">
             <CheckBox
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New CheckBox"
+                android:text="@string/cb6"
                 android:id="@+id/checkBox6"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:checked="false" />
         </TableRow>
 
         <TableRow>
@@ -95,9 +101,10 @@ android:background="@drawable/background_blue">
             <CheckBox
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New CheckBox"
+                android:text="@string/cb7"
                 android:id="@+id/checkBox7"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:checked="false" />
         </TableRow>
 
         <TableRow>
@@ -105,9 +112,10 @@ android:background="@drawable/background_blue">
             <CheckBox
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New CheckBox"
+                android:text="@string/cb8"
                 android:id="@+id/checkBox8"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:checked="false" />
         </TableRow>
 
         <TableRow>
@@ -115,9 +123,10 @@ android:background="@drawable/background_blue">
             <CheckBox
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New CheckBox"
+                android:text="@string/cb9"
                 android:id="@+id/checkBox9"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:checked="false" />
         </TableRow>
 
         <TableRow>
@@ -125,9 +134,10 @@ android:background="@drawable/background_blue">
             <CheckBox
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New CheckBox"
+                android:text="@string/cb10"
                 android:id="@+id/checkBox10"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:checked="false" />
         </TableRow>
 
         <TableRow>
@@ -135,9 +145,10 @@ android:background="@drawable/background_blue">
             <CheckBox
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New CheckBox"
+                android:text="@string/cb11"
                 android:id="@+id/checkBox11"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:checked="false" />
         </TableRow>
 
         <TableRow>
@@ -146,7 +157,7 @@ android:background="@drawable/background_blue">
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Save Changes"
+                android:text="@string/saveButton"
                 android:id="@+id/buttonSave"
                 android:gravity="center"
                 android:onClick="save"
