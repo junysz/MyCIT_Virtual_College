@@ -1,22 +1,56 @@
 package ie.cork.mycit.database;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.util.Log;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
+import ie.cork.mycit.group1.R;
 import ie.cork.mycit.group1.SplashActivity;
 
 public class LocalPersistence {
 
     private static String FILENAME = "InteralString";
+    //Offline File Name = "interalstring260215"
+    //InternalString is the name of the file 260215 stands for the data this offline file was updated from online file
+
+    public static void offlineFile(Context context) {
+
+        Resources res;
+        InputStream in = context.getResources().openRawResource(R.raw.interalstring260215);
+        FileOutputStream out = null;
+        try {
+            out = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
+        } catch (FileNotFoundException e) {
+            Log.i("result", "Offline file Failed FileNotFoundException");
+            Log.i("result", e.getMessage());
+        }
+
+        // Transfer bytes from in to out
+        byte[] buf = new byte[1024];
+        int len;
+        try {
+            while ((len = in.read(buf)) > 0) {
+                out.write(buf, 0, len);
+            }
+            in.close();
+            out.close();
+        } catch (IOException e) {
+            Log.i("result", "Offline file Failed IOException");
+            Log.i("result", e.getMessage());
+        }
+
+    }
 
     public static void writeObjectToFile(Context context, Object object) {
 
