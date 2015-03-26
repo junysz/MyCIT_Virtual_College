@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:text="@string/selectdepartments"
         android:onClick="submitDept"
+        android:background="@drawable/button_border"
         android:layout_alignWithParentIfMissing="false"
         android:layout_below="@+id/spinnerDepts"
         android:layout_marginTop="77dp"

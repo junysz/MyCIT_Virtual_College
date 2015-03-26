@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:text="@string/view_timetable"
         android:onClick="submit"
+        android:background="@drawable/button_border"
         android:layout_alignWithParentIfMissing="false"
         android:layout_below="@+id/spinnerClassGroups"
         android:layout_marginTop="77dp"
