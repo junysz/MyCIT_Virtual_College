@@ -24,6 +24,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 import ie.cork.mycit.database.IDItem;
 import ie.cork.mycit.database.IDNameLink;
@@ -54,7 +55,13 @@ public class SplashActivity extends Activity {
             }
         }else{
             Log.i("result", "There is no internet");
-            LocalPersistence.offlineFile(SplashActivity.this);
+            if(Locale.getDefault().getLanguage().equals("en")){
+                LocalPersistence.offlineFile(SplashActivity.this, "en");
+            }else if(Locale.getDefault().getLanguage().equals("pl")){
+                LocalPersistence.offlineFile(SplashActivity.this, "pl");
+            }else{
+                LocalPersistence.offlineFile(SplashActivity.this, "en");
+            }
 
         }
 
@@ -103,8 +110,16 @@ public class SplashActivity extends Activity {
         @Override
         protected Void doInBackground(Void... uri) {
 
+            String url = "jdbc:mysql://mycitvappapp.cksebamxxpti.eu-west-1.rds.amazonaws.com:3306/";
+            if(Locale.getDefault().getLanguage().equals("en")){
+                url += "My_CIT_App_En";
+            }else if(Locale.getDefault().getLanguage().equals("pl")){
+                url += "My_CIT_App_Pl";
+            }else{
+                url += "My_CIT_App_En";
+            }
+
             Log.i("result","Starting method doInBackground()");
-            String url = "jdbc:mysql://mycitvappapp.cksebamxxpti.eu-west-1.rds.amazonaws.com:3306/My_CIT_App";
             String username = "andApp";
             String password = "a";
             Connection con;

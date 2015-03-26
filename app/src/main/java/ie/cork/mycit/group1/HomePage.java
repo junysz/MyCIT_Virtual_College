@@ -135,7 +135,8 @@ public class HomePage extends ActionBarActivity implements
     }
 
     public void menuSelect(String title, String url) {
-        if(title.equalsIgnoreCase("Timetables")){
+        String timetable = getResources().getString(R.string.title_activity_timetable_view);
+        if(title.equalsIgnoreCase(timetable)){
             Intent timetables = new Intent(HomePage.this, Departments.class);
             startActivity(timetables);
         }
@@ -161,7 +162,7 @@ public class HomePage extends ActionBarActivity implements
 	public void onSectionAttached(int number) {
 		switch (number) {
 		case 1:
-			mTitle = "MyCit Home Page";
+			mTitle = getResources().getString(R.string.mycit_homepage);
 			break;
 		case 2:
 			Intent newStudents = new Intent(HomePage.this, NewStudents.class);
