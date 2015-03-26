@@ -10,24 +10,32 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
 import ie.cork.mycit.group1.R;
-import ie.cork.mycit.group1.SplashActivity;
 
 public class LocalPersistence {
 
     private static String FILENAME = "InteralString";
-    //Offline File Name = "interalstring260215"
-    //InternalString is the name of the file 260215 stands for the data this offline file was updated from online file
+    //Offline File Name = "enofflinebackup260215"
+    //en stands for the english back up
+    //pl is the polish backup
+    //offlinebackup is the name of the file
+    //260215 stands for the data this offline file was updated from online file
 
-    public static void offlineFile(Context context) {
+    public static void offlineFile(Context context, String lang) {
 
         Resources res;
-        InputStream in = context.getResources().openRawResource(R.raw.interalstring260215);
+        InputStream in;
+        if(lang.equalsIgnoreCase("en")){
+            in = context.getResources().openRawResource(R.raw.enofflinebackup260215);
+        }else if(lang.equalsIgnoreCase("pl")){
+            in = context.getResources().openRawResource(R.raw.plofflinebackup260215);
+        }else{
+            in = context.getResources().openRawResource(R.raw.enofflinebackup260215);
+        }
         FileOutputStream out = null;
         try {
             out = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
