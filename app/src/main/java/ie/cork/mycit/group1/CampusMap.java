@@ -66,8 +66,8 @@ public class CampusMap extends Activity {
     }
 
     public void menuSelect(String title, String url) {
-        if(title.equalsIgnoreCase("Interactive Map")){
-
+        String interactivemap = getResources().getString(R.string.title_activity_google_map);
+        if(title.equalsIgnoreCase(interactivemap)){
             Uri gmmIntentUri = Uri.parse(url);
             Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
             mapIntent.setPackage("com.google.android.apps.maps");

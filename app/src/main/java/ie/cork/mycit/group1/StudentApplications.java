@@ -65,7 +65,8 @@ public class StudentApplications extends Activity {
     }
 
     public void menuSelect(String title, String url) {
-        if(title.equalsIgnoreCase("Timetables")){
+        String timetable = getResources().getString(R.string.title_activity_timetable_view);
+        if(title.equalsIgnoreCase(timetable)){
             Intent timetables = new Intent(StudentApplications.this, Departments.class);
             startActivity(timetables);
         }
