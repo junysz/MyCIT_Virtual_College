@@ -53,7 +53,6 @@ public class SplashActivity extends Activity {
         }else{
             Log.i("result", "There is no internet");
             LocalPersistence.offlineFile(SplashActivity.this);
-
         }
 
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);    // Removes title bar
@@ -120,15 +119,6 @@ public class SplashActivity extends Activity {
             } catch (ClassNotFoundException e) {
                 Log.i("result","failed to get driver");
 
-            }
-
-            try {
-                con = DriverManager.getConnection(url, username,password);
-            } catch (SQLException e) {
-                e.printStackTrace();
-                Log.i("result","Went into catch SQLException con = null");
-                Log.i("result",e.getMessage());
-                con = null;
             }
 
             try {
@@ -218,6 +208,8 @@ public class SplashActivity extends Activity {
                 LocalPersistence.writeObjectToFile(SplashActivity.this, data);
 
             }catch (java.sql.SQLException sqlE){
+                Log.i("result", "Failed to connect to the DB using offline file");
+                LocalPersistence.offlineFile(SplashActivity.this);
                 Log.i("result","Went into catch SQLException sqlE");
                 Log.i("result",sqlE.getMessage());
             }
