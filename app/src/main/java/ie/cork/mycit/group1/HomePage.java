@@ -1,6 +1,9 @@
 package ie.cork.mycit.group1;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,6 +12,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -47,6 +51,8 @@ public class HomePage extends ActionBarActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_page);
 
+        setupHomePageSettings();
+
         setupTwitterButton();
         setupFacebookButton();
         setupYoutubeButton();
@@ -79,6 +85,24 @@ public class HomePage extends ActionBarActivity implements
 
     }
 
+    public void setupHomePageSettings(){
+        if (!getFromSP("firstlaunch")) {
+            Log.i("result", "First Launch");
+            saveInSp(HomePage.this, "firstlaunch", true);
+            new AlertDialog.Builder(this)
+                    .setTitle("Welcome to MyCIT's App")
+                    .setMessage("This is your first launch, please setup your Home Page settings.")
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent firstlaunch = new Intent(HomePage.this, HomePageSettings.class);
+                            startActivity(firstlaunch);
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_info)
+                    .show();
+        }
+    }
+
     public void startCustom(){
         checkCustom(0);
         checkCustom(1);
@@ -104,6 +128,13 @@ public class HomePage extends ActionBarActivity implements
     private boolean getFromSP(String key){
         SharedPreferences preferences = getApplicationContext().getSharedPreferences("PROJECT_NAME", android.content.Context.MODE_PRIVATE);
         return preferences.getBoolean(key, false);
+    }
+
+    private static void saveInSp(Context context, String key, boolean value){
+        SharedPreferences preferences = context.getSharedPreferences("PROJECT_NAME", android.content.Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean(key, value);
+        editor.commit();
     }
 
     private void registerClickCallback() {
