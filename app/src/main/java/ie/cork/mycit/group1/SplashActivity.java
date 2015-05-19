@@ -34,7 +34,7 @@ import ie.cork.mycit.database.TableData;
 public class SplashActivity extends Activity {
     private TableData data = new TableData();
     private static String TAG = SplashActivity.class.getName();
-    private static long SLEEP_TIME = 3;    // Sleep for some time
+    private static long SLEEP_TIME = 1;    // Sleep for some time
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +83,7 @@ public class SplashActivity extends Activity {
         public void run() {
             try {
                 // Sleeping
-                Thread.sleep(SLEEP_TIME*1000);
+                Thread.sleep(SLEEP_TIME*100);
             } catch (Exception e) {
                 Log.e(TAG, e.getMessage());
             }
